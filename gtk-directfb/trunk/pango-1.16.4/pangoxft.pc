@@ -1,0 +1,11 @@
+prefix=/opt/mipsel-linux-uclibc/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: Pango Xft
+Description: Xft font support for Pango
+Version: 1.16.4
+Requires: pango pangoft2
+Libs: -L${libdir} -lpangoxft-1.0 
+Cflags: -I${includedir}/pango-1.0 

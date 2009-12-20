@@ -1,0 +1,32 @@
+#!/bin/sh
+
+#export SOURCE_PATH=/media/Data/dingoo/dingux/dev/openwrt/trunk/build_dir/target-_-
+export INSTALL_PATH=/opt/mipsel-linux-uclibc/usr
+
+export PKG_CONFIG_PATH=${INSTALL_PATH}/lib/pkgconfig
+#export CC=mipsel-linux-gcc
+
+BUILDDIR=`pwd`
+
+
+echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+echo "@@ building DirectFB-1.4.2 ..."
+echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+
+# dependencies: tslib
+
+cd ${BUILDDIR}
+cd DirectFB-1.4.2
+
+
+export DFB_DINGUX_PATH=/boot/local/directfb
+mkdir ${DFB_DINGUX_PATH}
+
+#./configure --prefix=${INSTALL_PATH} --exec-prefix=${DFB_DINGUX_PATH} --host=mipsel-linux --disable-x11 --disable-osx --with-gfxdrivers=none --with-inputdrivers=keyboard,linuxinput CFLAGS="-I${INSTALL_PATH}/include" LDFLAGS="-L${INSTALL_PATH}/lib"
+./configure --prefix=${INSTALL_PATH} --host=mipsel-linux --disable-x11 --disable-osx --with-gfxdrivers=none --with-inputdrivers=keyboard,linuxinput CFLAGS="-I${INSTALL_PATH}/include" LDFLAGS="-L${INSTALL_PATH}/lib"
+
+
+#./configure --prefix=/boot/local/apps/gtkapp/ --host=mipsel-linux --target=mipsel-linux --disable-x11 --disable-osx --with-gfxdrivers=none --with-inputdrivers=keyboard,linuxinput CFLAGS="-I${INSTALL_PATH}/include" LDFLAGS="-L${INSTALL_PATH}/lib"
+
+make
+make install

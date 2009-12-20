@@ -1,0 +1,8 @@
+target=directfb
+
+Name: GDK Uninstalled
+Description: GIMP Drawing Kit (${target} target), Not Installed
+Version: 2.10.14
+Requires: gdk-pixbuf-2.0-uninstalled pango pangocairo
+Libs: ${pc_top_builddir}/${pcfiledir}/gdk/libgdk-${target}-2.0.la 
+Cflags: -I${pc_top_builddir}/${pcfiledir}/./gdk -I${pc_top_builddir}/${pcfiledir}/. -I${pc_top_builddir}/${pcfiledir} -D_REENTRANT -I/opt/mipsel-linux-uclibc/usr/include/cairo -I/opt/mipsel-linux-uclibc/usr/include/directfb -I/opt/mipsel-linux-uclibc/usr/include/pixman-1 -I/opt/mipsel-linux-uclibc/usr/include/freetype2 -I/opt/mipsel-linux-uclibc/usr/include -I/usr/include/libpng12   

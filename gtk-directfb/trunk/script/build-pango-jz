@@ -1,0 +1,24 @@
+#!/bin/sh
+
+export INSTALL_PATH=/opt/mipsel-linux-uclibc/usr
+export PKG_CONFIG_PATH="${INSTALL_PATH}/lib/pkgconfig"
+
+BUILDDIR=`pwd`
+
+echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+echo "@@ building pango-1.16.4 ..."
+echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+
+# dependencies: glib, freetype, xml, cairo
+
+cd ${BUILDDIR}
+tar xjf ./pango-1.16.4.tar.bz2
+cd pango-1.16.4
+
+sed -i -e 's/have_cairo=false/have_cairo=true/g' configure
+sed -i -e 's/have_cairo_png=false/have_cairo_png=true/g' configure
+sed -i -e 's/have_cairo_freetype=false/have_cairo_freetype=true/g' configure
+
+./configure --prefix=${INSTALL_PATH} --host=mipsel-linux --without-x LDFLAGS="-L${INSTALL_PATH}/lib -lxml2"
+make
+make install

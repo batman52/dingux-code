@@ -1,0 +1,29 @@
+#!/bin/sh
+
+BUILDDIR=`pwd`
+cd "${BUILDDIR}/gtk+-2.10.14/gdk/directfb"
+#for file in gdkdrawable-directfb gdkimage-directfb gdkinput-directfb gdkpixmap-directfb gdkwindow-directfb; do
+
+#        C="$file.c"
+#        TMP="$file.tmp"
+#        BAK="$file.bak"
+
+#        sed 's/G_GNUC_FUNCTION/G_STRLOC/g' $C>$TMP
+
+#        mv $C $BAK
+#        mv $TMP $C
+        #echo $file
+#done
+
+cd ..
+cd ..
+
+file=Makefile
+SRC="$file"
+TMP="$file.tmp"
+BAK="$file.bak"
+sed 's/SRC_SUBDIRS = gdk-pixbuf gdk gtk modules demos tests perf contrib/SRC_SUBDIRS = gdk-pixbuf gdk gtk modules tests perf contrib/'  $SRC>$TMP
+
+mv $SRC $BAK
+mv $TMP $SRC
+

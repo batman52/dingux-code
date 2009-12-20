@@ -1,0 +1,326 @@
+gsocketconnection.lo: gsocketconnection.c ../config.h gsocketconnection.h \
+  ../glib/glib-object.h ../gobject/gboxed.h ../gobject/gtype.h \
+  ../glib/glib.h ../glib/galloca.h ../glib/gtypes.h ../glibconfig.h \
+  ../glib/gmacros.h \
+  /opt/mipsel-linux-uclibc/usr/bin/../lib/gcc/mipsel-linux-uclibc/4.3.3/include/stddef.h \
+  /opt/mipsel-linux-uclibc/usr/bin/../lib/gcc/mipsel-linux-uclibc/4.3.3/include-fixed/limits.h \
+  /opt/mipsel-linux-uclibc/usr/bin/../lib/gcc/mipsel-linux-uclibc/4.3.3/include-fixed/syslimits.h \
+  /opt/mipsel-linux-uclibc/usr/include/limits.h \
+  /opt/mipsel-linux-uclibc/usr/include/features.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/uClibc_config.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/uClibc_arch_features.h \
+  /opt/mipsel-linux-uclibc/usr/include/sys/cdefs.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/posix1_lim.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/local_lim.h \
+  /opt/mipsel-linux-uclibc/usr/include/linux/limits.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/uClibc_local_lim.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/posix2_lim.h \
+  /opt/mipsel-linux-uclibc/usr/bin/../lib/gcc/mipsel-linux-uclibc/4.3.3/include/float.h \
+  ../glib/garray.h ../glib/gasyncqueue.h ../glib/gthread.h \
+  ../glib/gerror.h \
+  /opt/mipsel-linux-uclibc/usr/bin/../lib/gcc/mipsel-linux-uclibc/4.3.3/include/stdarg.h \
+  ../glib/gquark.h ../glib/gutils.h ../glib/gatomic.h \
+  ../glib/gbacktrace.h /opt/mipsel-linux-uclibc/usr/include/signal.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/sigset.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/types.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/wordsize.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/kernel_types.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/typesizes.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/pthreadtypes.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/sched.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/signum.h \
+  /opt/mipsel-linux-uclibc/usr/include/time.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/siginfo.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/sigaction.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/sigcontext.h \
+  /opt/mipsel-linux-uclibc/usr/include/sgidefs.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/sigstack.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/sigthread.h ../glib/gbase64.h \
+  ../glib/gbookmarkfile.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/time.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/uClibc_clk_tck.h \
+  ../glib/gcache.h ../glib/glist.h ../glib/gmem.h ../glib/gslice.h \
+  ../glib/gchecksum.h ../glib/gcompletion.h ../glib/gconvert.h \
+  ../glib/gdataset.h ../glib/gdate.h ../glib/gdir.h ../glib/gfileutils.h \
+  ../glib/ghash.h ../glib/ghook.h ../glib/ghostutils.h \
+  ../glib/giochannel.h ../glib/gmain.h ../glib/gpoll.h ../glib/gslist.h \
+  ../glib/gstring.h ../glib/gunicode.h ../glib/gkeyfile.h \
+  ../glib/gmappedfile.h ../glib/gmarkup.h ../glib/gmessages.h \
+  ../glib/gnode.h ../glib/goption.h ../glib/gpattern.h ../glib/gprimes.h \
+  ../glib/gqsort.h ../glib/gqueue.h ../glib/grand.h ../glib/grel.h \
+  ../glib/gregex.h ../glib/gscanner.h ../glib/gsequence.h \
+  ../glib/gshell.h ../glib/gspawn.h ../glib/gstrfuncs.h \
+  ../glib/gtestutils.h ../glib/gthreadpool.h ../glib/gtimer.h \
+  ../glib/gtree.h ../glib/gurifuncs.h ../gobject/genums.h \
+  ../gobject/gobject.h ../gobject/gvalue.h ../gobject/gparam.h \
+  ../gobject/gclosure.h ../gobject/gsignal.h ../gobject/gmarshal.h \
+  ../gobject/gparamspecs.h ../gobject/gsourceclosure.h \
+  ../gobject/gtypemodule.h ../gobject/gtypeplugin.h \
+  ../gobject/gvaluearray.h ../gobject/gvaluetypes.h ../gio/gsocket.h \
+  ../gio/giotypes.h ../gio/gioenums.h ../gio/giostream.h \
+  ../gio/ginputstream.h ../gio/goutputstream.h ../gio/gcancellable.h \
+  ../gio/gioerror.h gsocketoutputstream.h gsocketinputstream.h \
+  ../gio/gsimpleasyncresult.h gunixconnection.h \
+  ../gio/gsocketconnection.h gtcpconnection.h ../glib/glibintl.h \
+  /opt/mipsel-linux-uclibc/usr/include/libintl.h \
+  /opt/mipsel-linux-uclibc/usr/include/locale.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/uClibc_locale.h gioalias.h \
+  gioaliasdef.c
+
+../config.h:
+
+gsocketconnection.h:
+
+../glib/glib-object.h:
+
+../gobject/gboxed.h:
+
+../gobject/gtype.h:
+
+../glib/glib.h:
+
+../glib/galloca.h:
+
+../glib/gtypes.h:
+
+../glibconfig.h:
+
+../glib/gmacros.h:
+
+/opt/mipsel-linux-uclibc/usr/bin/../lib/gcc/mipsel-linux-uclibc/4.3.3/include/stddef.h:
+
+/opt/mipsel-linux-uclibc/usr/bin/../lib/gcc/mipsel-linux-uclibc/4.3.3/include-fixed/limits.h:
+
+/opt/mipsel-linux-uclibc/usr/bin/../lib/gcc/mipsel-linux-uclibc/4.3.3/include-fixed/syslimits.h:
+
+/opt/mipsel-linux-uclibc/usr/include/limits.h:
+
+/opt/mipsel-linux-uclibc/usr/include/features.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/uClibc_config.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/uClibc_arch_features.h:
+
+/opt/mipsel-linux-uclibc/usr/include/sys/cdefs.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/posix1_lim.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/local_lim.h:
+
+/opt/mipsel-linux-uclibc/usr/include/linux/limits.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/uClibc_local_lim.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/posix2_lim.h:
+
+/opt/mipsel-linux-uclibc/usr/bin/../lib/gcc/mipsel-linux-uclibc/4.3.3/include/float.h:
+
+../glib/garray.h:
+
+../glib/gasyncqueue.h:
+
+../glib/gthread.h:
+
+../glib/gerror.h:
+
+/opt/mipsel-linux-uclibc/usr/bin/../lib/gcc/mipsel-linux-uclibc/4.3.3/include/stdarg.h:
+
+../glib/gquark.h:
+
+../glib/gutils.h:
+
+../glib/gatomic.h:
+
+../glib/gbacktrace.h:
+
+/opt/mipsel-linux-uclibc/usr/include/signal.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/sigset.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/types.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/wordsize.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/kernel_types.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/typesizes.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/pthreadtypes.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/sched.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/signum.h:
+
+/opt/mipsel-linux-uclibc/usr/include/time.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/siginfo.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/sigaction.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/sigcontext.h:
+
+/opt/mipsel-linux-uclibc/usr/include/sgidefs.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/sigstack.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/sigthread.h:
+
+../glib/gbase64.h:
+
+../glib/gbookmarkfile.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/time.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/uClibc_clk_tck.h:
+
+../glib/gcache.h:
+
+../glib/glist.h:
+
+../glib/gmem.h:
+
+../glib/gslice.h:
+
+../glib/gchecksum.h:
+
+../glib/gcompletion.h:
+
+../glib/gconvert.h:
+
+../glib/gdataset.h:
+
+../glib/gdate.h:
+
+../glib/gdir.h:
+
+../glib/gfileutils.h:
+
+../glib/ghash.h:
+
+../glib/ghook.h:
+
+../glib/ghostutils.h:
+
+../glib/giochannel.h:
+
+../glib/gmain.h:
+
+../glib/gpoll.h:
+
+../glib/gslist.h:
+
+../glib/gstring.h:
+
+../glib/gunicode.h:
+
+../glib/gkeyfile.h:
+
+../glib/gmappedfile.h:
+
+../glib/gmarkup.h:
+
+../glib/gmessages.h:
+
+../glib/gnode.h:
+
+../glib/goption.h:
+
+../glib/gpattern.h:
+
+../glib/gprimes.h:
+
+../glib/gqsort.h:
+
+../glib/gqueue.h:
+
+../glib/grand.h:
+
+../glib/grel.h:
+
+../glib/gregex.h:
+
+../glib/gscanner.h:
+
+../glib/gsequence.h:
+
+../glib/gshell.h:
+
+../glib/gspawn.h:
+
+../glib/gstrfuncs.h:
+
+../glib/gtestutils.h:
+
+../glib/gthreadpool.h:
+
+../glib/gtimer.h:
+
+../glib/gtree.h:
+
+../glib/gurifuncs.h:
+
+../gobject/genums.h:
+
+../gobject/gobject.h:
+
+../gobject/gvalue.h:
+
+../gobject/gparam.h:
+
+../gobject/gclosure.h:
+
+../gobject/gsignal.h:
+
+../gobject/gmarshal.h:
+
+../gobject/gparamspecs.h:
+
+../gobject/gsourceclosure.h:
+
+../gobject/gtypemodule.h:
+
+../gobject/gtypeplugin.h:
+
+../gobject/gvaluearray.h:
+
+../gobject/gvaluetypes.h:
+
+../gio/gsocket.h:
+
+../gio/giotypes.h:
+
+../gio/gioenums.h:
+
+../gio/giostream.h:
+
+../gio/ginputstream.h:
+
+../gio/goutputstream.h:
+
+../gio/gcancellable.h:
+
+../gio/gioerror.h:
+
+gsocketoutputstream.h:
+
+gsocketinputstream.h:
+
+../gio/gsimpleasyncresult.h:
+
+gunixconnection.h:
+
+../gio/gsocketconnection.h:
+
+gtcpconnection.h:
+
+../glib/glibintl.h:
+
+/opt/mipsel-linux-uclibc/usr/include/libintl.h:
+
+/opt/mipsel-linux-uclibc/usr/include/locale.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/uClibc_locale.h:
+
+gioalias.h:
+
+gioaliasdef.c:

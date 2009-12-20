@@ -1,0 +1,107 @@
+system.lo: system.c ../../config.h \
+  /opt/mipsel-linux-uclibc/usr/include/errno.h \
+  /opt/mipsel-linux-uclibc/usr/include/features.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/uClibc_config.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/uClibc_arch_features.h \
+  /opt/mipsel-linux-uclibc/usr/include/sys/cdefs.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/errno.h \
+  /opt/mipsel-linux-uclibc/usr/include/linux/errno.h \
+  /opt/mipsel-linux-uclibc/usr/include/asm/errno.h \
+  /opt/mipsel-linux-uclibc/usr/include/asm-generic/errno-base.h \
+  /opt/mipsel-linux-uclibc/usr/include/unistd.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/posix_opt.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/environments.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/wordsize.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/types.h \
+  /opt/mipsel-linux-uclibc/usr/bin/../lib/gcc/mipsel-linux-uclibc/4.3.3/include/stddef.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/kernel_types.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/typesizes.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/pthreadtypes.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/sched.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/confname.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/getopt.h \
+  ../../lib/direct/build.h ../../lib/direct/system.h \
+  /opt/mipsel-linux-uclibc/usr/include/sys/types.h \
+  /opt/mipsel-linux-uclibc/usr/include/time.h \
+  /opt/mipsel-linux-uclibc/usr/include/endian.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/endian.h \
+  /opt/mipsel-linux-uclibc/usr/include/sys/select.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/select.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/sigset.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/time.h \
+  /opt/mipsel-linux-uclibc/usr/include/sys/sysmacros.h \
+  /opt/mipsel-linux-uclibc/usr/include/linux/unistd.h \
+  /opt/mipsel-linux-uclibc/usr/include/asm/unistd.h \
+  /opt/mipsel-linux-uclibc/usr/include/asm/sgidefs.h
+
+../../config.h:
+
+/opt/mipsel-linux-uclibc/usr/include/errno.h:
+
+/opt/mipsel-linux-uclibc/usr/include/features.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/uClibc_config.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/uClibc_arch_features.h:
+
+/opt/mipsel-linux-uclibc/usr/include/sys/cdefs.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/errno.h:
+
+/opt/mipsel-linux-uclibc/usr/include/linux/errno.h:
+
+/opt/mipsel-linux-uclibc/usr/include/asm/errno.h:
+
+/opt/mipsel-linux-uclibc/usr/include/asm-generic/errno-base.h:
+
+/opt/mipsel-linux-uclibc/usr/include/unistd.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/posix_opt.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/environments.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/wordsize.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/types.h:
+
+/opt/mipsel-linux-uclibc/usr/bin/../lib/gcc/mipsel-linux-uclibc/4.3.3/include/stddef.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/kernel_types.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/typesizes.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/pthreadtypes.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/sched.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/confname.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/getopt.h:
+
+../../lib/direct/build.h:
+
+../../lib/direct/system.h:
+
+/opt/mipsel-linux-uclibc/usr/include/sys/types.h:
+
+/opt/mipsel-linux-uclibc/usr/include/time.h:
+
+/opt/mipsel-linux-uclibc/usr/include/endian.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/endian.h:
+
+/opt/mipsel-linux-uclibc/usr/include/sys/select.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/select.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/sigset.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/time.h:
+
+/opt/mipsel-linux-uclibc/usr/include/sys/sysmacros.h:
+
+/opt/mipsel-linux-uclibc/usr/include/linux/unistd.h:
+
+/opt/mipsel-linux-uclibc/usr/include/asm/unistd.h:
+
+/opt/mipsel-linux-uclibc/usr/include/asm/sgidefs.h:

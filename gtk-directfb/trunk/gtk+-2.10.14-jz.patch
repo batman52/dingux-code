@@ -1,0 +1,11 @@
+--- configure.orig	2008-01-10 11:55:27.000000000 +0800
++++ configure	2008-01-10 11:55:45.000000000 +0800
+@@ -33989,7 +33989,7 @@
+ echo "$as_me: error:
+ *** Can't link to Pango. Pango is required to build
+ *** GTK+. For more information see http://www.pango.org" >&2;}
+-   { (exit 1); exit 1; }; }
++   }
+ fi
+ 
+ rm -f core conftest.err conftest.$ac_objext \

@@ -1,0 +1,212 @@
+#!/bin/sh
+
+# Required packages: 
+#
+# tslib-jz, expat-2.0.1, libxml2-2.6.30, freetype-2.3.5,
+# fontconfig-2.5.0, tiff-3.7.4, DirectFB-1.1.1, glib-2.12.13,
+# atk-1.20.0, cairo-1.4.12, pango-1.16.4, gtk+-2.10.14
+
+# Modify these two variables to yours
+#export PATH=/opt/mipsel-linux-uclibc/bin:/opt/mipsel-linux-uclibc/usr/bin:"$PATH"
+export SOURCE_PATH=/media/Data/dingoo/dingux/dev/gtk-directfb/source
+export INSTALL_PATH=/opt/mipsel-linux-uclibc
+
+export PKG_CONFIG_PATH=${INSTALL_PATH}/lib/pkgconfig
+export CC=mipsel-linux-gcc
+
+BUILDDIR=`pwd`
+
+echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+echo "@@ building tslib ..."
+echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+
+# dependencies: none
+
+cd ${BUILDDIR}
+tar xzf ${SOURCE_PATH}/tslib-jz.tar.gz
+cd tslib-jz/tslib-0.1.1/
+./autogen.sh
+echo "ac_cv_func_malloc_0_nonnull=yes" > config.cache
+./configure --prefix=${INSTALL_PATH} --host=mipsel-linux --cache-file=config.cache
+make
+make install
+
+
+echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+echo "@@ building expat-2.0.1 ..."
+echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+
+# dependencies: none
+
+cd ${BUILDDIR}
+tar xzf ${SOURCE_PATH}/expat-2.0.1.tar.gz
+cd expat-2.0.1
+./configure --prefix=${INSTALL_PATH} --host=mipsel-linux
+make
+make install
+
+
+echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+echo "@@ building libxml2-2.6.30 ..."
+echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+
+# dependencies: none
+
+cd ${BUILDDIR}
+tar xzf ${SOURCE_PATH}/libxml2-2.6.30.tar.gz
+cd libxml2-2.6.30
+./configure --prefix=${INSTALL_PATH} --host=mipsel-linux
+make
+make install
+
+
+echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+echo "@@ building freetype-2.3.5 ..."
+echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+
+# dependencies: none
+
+cd ${BUILDDIR}
+tar xjf ${SOURCE_PATH}/freetype-2.3.5.tar.tar
+cd freetype-2.3.5
+./configure --prefix=${INSTALL_PATH} --host=mipsel-linux --target=mipsel-linux
+make
+make install
+
+
+echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+echo "@@ building fontconfig-2.5.0 ..."
+echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+
+# dependencies freetype, libxml2
+
+cd ${BUILDDIR}
+tar xzf ${SOURCE_PATH}/fontconfig-2.5.0.tar.gz
+cd fontconfig-2.5.0
+./configure --prefix=${INSTALL_PATH} --host=mipsel-linux --with-arch=mips CFLAGS="-I${INSTALL_PATH}/include" LDFLAGS="-L${INSTALL_PATH}/lib" --with-freetype-config=${INSTALL_PATH}/bin/freetype-config --enable-libxml2 LIBXML2_CFLAGS="-I${INSTALL_PATH}/include/libxml2" LIBXML2_LIBS="-L${INSTALL_PATH}/lib -lxml2"
+make
+make install
+
+
+echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+echo "@@ building tiff-3.7.4 ..."
+echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+
+# dependencies: jpeg, zlib
+
+cd ${BUILDDIR}
+tar xzf ${SOURCE_PATH}/tiff-3.7.4.tar.gz
+cd tiff-3.7.4
+#./configure --prefix=${INSTALL_PATH} --host=mipsel-linux --target=mipsel-linux --without-x --with-zlib-include-dir=${INSTALL_PATH}/include --with-zlib-lib-dir=${INSTALL_PATH}/lib --with-jpeg-include-dir=${INSTALL_PATH}/include --with-jpeg-lib-dir=${INSTALL_PATH}/lib
+./configure --prefix=${INSTALL_PATH} --host=mipsel-linux --target=mipsel-linux --without-x
+make
+make install
+
+
+
+echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+echo "@@ building DirectFB-1.1.1 ..."
+echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+
+# dependencies: none
+
+cd ${BUILDDIR}
+tar xzf ${SOURCE_PATH}/DirectFB-1.1.1.tar.gz
+cd DirectFB-1.1.1
+./configure --prefix=${INSTALL_PATH} --host=mipsel-linux --target=mipsel-linux --disable-x11 --disable-osx --with-gfxdrivers=none --with-inputdrivers=keyboard,linuxinput,tslib TSLIB_CFLAGS="-I${INSTALL_PATH}/include" TSLIB_LIBS="${INSTALL_PATH}/lib" CFLAGS="-I${INSTALL_PATH}/include" LDFLAGS="-L${INSTALL_PATH}/lib -lz -lm -lts"
+make
+make install
+
+
+echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+echo "@@ building glib-2.12.13 ..."
+echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+
+# dependencies: none
+
+cd ${BUILDDIR}
+tar xjf ${SOURCE_PATH}/glib-2.12.13.tar.bz2
+cd glib-2.12.13
+
+echo "glib_cv_long_long_format=ll" > mipsel-linux.cache
+echo "glib_cv_stack_grows=no" >> mipsel-linux.cache
+echo "glib_cv_has__inline=yes" >> mipsel-linux.cache
+echo "glib_cv_hasinline=yes" >> mipsel-linux.cache
+echo "glib_cv_sane_realloc=yes" >> mipsel-linux.cache
+echo "glib_cv_va_copy=yes" >> mipsel-linux.cache
+echo "glib_cv___va_copy=yes" >> mipsel-linux.cache
+echo "glib_cv_va_val_copy=yes" >> mipsel-linux.cache
+echo "glib_cv_uscore=no" >> mipsel-linux.cache  
+echo "glib_cv_sizeof_gmutex=24" >> mipsel-linux.cache
+echo "ac_cv_func_posix_getpwuid_r=yes" >> mipsel-linux.cache
+
+./configure --prefix=${INSTALL_PATH} --host=mipsel-linux --cache-file=mipsel-linux.cache
+make
+make install
+
+
+echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+echo "@@ building atk-1.20.0 ..."
+echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+
+# dependencies: glib
+
+cd ${BUILDDIR}
+tar xjf ${SOURCE_PATH}/atk-1.20.0.tar.bz2
+cd atk-1.20.0
+./configure --prefix=${INSTALL_PATH} --host=mipsel-linux
+make
+make install
+
+
+echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+echo "@@ building cairo-1.4.12 ..."
+echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+
+# dependencies:
+
+cd ${BUILDDIR}
+tar xzf ${SOURCE_PATH}/cairo-1.4.12.tar.gz
+cd cairo-1.4.12
+./configure --prefix=${INSTALL_PATH} --host=mipsel-linux --disable-xlib --disable-xlib-xrender --enable-directfb --enable-freetype --without-x
+make
+make install
+
+
+echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+echo "@@ building pango-1.16.4 ..."
+echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+
+# dependencies: glib, freetype, xml
+
+cd ${BUILDDIR}
+tar xjf ${SOURCE_PATH}/pango-1.16.4.tar.bz2
+cd pango-1.16.4
+
+sed -i -e 's/have_cairo=false/have_cairo=true/g' configure
+sed -i -e 's/have_cairo_png=false/have_cairo_png=true/g' configure
+sed -i -e 's/have_cairo_freetype=false/have_cairo_freetype=true/g' configure
+
+./configure --prefix=${INSTALL_PATH} --host=mipsel-linux --without-x LDFLAGS="-L${INSTALL_PATH}/lib -lxml2"
+make
+make install
+
+
+echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+echo "@@ building gtk+-2.10.14 ..."
+echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+
+# dependencies: GLib, Pango, ATK, cairo, DirectFB
+
+cd ${BUILDDIR}
+tar xjf ${SOURCE_PATH}/gtk+-2.10.14.tar.bz2
+cd gtk+-2.10.14
+patch -p0 < ${SOURCE_PATH}/gtk+-2.10.14-jz.patch
+./configure --prefix=${INSTALL_PATH} --host=mipsel-linux --with-gdktarget=directfb --without-x CFLAGS="-I${INSTALL_PATH}/include" LDFLAGS="-L${INSTALL_PATH}/lib"
+make
+make install
+
+
+echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+echo "@@               FINISHED                  @@"
+echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"

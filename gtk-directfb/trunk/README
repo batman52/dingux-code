@@ -1,0 +1,10 @@
+In order to build all, just run as root ./script/build-all
+
+In the script folder are also provided scripts to compile
+every single library needed, each named build-LIBRARY,
+where LIBRARY is the library name.
+
+It is assumed that the toolchain path is /opt/mipsel-linux-uclibc,
+otherwise you will need to change the prefix path into the script.
+
+

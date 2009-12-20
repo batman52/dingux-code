@@ -1,0 +1,248 @@
+cairo-gstate.lo: cairo-gstate.c cairoint.h ../config.h \
+  /opt/mipsel-linux-uclibc/usr/include/assert.h \
+  /opt/mipsel-linux-uclibc/usr/include/features.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/uClibc_config.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/uClibc_arch_features.h \
+  /opt/mipsel-linux-uclibc/usr/include/sys/cdefs.h \
+  /opt/mipsel-linux-uclibc/usr/include/stdlib.h \
+  /opt/mipsel-linux-uclibc/usr/bin/../lib/gcc/mipsel-linux-uclibc/4.3.3/include/stddef.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/waitflags.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/waitstatus.h \
+  /opt/mipsel-linux-uclibc/usr/include/endian.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/endian.h \
+  /opt/mipsel-linux-uclibc/usr/include/sys/types.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/types.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/wordsize.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/kernel_types.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/typesizes.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/pthreadtypes.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/sched.h \
+  /opt/mipsel-linux-uclibc/usr/include/time.h \
+  /opt/mipsel-linux-uclibc/usr/include/sys/select.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/select.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/sigset.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/time.h \
+  /opt/mipsel-linux-uclibc/usr/include/sys/sysmacros.h \
+  /opt/mipsel-linux-uclibc/usr/include/alloca.h \
+  /opt/mipsel-linux-uclibc/usr/include/string.h \
+  /opt/mipsel-linux-uclibc/usr/bin/../lib/gcc/mipsel-linux-uclibc/4.3.3/include/stdarg.h \
+  /opt/mipsel-linux-uclibc/usr/include/math.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/huge_val.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/huge_valf.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/huge_vall.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/inf.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/nan.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/mathdef.h \
+  /opt/mipsel-linux-uclibc/usr/include/sgidefs.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/mathcalls.h \
+  /opt/mipsel-linux-uclibc/usr/bin/../lib/gcc/mipsel-linux-uclibc/4.3.3/include-fixed/limits.h \
+  /opt/mipsel-linux-uclibc/usr/bin/../lib/gcc/mipsel-linux-uclibc/4.3.3/include-fixed/syslimits.h \
+  /opt/mipsel-linux-uclibc/usr/include/limits.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/posix1_lim.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/local_lim.h \
+  /opt/mipsel-linux-uclibc/usr/include/linux/limits.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/uClibc_local_lim.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/posix2_lim.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/xopen_lim.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/stdio_lim.h \
+  /opt/mipsel-linux-uclibc/usr/include/stdio.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/uClibc_stdio.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/uClibc_mutex.h \
+  /opt/mipsel-linux-uclibc/usr/include/pthread.h \
+  /opt/mipsel-linux-uclibc/usr/include/sched.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/uClibc_clk_tck.h \
+  /opt/mipsel-linux-uclibc/usr/include/signal.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/initspin.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/sigthread.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/uClibc_pthread.h cairo.h \
+  cairo-version.h cairo-features.h cairo-deprecated.h \
+  /opt/mipsel-linux-uclibc/usr/include/pixman-1/pixman.h \
+  /opt/mipsel-linux-uclibc/usr/include/pixman-1/pixman-version.h \
+  /opt/mipsel-linux-uclibc/usr/include/stdint.h cairo-compiler-private.h \
+  cairo-types-private.h cairo-fixed-type-private.h \
+  cairo-wideint-type-private.h \
+  /opt/mipsel-linux-uclibc/usr/include/byteswap.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/byteswap.h \
+  cairo-cache-private.h cairo-reference-count-private.h \
+  cairo-atomic-private.h cairo-scaled-font-private.h \
+  cairo-mutex-type-private.h cairo-mutex-impl-private.h \
+  cairo-surface-private.h cairo-region-private.h cairo-mutex-private.h \
+  cairo-mutex-list-private.h cairo-fixed-private.h \
+  cairo-wideint-private.h cairo-malloc-private.h cairo-hash-private.h \
+  cairo-clip-private.h cairo-path-fixed-private.h cairo-gstate-private.h
+
+cairoint.h:
+
+../config.h:
+
+/opt/mipsel-linux-uclibc/usr/include/assert.h:
+
+/opt/mipsel-linux-uclibc/usr/include/features.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/uClibc_config.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/uClibc_arch_features.h:
+
+/opt/mipsel-linux-uclibc/usr/include/sys/cdefs.h:
+
+/opt/mipsel-linux-uclibc/usr/include/stdlib.h:
+
+/opt/mipsel-linux-uclibc/usr/bin/../lib/gcc/mipsel-linux-uclibc/4.3.3/include/stddef.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/waitflags.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/waitstatus.h:
+
+/opt/mipsel-linux-uclibc/usr/include/endian.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/endian.h:
+
+/opt/mipsel-linux-uclibc/usr/include/sys/types.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/types.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/wordsize.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/kernel_types.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/typesizes.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/pthreadtypes.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/sched.h:
+
+/opt/mipsel-linux-uclibc/usr/include/time.h:
+
+/opt/mipsel-linux-uclibc/usr/include/sys/select.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/select.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/sigset.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/time.h:
+
+/opt/mipsel-linux-uclibc/usr/include/sys/sysmacros.h:
+
+/opt/mipsel-linux-uclibc/usr/include/alloca.h:
+
+/opt/mipsel-linux-uclibc/usr/include/string.h:
+
+/opt/mipsel-linux-uclibc/usr/bin/../lib/gcc/mipsel-linux-uclibc/4.3.3/include/stdarg.h:
+
+/opt/mipsel-linux-uclibc/usr/include/math.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/huge_val.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/huge_valf.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/huge_vall.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/inf.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/nan.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/mathdef.h:
+
+/opt/mipsel-linux-uclibc/usr/include/sgidefs.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/mathcalls.h:
+
+/opt/mipsel-linux-uclibc/usr/bin/../lib/gcc/mipsel-linux-uclibc/4.3.3/include-fixed/limits.h:
+
+/opt/mipsel-linux-uclibc/usr/bin/../lib/gcc/mipsel-linux-uclibc/4.3.3/include-fixed/syslimits.h:
+
+/opt/mipsel-linux-uclibc/usr/include/limits.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/posix1_lim.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/local_lim.h:
+
+/opt/mipsel-linux-uclibc/usr/include/linux/limits.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/uClibc_local_lim.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/posix2_lim.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/xopen_lim.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/stdio_lim.h:
+
+/opt/mipsel-linux-uclibc/usr/include/stdio.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/uClibc_stdio.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/uClibc_mutex.h:
+
+/opt/mipsel-linux-uclibc/usr/include/pthread.h:
+
+/opt/mipsel-linux-uclibc/usr/include/sched.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/uClibc_clk_tck.h:
+
+/opt/mipsel-linux-uclibc/usr/include/signal.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/initspin.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/sigthread.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/uClibc_pthread.h:
+
+cairo.h:
+
+cairo-version.h:
+
+cairo-features.h:
+
+cairo-deprecated.h:
+
+/opt/mipsel-linux-uclibc/usr/include/pixman-1/pixman.h:
+
+/opt/mipsel-linux-uclibc/usr/include/pixman-1/pixman-version.h:
+
+/opt/mipsel-linux-uclibc/usr/include/stdint.h:
+
+cairo-compiler-private.h:
+
+cairo-types-private.h:
+
+cairo-fixed-type-private.h:
+
+cairo-wideint-type-private.h:
+
+/opt/mipsel-linux-uclibc/usr/include/byteswap.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/byteswap.h:
+
+cairo-cache-private.h:
+
+cairo-reference-count-private.h:
+
+cairo-atomic-private.h:
+
+cairo-scaled-font-private.h:
+
+cairo-mutex-type-private.h:
+
+cairo-mutex-impl-private.h:
+
+cairo-surface-private.h:
+
+cairo-region-private.h:
+
+cairo-mutex-private.h:
+
+cairo-mutex-list-private.h:
+
+cairo-fixed-private.h:
+
+cairo-wideint-private.h:
+
+cairo-malloc-private.h:
+
+cairo-hash-private.h:
+
+cairo-clip-private.h:
+
+cairo-path-fixed-private.h:
+
+cairo-gstate-private.h:

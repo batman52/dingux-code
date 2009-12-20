@@ -1,0 +1,30 @@
+#!/bin/sh
+
+# Required packages: 
+#
+# tslib-jz, expat-2.0.1, libxml2-2.6.30, freetype-2.3.5,
+# fontconfig-2.5.0, tiff-3.7.4, DirectFB-1.1.1, glib-2.12.13,
+# atk-1.20.0, cairo-1.4.12, pango-1.16.4, gtk+-2.10.14
+
+# Modify these two variables to yours
+#export PATH=/opt/mipsel-linux-uclibc/bin:/opt/mipsel-linux-uclibc/usr/bin:"$PATH"
+#export SOURCE_PATH=/media/Data/dingoo/dingux/dev/openwrt/trunk/build_dir/target-_-
+export INSTALL_PATH=/opt/mipsel-linux-uclibc/usr
+
+export PKG_CONFIG_PATH=${INSTALL_PATH}/lib/pkgconfig
+#export CC=mipsel-linux-gcc
+
+BUILDDIR=`pwd`
+
+
+echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+echo "@@ building libxml2-2.7.6 ..."
+echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+
+# dependencies: none
+
+cd ${BUILDDIR}
+cd libxml2-2.7.6
+./configure --prefix=${INSTALL_PATH} --host=mipsel-linux
+make
+make install

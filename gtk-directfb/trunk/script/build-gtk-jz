@@ -1,0 +1,55 @@
+#!/bin/sh
+
+#export SOURCE_PATH=/media/Data/dingoo/dingux/dev/gtk-directfb/source
+export INSTALL_PATH=/opt/mipsel-linux-uclibc/usr
+export PKG_CONFIG_PATH=${INSTALL_PATH}/lib/pkgconfig
+#export CC=mipsel-linux-gcc
+
+BUILDDIR=`pwd`
+
+echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+echo "@@ building gtk+-2.10.14 ..."
+echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+
+# dependencies: GLib, Pango, ATK, cairo, DirectFB
+
+cd ${BUILDDIR}
+tar xjf ./gtk+-2.10.14.tar.bz2
+cd gtk+-2.10.14
+./configure --prefix=${INSTALL_PATH} --host=mipsel-linux --with-gdktarget=directfb --without-x 
+
+## set config.h
+echo '#define __u32 u32'>> config.h
+echo '#define __u8 u8'>> config.h
+
+## 
+cd "${BUILDDIR}/gtk+-2.10.14/gdk/directfb"
+for file in gdkdrawable-directfb gdkimage-directfb gdkinput-directfb gdkpixmap-directfb gdkwindow-directfb; do
+
+        C="$file.c"
+        TMP="$file.tmp"
+        BAK="$file.bak"
+
+        sed 's/G_GNUC_FUNCTION/G_STRLOC/g' $C>$TMP
+
+        mv $C $BAK
+        mv $TMP $C
+        #echo $file
+done
+
+cd ${BUILDDIR}/gtk+-2.10.14
+## remove demos folder from Makefile
+file=Makefile
+SRC="$file"
+TMP="$file.tmp"
+BAK="$file.bak"
+sed 's/SRC_SUBDIRS = gdk-pixbuf gdk gtk modules demos tests perf contrib/SRC_SUBDIRS = gdk-pixbuf gdk gtk modules tests perf contrib/'  $SRC>$TMP
+
+mv $SRC $BAK
+mv $TMP $SRC
+
+## build
+#cd ${BUILDDIR}/gtk+-2.10.14
+
+make
+make install

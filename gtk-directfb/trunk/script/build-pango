@@ -1,0 +1,41 @@
+#!/bin/sh
+
+export INSTALL_PATH=/opt/mipsel-linux-uclibc/usr
+export PKG_CONFIG_PATH="${INSTALL_PATH}/lib/pkgconfig"
+
+BUILDDIR=`pwd`
+
+echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+echo "@@ building pango-1.26.0 ..."
+echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+
+# dependencies: glib, freetype, xml, cairo
+
+#cp -r ${INSTALL_PATH}/include/freetype2/freetype ${INSTALL_PATH}/include/
+
+cd ${BUILDDIR}
+cd pango-1.26.0
+
+sed -i -e 's/have_cairo=false/have_cairo=true/g' configure
+sed -i -e 's/have_cairo_png=false/have_cairo_png=true/g' configure
+sed -i -e 's/have_cairo_freetype=false/have_cairo_freetype=true/g' configure
+
+./configure --prefix=${INSTALL_PATH} --host=mipsel-linux --without-x LDFLAGS="-L${INSTALL_PATH}/lib -lxml2"
+#CAIRO_CFLAGS="-I${INSTALL_PATH}/include/cairo" FREETYPE_CFLAGS="-I${INSTALL_PATH}/include/freetype2/freetype/config:{INSTALL_PATH}/include/freetype2/freetype/" FONTCONFIG_CFLAGS="-I${INSTALL_PATH}/include/fontconfig" GLIB_CFLAGS="-I${INSTALL_PATH}/include/glib-2.0" 
+#--with-included-modules=yes 
+
+#make
+
+################################################
+#cd modules
+#for module in arabic basic hangul hebrew indic khmer syriac thai tibetan
+#do
+#	cd $module
+#	make "libpango-$module-fc.la"
+#	cd ..
+#done
+#cd ..
+#make
+###################################################
+
+#make install

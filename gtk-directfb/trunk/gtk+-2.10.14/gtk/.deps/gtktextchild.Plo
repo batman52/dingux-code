@@ -1,0 +1,617 @@
+gtktextchild.lo: gtktextchild.c ../config.h gtktextchild.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib-object.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/gobject/gboxed.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/gobject/gtype.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/galloca.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gtypes.h \
+  /opt/mipsel-linux-uclibc/usr/lib/glib-2.0/include/glibconfig.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gmacros.h \
+  /opt/mipsel-linux-uclibc/usr/bin/../lib/gcc/mipsel-linux-uclibc/4.3.3/include/stddef.h \
+  /opt/mipsel-linux-uclibc/usr/bin/../lib/gcc/mipsel-linux-uclibc/4.3.3/include-fixed/limits.h \
+  /opt/mipsel-linux-uclibc/usr/bin/../lib/gcc/mipsel-linux-uclibc/4.3.3/include-fixed/syslimits.h \
+  /opt/mipsel-linux-uclibc/usr/include/limits.h \
+  /opt/mipsel-linux-uclibc/usr/include/features.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/uClibc_config.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/uClibc_arch_features.h \
+  /opt/mipsel-linux-uclibc/usr/include/sys/cdefs.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/posix1_lim.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/local_lim.h \
+  /opt/mipsel-linux-uclibc/usr/include/linux/limits.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/uClibc_local_lim.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/posix2_lim.h \
+  /opt/mipsel-linux-uclibc/usr/bin/../lib/gcc/mipsel-linux-uclibc/4.3.3/include/float.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/garray.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gasyncqueue.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gthread.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gerror.h \
+  /opt/mipsel-linux-uclibc/usr/bin/../lib/gcc/mipsel-linux-uclibc/4.3.3/include/stdarg.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gquark.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gutils.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gatomic.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gbacktrace.h \
+  /opt/mipsel-linux-uclibc/usr/include/signal.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/sigset.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/types.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/wordsize.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/kernel_types.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/typesizes.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/pthreadtypes.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/sched.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/signum.h \
+  /opt/mipsel-linux-uclibc/usr/include/time.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/siginfo.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/sigaction.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/sigcontext.h \
+  /opt/mipsel-linux-uclibc/usr/include/sgidefs.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/sigstack.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/sigthread.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gbase64.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gbookmarkfile.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/time.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/uClibc_clk_tck.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gcache.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/glist.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gmem.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gslice.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gchecksum.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gcompletion.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gconvert.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gdataset.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gdate.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gdir.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gfileutils.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/ghash.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/ghook.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/ghostutils.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/giochannel.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gmain.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gpoll.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gslist.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gstring.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gunicode.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gkeyfile.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gmappedfile.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gmarkup.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gmessages.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gnode.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/goption.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gpattern.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gprimes.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gqsort.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gqueue.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/grand.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/grel.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gregex.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gscanner.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gsequence.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gshell.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gspawn.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gstrfuncs.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gtestutils.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gthreadpool.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gtimer.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gtree.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gurifuncs.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/gobject/genums.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/gobject/gobject.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/gobject/gvalue.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/gobject/gparam.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/gobject/gclosure.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/gobject/gsignal.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/gobject/gmarshal.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/gobject/gparamspecs.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/gobject/gsourceclosure.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/gobject/gtypemodule.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/gobject/gtypeplugin.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/gobject/gvaluearray.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/gobject/gvaluetypes.h \
+  gtktextbtree.h ../gtk/gtktextbuffer.h ../gtk/gtkwidget.h ../gdk/gdk.h \
+  ../gdk/gdkcairo.h ../gdk/gdkcolor.h \
+  /opt/mipsel-linux-uclibc/usr/include/cairo/cairo.h \
+  /opt/mipsel-linux-uclibc/usr/include/cairo/cairo-version.h \
+  /opt/mipsel-linux-uclibc/usr/include/cairo/cairo-features.h \
+  /opt/mipsel-linux-uclibc/usr/include/cairo/cairo-deprecated.h \
+  ../gdk/gdktypes.h \
+  /opt/mipsel-linux-uclibc/usr/include/pango-1.0/pango/pango.h \
+  /opt/mipsel-linux-uclibc/usr/include/pango-1.0/pango/pango-attributes.h \
+  /opt/mipsel-linux-uclibc/usr/include/pango-1.0/pango/pango-font.h \
+  /opt/mipsel-linux-uclibc/usr/include/pango-1.0/pango/pango-coverage.h \
+  /opt/mipsel-linux-uclibc/usr/include/pango-1.0/pango/pango-types.h \
+  /opt/mipsel-linux-uclibc/usr/include/pango-1.0/pango/pango-matrix.h \
+  /opt/mipsel-linux-uclibc/usr/include/pango-1.0/pango/pango-script.h \
+  /opt/mipsel-linux-uclibc/usr/include/pango-1.0/pango/pango-gravity.h \
+  /opt/mipsel-linux-uclibc/usr/include/pango-1.0/pango/pango-break.h \
+  /opt/mipsel-linux-uclibc/usr/include/pango-1.0/pango/pango-item.h \
+  /opt/mipsel-linux-uclibc/usr/include/pango-1.0/pango/pango-context.h \
+  /opt/mipsel-linux-uclibc/usr/include/pango-1.0/pango/pango-fontmap.h \
+  /opt/mipsel-linux-uclibc/usr/include/pango-1.0/pango/pango-fontset.h \
+  /opt/mipsel-linux-uclibc/usr/include/pango-1.0/pango/pango-engine.h \
+  /opt/mipsel-linux-uclibc/usr/include/pango-1.0/pango/pango-glyph.h \
+  /opt/mipsel-linux-uclibc/usr/include/pango-1.0/pango/pango-enum-types.h \
+  /opt/mipsel-linux-uclibc/usr/include/pango-1.0/pango/pango-features.h \
+  /opt/mipsel-linux-uclibc/usr/include/pango-1.0/pango/pango-glyph-item.h \
+  /opt/mipsel-linux-uclibc/usr/include/pango-1.0/pango/pango-layout.h \
+  /opt/mipsel-linux-uclibc/usr/include/pango-1.0/pango/pango-tabs.h \
+  /opt/mipsel-linux-uclibc/usr/include/pango-1.0/pango/pango-renderer.h \
+  /opt/mipsel-linux-uclibc/usr/include/pango-1.0/pango/pango-utils.h \
+  /opt/mipsel-linux-uclibc/usr/include/stdio.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/uClibc_stdio.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/uClibc_mutex.h \
+  /opt/mipsel-linux-uclibc/usr/include/pthread.h \
+  /opt/mipsel-linux-uclibc/usr/include/sched.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/initspin.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/uClibc_pthread.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/stdio_lim.h \
+  ../gdk/gdkconfig.h ../gdk/gdkpixbuf.h ../gdk/gdkrgb.h \
+  ../gdk-pixbuf/gdk-pixbuf.h ../gdk-pixbuf/gdk-pixbuf-features.h \
+  ../gdk-pixbuf/gdk-pixbuf-core.h ../gdk-pixbuf/gdk-pixbuf-transform.h \
+  ../gdk-pixbuf/gdk-pixbuf-animation.h \
+  ../gdk-pixbuf/gdk-pixbuf-simple-anim.h ../gdk-pixbuf/gdk-pixbuf-io.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/gmodule.h \
+  ../gdk-pixbuf/gdk-pixbuf-loader.h ../gdk-pixbuf/gdk-pixbuf-enum-types.h \
+  /opt/mipsel-linux-uclibc/usr/include/pango-1.0/pango/pangocairo.h \
+  ../gdk/gdkcursor.h ../gdk/gdkdisplay.h ../gdk/gdkevents.h \
+  ../gdk/gdkdnd.h ../gdk/gdkinput.h ../gdk/gdkdrawable.h ../gdk/gdkgc.h \
+  ../gdk/gdkenumtypes.h ../gdk/gdkfont.h ../gdk/gdkimage.h \
+  ../gdk/gdkkeys.h ../gdk/gdkdisplaymanager.h ../gdk/gdkpango.h \
+  ../gdk/gdkpixmap.h ../gdk/gdkproperty.h ../gdk/gdkregion.h \
+  ../gdk/gdkscreen.h ../gdk/gdkselection.h ../gdk/gdkspawn.h \
+  ../gdk/gdkvisual.h ../gdk/gdkwindow.h ../gtk/gtkaccelgroup.h \
+  ../gtk/gtkenums.h ../gtk/gtkobject.h ../gtk/gtktypeutils.h \
+  ../gtk/gtktypebuiltins.h ../gtk/gtkdebug.h ../gtk/gtkadjustment.h \
+  ../gtk/gtkstyle.h ../gtk/gtksettings.h ../gtk/gtkrc.h \
+  /opt/mipsel-linux-uclibc/usr/include/atk-1.0/atk/atkobject.h \
+  /opt/mipsel-linux-uclibc/usr/include/atk-1.0/atk/atkstate.h \
+  /opt/mipsel-linux-uclibc/usr/include/atk-1.0/atk/atkrelationtype.h \
+  ../gtk/gtkclipboard.h ../gtk/gtkselection.h ../gtk/gtktextiter.h \
+  ../gtk/gtktexttag.h ../gtk/gtktextchild.h ../gtk/gtktexttagtable.h \
+  ../gtk/gtktextmark.h ../gtk/gtktextsegment.h \
+  ../gtk/gtktextmarkprivate.h ../gtk/gtktexttypes.h \
+  ../gtk/gtktexttagprivate.h ../gtk/gtktextlayout.h \
+  ../gtk/gtktextchildprivate.h gtktextlayout.h gtkintl.h \
+  /opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gi18n-lib.h \
+  /opt/mipsel-linux-uclibc/usr/include/libintl.h \
+  /opt/mipsel-linux-uclibc/usr/include/locale.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/uClibc_locale.h \
+  /opt/mipsel-linux-uclibc/usr/include/string.h gtkalias.h gtkaliasdef.c
+
+../config.h:
+
+gtktextchild.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib-object.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/gobject/gboxed.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/gobject/gtype.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/galloca.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gtypes.h:
+
+/opt/mipsel-linux-uclibc/usr/lib/glib-2.0/include/glibconfig.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gmacros.h:
+
+/opt/mipsel-linux-uclibc/usr/bin/../lib/gcc/mipsel-linux-uclibc/4.3.3/include/stddef.h:
+
+/opt/mipsel-linux-uclibc/usr/bin/../lib/gcc/mipsel-linux-uclibc/4.3.3/include-fixed/limits.h:
+
+/opt/mipsel-linux-uclibc/usr/bin/../lib/gcc/mipsel-linux-uclibc/4.3.3/include-fixed/syslimits.h:
+
+/opt/mipsel-linux-uclibc/usr/include/limits.h:
+
+/opt/mipsel-linux-uclibc/usr/include/features.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/uClibc_config.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/uClibc_arch_features.h:
+
+/opt/mipsel-linux-uclibc/usr/include/sys/cdefs.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/posix1_lim.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/local_lim.h:
+
+/opt/mipsel-linux-uclibc/usr/include/linux/limits.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/uClibc_local_lim.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/posix2_lim.h:
+
+/opt/mipsel-linux-uclibc/usr/bin/../lib/gcc/mipsel-linux-uclibc/4.3.3/include/float.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/garray.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gasyncqueue.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gthread.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gerror.h:
+
+/opt/mipsel-linux-uclibc/usr/bin/../lib/gcc/mipsel-linux-uclibc/4.3.3/include/stdarg.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gquark.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gutils.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gatomic.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gbacktrace.h:
+
+/opt/mipsel-linux-uclibc/usr/include/signal.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/sigset.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/types.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/wordsize.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/kernel_types.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/typesizes.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/pthreadtypes.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/sched.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/signum.h:
+
+/opt/mipsel-linux-uclibc/usr/include/time.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/siginfo.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/sigaction.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/sigcontext.h:
+
+/opt/mipsel-linux-uclibc/usr/include/sgidefs.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/sigstack.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/sigthread.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gbase64.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gbookmarkfile.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/time.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/uClibc_clk_tck.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gcache.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/glist.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gmem.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gslice.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gchecksum.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gcompletion.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gconvert.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gdataset.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gdate.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gdir.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gfileutils.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/ghash.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/ghook.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/ghostutils.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/giochannel.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gmain.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gpoll.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gslist.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gstring.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gunicode.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gkeyfile.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gmappedfile.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gmarkup.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gmessages.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gnode.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/goption.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gpattern.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gprimes.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gqsort.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gqueue.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/grand.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/grel.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gregex.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gscanner.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gsequence.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gshell.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gspawn.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gstrfuncs.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gtestutils.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gthreadpool.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gtimer.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gtree.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gurifuncs.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/gobject/genums.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/gobject/gobject.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/gobject/gvalue.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/gobject/gparam.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/gobject/gclosure.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/gobject/gsignal.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/gobject/gmarshal.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/gobject/gparamspecs.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/gobject/gsourceclosure.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/gobject/gtypemodule.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/gobject/gtypeplugin.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/gobject/gvaluearray.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/gobject/gvaluetypes.h:
+
+gtktextbtree.h:
+
+../gtk/gtktextbuffer.h:
+
+../gtk/gtkwidget.h:
+
+../gdk/gdk.h:
+
+../gdk/gdkcairo.h:
+
+../gdk/gdkcolor.h:
+
+/opt/mipsel-linux-uclibc/usr/include/cairo/cairo.h:
+
+/opt/mipsel-linux-uclibc/usr/include/cairo/cairo-version.h:
+
+/opt/mipsel-linux-uclibc/usr/include/cairo/cairo-features.h:
+
+/opt/mipsel-linux-uclibc/usr/include/cairo/cairo-deprecated.h:
+
+../gdk/gdktypes.h:
+
+/opt/mipsel-linux-uclibc/usr/include/pango-1.0/pango/pango.h:
+
+/opt/mipsel-linux-uclibc/usr/include/pango-1.0/pango/pango-attributes.h:
+
+/opt/mipsel-linux-uclibc/usr/include/pango-1.0/pango/pango-font.h:
+
+/opt/mipsel-linux-uclibc/usr/include/pango-1.0/pango/pango-coverage.h:
+
+/opt/mipsel-linux-uclibc/usr/include/pango-1.0/pango/pango-types.h:
+
+/opt/mipsel-linux-uclibc/usr/include/pango-1.0/pango/pango-matrix.h:
+
+/opt/mipsel-linux-uclibc/usr/include/pango-1.0/pango/pango-script.h:
+
+/opt/mipsel-linux-uclibc/usr/include/pango-1.0/pango/pango-gravity.h:
+
+/opt/mipsel-linux-uclibc/usr/include/pango-1.0/pango/pango-break.h:
+
+/opt/mipsel-linux-uclibc/usr/include/pango-1.0/pango/pango-item.h:
+
+/opt/mipsel-linux-uclibc/usr/include/pango-1.0/pango/pango-context.h:
+
+/opt/mipsel-linux-uclibc/usr/include/pango-1.0/pango/pango-fontmap.h:
+
+/opt/mipsel-linux-uclibc/usr/include/pango-1.0/pango/pango-fontset.h:
+
+/opt/mipsel-linux-uclibc/usr/include/pango-1.0/pango/pango-engine.h:
+
+/opt/mipsel-linux-uclibc/usr/include/pango-1.0/pango/pango-glyph.h:
+
+/opt/mipsel-linux-uclibc/usr/include/pango-1.0/pango/pango-enum-types.h:
+
+/opt/mipsel-linux-uclibc/usr/include/pango-1.0/pango/pango-features.h:
+
+/opt/mipsel-linux-uclibc/usr/include/pango-1.0/pango/pango-glyph-item.h:
+
+/opt/mipsel-linux-uclibc/usr/include/pango-1.0/pango/pango-layout.h:
+
+/opt/mipsel-linux-uclibc/usr/include/pango-1.0/pango/pango-tabs.h:
+
+/opt/mipsel-linux-uclibc/usr/include/pango-1.0/pango/pango-renderer.h:
+
+/opt/mipsel-linux-uclibc/usr/include/pango-1.0/pango/pango-utils.h:
+
+/opt/mipsel-linux-uclibc/usr/include/stdio.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/uClibc_stdio.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/uClibc_mutex.h:
+
+/opt/mipsel-linux-uclibc/usr/include/pthread.h:
+
+/opt/mipsel-linux-uclibc/usr/include/sched.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/initspin.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/uClibc_pthread.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/stdio_lim.h:
+
+../gdk/gdkconfig.h:
+
+../gdk/gdkpixbuf.h:
+
+../gdk/gdkrgb.h:
+
+../gdk-pixbuf/gdk-pixbuf.h:
+
+../gdk-pixbuf/gdk-pixbuf-features.h:
+
+../gdk-pixbuf/gdk-pixbuf-core.h:
+
+../gdk-pixbuf/gdk-pixbuf-transform.h:
+
+../gdk-pixbuf/gdk-pixbuf-animation.h:
+
+../gdk-pixbuf/gdk-pixbuf-simple-anim.h:
+
+../gdk-pixbuf/gdk-pixbuf-io.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/gmodule.h:
+
+../gdk-pixbuf/gdk-pixbuf-loader.h:
+
+../gdk-pixbuf/gdk-pixbuf-enum-types.h:
+
+/opt/mipsel-linux-uclibc/usr/include/pango-1.0/pango/pangocairo.h:
+
+../gdk/gdkcursor.h:
+
+../gdk/gdkdisplay.h:
+
+../gdk/gdkevents.h:
+
+../gdk/gdkdnd.h:
+
+../gdk/gdkinput.h:
+
+../gdk/gdkdrawable.h:
+
+../gdk/gdkgc.h:
+
+../gdk/gdkenumtypes.h:
+
+../gdk/gdkfont.h:
+
+../gdk/gdkimage.h:
+
+../gdk/gdkkeys.h:
+
+../gdk/gdkdisplaymanager.h:
+
+../gdk/gdkpango.h:
+
+../gdk/gdkpixmap.h:
+
+../gdk/gdkproperty.h:
+
+../gdk/gdkregion.h:
+
+../gdk/gdkscreen.h:
+
+../gdk/gdkselection.h:
+
+../gdk/gdkspawn.h:
+
+../gdk/gdkvisual.h:
+
+../gdk/gdkwindow.h:
+
+../gtk/gtkaccelgroup.h:
+
+../gtk/gtkenums.h:
+
+../gtk/gtkobject.h:
+
+../gtk/gtktypeutils.h:
+
+../gtk/gtktypebuiltins.h:
+
+../gtk/gtkdebug.h:
+
+../gtk/gtkadjustment.h:
+
+../gtk/gtkstyle.h:
+
+../gtk/gtksettings.h:
+
+../gtk/gtkrc.h:
+
+/opt/mipsel-linux-uclibc/usr/include/atk-1.0/atk/atkobject.h:
+
+/opt/mipsel-linux-uclibc/usr/include/atk-1.0/atk/atkstate.h:
+
+/opt/mipsel-linux-uclibc/usr/include/atk-1.0/atk/atkrelationtype.h:
+
+../gtk/gtkclipboard.h:
+
+../gtk/gtkselection.h:
+
+../gtk/gtktextiter.h:
+
+../gtk/gtktexttag.h:
+
+../gtk/gtktextchild.h:
+
+../gtk/gtktexttagtable.h:
+
+../gtk/gtktextmark.h:
+
+../gtk/gtktextsegment.h:
+
+../gtk/gtktextmarkprivate.h:
+
+../gtk/gtktexttypes.h:
+
+../gtk/gtktexttagprivate.h:
+
+../gtk/gtktextlayout.h:
+
+../gtk/gtktextchildprivate.h:
+
+gtktextlayout.h:
+
+gtkintl.h:
+
+/opt/mipsel-linux-uclibc/usr/include/glib-2.0/glib/gi18n-lib.h:
+
+/opt/mipsel-linux-uclibc/usr/include/libintl.h:
+
+/opt/mipsel-linux-uclibc/usr/include/locale.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/uClibc_locale.h:
+
+/opt/mipsel-linux-uclibc/usr/include/string.h:
+
+gtkalias.h:
+
+gtkaliasdef.c:

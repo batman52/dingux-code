@@ -1,0 +1,30 @@
+#!/bin/sh
+
+# Required packages: 
+#
+# tslib-jz, expat-2.0.1, libxml2-2.6.30, freetype-2.3.5,
+# fontconfig-2.5.0, tiff-3.7.4, DirectFB-1.1.1, glib-2.12.13,
+# atk-1.20.0, cairo-1.4.12, pango-1.16.4, gtk+-2.10.14
+
+# Modify these two variables to yours
+#export PATH=/opt/mipsel-linux-uclibc/bin:/opt/mipsel-linux-uclibc/usr/bin:"$PATH"
+export INSTALL_PATH=/opt/mipsel-linux-uclibc/usr
+
+export PKG_CONFIG_PATH=${INSTALL_PATH}/lib/pkgconfig
+#export CC=mipsel-linux-gcc
+
+BUILDDIR=`pwd`
+
+echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+echo "@@ building cairo-1.8.8 ..."
+echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+
+# dependencies: libpng
+
+cd ${BUILDDIR}
+cd cairo-1.8.8
+./configure --prefix=${INSTALL_PATH} --host=mipsel-linux --disable-xlib --disable-xlib-xrender --enable-directfb --enable-freetype --without-x --enable-glitz=no
+make
+make install
+
+

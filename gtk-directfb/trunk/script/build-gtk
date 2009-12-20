@@ -1,0 +1,24 @@
+#!/bin/sh
+
+#export SOURCE_PATH=/media/Data/dingoo/dingux/dev/gtk-directfb/source
+export INSTALL_PATH=/opt/mipsel-linux-uclibc/usr
+
+export PKG_CONFIG_PATH=${INSTALL_PATH}/lib/pkgconfig
+#export CC=mipsel-linux-gcc
+
+BUILDDIR=`pwd`
+
+echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+echo "@@ building gtk+-2.17.0 ..."
+echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+
+# dependencies: GLib, Pango, ATK, cairo, DirectFB
+
+cd ${BUILDDIR}
+#tar xjf ${SOURCE_PATH}/gtk+-2.10.14.tar.bz2
+cd gtk+-2.17.0
+#patch -p0 < ${SOURCE_PATH}/gtk+-2.10.14-jz.patch
+./configure --prefix=${INSTALL_PATH} --host=mipsel-linux --with-gdktarget=directfb --without-x CFLAGS="-I${INSTALL_PATH}/include" LDFLAGS="-L${INSTALL_PATH}/lib"
+
+#make
+#make install

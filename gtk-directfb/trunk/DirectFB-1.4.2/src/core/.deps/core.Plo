@@ -1,0 +1,362 @@
+core.lo: core.c ../../config.h \
+  /opt/mipsel-linux-uclibc/usr/include/stdlib.h \
+  /opt/mipsel-linux-uclibc/usr/include/features.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/uClibc_config.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/uClibc_arch_features.h \
+  /opt/mipsel-linux-uclibc/usr/include/sys/cdefs.h \
+  /opt/mipsel-linux-uclibc/usr/bin/../lib/gcc/mipsel-linux-uclibc/4.3.3/include/stddef.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/waitflags.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/waitstatus.h \
+  /opt/mipsel-linux-uclibc/usr/include/endian.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/endian.h \
+  /opt/mipsel-linux-uclibc/usr/include/sys/types.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/types.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/wordsize.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/kernel_types.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/typesizes.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/pthreadtypes.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/sched.h \
+  /opt/mipsel-linux-uclibc/usr/include/time.h \
+  /opt/mipsel-linux-uclibc/usr/include/sys/select.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/select.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/sigset.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/time.h \
+  /opt/mipsel-linux-uclibc/usr/include/sys/sysmacros.h \
+  /opt/mipsel-linux-uclibc/usr/include/alloca.h \
+  /opt/mipsel-linux-uclibc/usr/include/unistd.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/posix_opt.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/environments.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/confname.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/getopt.h \
+  /opt/mipsel-linux-uclibc/usr/include/dirent.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/dirent.h \
+  /opt/mipsel-linux-uclibc/usr/include/errno.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/errno.h \
+  /opt/mipsel-linux-uclibc/usr/include/linux/errno.h \
+  /opt/mipsel-linux-uclibc/usr/include/asm/errno.h \
+  /opt/mipsel-linux-uclibc/usr/include/asm-generic/errno-base.h \
+  /opt/mipsel-linux-uclibc/usr/include/sys/syscall.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/sysnum.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/posix1_lim.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/local_lim.h \
+  /opt/mipsel-linux-uclibc/usr/include/linux/limits.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/uClibc_local_lim.h \
+  /opt/mipsel-linux-uclibc/usr/include/dlfcn.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/dlfcn.h \
+  /opt/mipsel-linux-uclibc/usr/include/pthread.h \
+  /opt/mipsel-linux-uclibc/usr/include/sched.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/uClibc_clk_tck.h \
+  /opt/mipsel-linux-uclibc/usr/include/signal.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/initspin.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/sigthread.h \
+  ../../lib/fusion/fusion.h ../../lib/fusion/types.h \
+  ../../lib/fusion/build.h ../../lib/direct/types.h \
+  ../../lib/direct/build.h \
+  /opt/mipsel-linux-uclibc/usr/bin/../lib/gcc/mipsel-linux-uclibc/4.3.3/include/stdbool.h \
+  /opt/mipsel-linux-uclibc/usr/include/stdint.h ../../lib/fusion/arena.h \
+  ../../lib/direct/list.h ../../lib/direct/debug.h \
+  /opt/mipsel-linux-uclibc/usr/include/stdio.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/uClibc_stdio.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/uClibc_mutex.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/uClibc_pthread.h \
+  /opt/mipsel-linux-uclibc/usr/bin/../lib/gcc/mipsel-linux-uclibc/4.3.3/include/stdarg.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/stdio_lim.h \
+  ../../lib/direct/clock.h \
+  /opt/mipsel-linux-uclibc/usr/include/sys/time.h ../../lib/direct/conf.h \
+  ../../lib/direct/messages.h \
+  /opt/mipsel-linux-uclibc/usr/include/sys/signal.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/signum.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/siginfo.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/sigaction.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/sigcontext.h \
+  /opt/mipsel-linux-uclibc/usr/include/sgidefs.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/sigstack.h \
+  /opt/mipsel-linux-uclibc/usr/include/ucontext.h \
+  /opt/mipsel-linux-uclibc/usr/include/sys/ucontext.h \
+  ../../lib/direct/log.h ../../lib/direct/system.h \
+  ../../lib/direct/thread.h ../../lib/direct/trace.h \
+  ../../lib/fusion/shmalloc.h ../../lib/fusion/shm/pool.h \
+  ../../include/directfb.h ../../include/dfb_types.h \
+  ../../include/directfb_keyboard.h ../../lib/direct/interface.h \
+  ../../lib/direct/mem.h /opt/mipsel-linux-uclibc/usr/include/string.h \
+  ../../src/core/coredefs.h ../../src/core/coretypes.h \
+  ../../src/core/core.h ../../lib/fusion/lock.h ../../lib/direct/util.h \
+  ../../lib/fusion/object.h ../../lib/fusion/ref.h \
+  ../../lib/fusion/call.h ../../lib/fusion/reactor.h \
+  ../../src/core/coretypes.h ../../src/core/coredefs.h \
+  ../../src/core/core_parts.h ../../src/core/layer_context.h \
+  ../../src/core/layer_region.h ../../src/core/layers.h \
+  ../../src/core/gfxcard.h ../../lib/direct/modules.h \
+  ../../src/core/surface_buffer.h ../../lib/fusion/vector.h \
+  /opt/mipsel-linux-uclibc/usr/bin/../lib/gcc/mipsel-linux-uclibc/4.3.3/include-fixed/limits.h \
+  /opt/mipsel-linux-uclibc/usr/bin/../lib/gcc/mipsel-linux-uclibc/4.3.3/include-fixed/syslimits.h \
+  /opt/mipsel-linux-uclibc/usr/include/limits.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/posix2_lim.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/xopen_lim.h \
+  ../../src/core/surface.h ../../lib/direct/serial.h \
+  ../../src/core/palette.h ../../src/core/system.h \
+  ../../src/core/windows.h ../../src/core/windows_internal.h \
+  ../../lib/direct/direct.h ../../lib/direct/memcpy.h \
+  ../../lib/direct/signals.h ../../lib/fusion/conf.h \
+  ../../src/misc/conf.h ../../src/misc/util.h \
+  ../../include/directfb_util.h ../../include/directfb_strings.h
+
+../../config.h:
+
+/opt/mipsel-linux-uclibc/usr/include/stdlib.h:
+
+/opt/mipsel-linux-uclibc/usr/include/features.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/uClibc_config.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/uClibc_arch_features.h:
+
+/opt/mipsel-linux-uclibc/usr/include/sys/cdefs.h:
+
+/opt/mipsel-linux-uclibc/usr/bin/../lib/gcc/mipsel-linux-uclibc/4.3.3/include/stddef.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/waitflags.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/waitstatus.h:
+
+/opt/mipsel-linux-uclibc/usr/include/endian.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/endian.h:
+
+/opt/mipsel-linux-uclibc/usr/include/sys/types.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/types.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/wordsize.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/kernel_types.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/typesizes.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/pthreadtypes.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/sched.h:
+
+/opt/mipsel-linux-uclibc/usr/include/time.h:
+
+/opt/mipsel-linux-uclibc/usr/include/sys/select.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/select.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/sigset.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/time.h:
+
+/opt/mipsel-linux-uclibc/usr/include/sys/sysmacros.h:
+
+/opt/mipsel-linux-uclibc/usr/include/alloca.h:
+
+/opt/mipsel-linux-uclibc/usr/include/unistd.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/posix_opt.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/environments.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/confname.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/getopt.h:
+
+/opt/mipsel-linux-uclibc/usr/include/dirent.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/dirent.h:
+
+/opt/mipsel-linux-uclibc/usr/include/errno.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/errno.h:
+
+/opt/mipsel-linux-uclibc/usr/include/linux/errno.h:
+
+/opt/mipsel-linux-uclibc/usr/include/asm/errno.h:
+
+/opt/mipsel-linux-uclibc/usr/include/asm-generic/errno-base.h:
+
+/opt/mipsel-linux-uclibc/usr/include/sys/syscall.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/sysnum.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/posix1_lim.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/local_lim.h:
+
+/opt/mipsel-linux-uclibc/usr/include/linux/limits.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/uClibc_local_lim.h:
+
+/opt/mipsel-linux-uclibc/usr/include/dlfcn.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/dlfcn.h:
+
+/opt/mipsel-linux-uclibc/usr/include/pthread.h:
+
+/opt/mipsel-linux-uclibc/usr/include/sched.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/uClibc_clk_tck.h:
+
+/opt/mipsel-linux-uclibc/usr/include/signal.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/initspin.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/sigthread.h:
+
+../../lib/fusion/fusion.h:
+
+../../lib/fusion/types.h:
+
+../../lib/fusion/build.h:
+
+../../lib/direct/types.h:
+
+../../lib/direct/build.h:
+
+/opt/mipsel-linux-uclibc/usr/bin/../lib/gcc/mipsel-linux-uclibc/4.3.3/include/stdbool.h:
+
+/opt/mipsel-linux-uclibc/usr/include/stdint.h:
+
+../../lib/fusion/arena.h:
+
+../../lib/direct/list.h:
+
+../../lib/direct/debug.h:
+
+/opt/mipsel-linux-uclibc/usr/include/stdio.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/uClibc_stdio.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/uClibc_mutex.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/uClibc_pthread.h:
+
+/opt/mipsel-linux-uclibc/usr/bin/../lib/gcc/mipsel-linux-uclibc/4.3.3/include/stdarg.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/stdio_lim.h:
+
+../../lib/direct/clock.h:
+
+/opt/mipsel-linux-uclibc/usr/include/sys/time.h:
+
+../../lib/direct/conf.h:
+
+../../lib/direct/messages.h:
+
+/opt/mipsel-linux-uclibc/usr/include/sys/signal.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/signum.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/siginfo.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/sigaction.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/sigcontext.h:
+
+/opt/mipsel-linux-uclibc/usr/include/sgidefs.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/sigstack.h:
+
+/opt/mipsel-linux-uclibc/usr/include/ucontext.h:
+
+/opt/mipsel-linux-uclibc/usr/include/sys/ucontext.h:
+
+../../lib/direct/log.h:
+
+../../lib/direct/system.h:
+
+../../lib/direct/thread.h:
+
+../../lib/direct/trace.h:
+
+../../lib/fusion/shmalloc.h:
+
+../../lib/fusion/shm/pool.h:
+
+../../include/directfb.h:
+
+../../include/dfb_types.h:
+
+../../include/directfb_keyboard.h:
+
+../../lib/direct/interface.h:
+
+../../lib/direct/mem.h:
+
+/opt/mipsel-linux-uclibc/usr/include/string.h:
+
+../../src/core/coredefs.h:
+
+../../src/core/coretypes.h:
+
+../../src/core/core.h:
+
+../../lib/fusion/lock.h:
+
+../../lib/direct/util.h:
+
+../../lib/fusion/object.h:
+
+../../lib/fusion/ref.h:
+
+../../lib/fusion/call.h:
+
+../../lib/fusion/reactor.h:
+
+../../src/core/coretypes.h:
+
+../../src/core/coredefs.h:
+
+../../src/core/core_parts.h:
+
+../../src/core/layer_context.h:
+
+../../src/core/layer_region.h:
+
+../../src/core/layers.h:
+
+../../src/core/gfxcard.h:
+
+../../lib/direct/modules.h:
+
+../../src/core/surface_buffer.h:
+
+../../lib/fusion/vector.h:
+
+/opt/mipsel-linux-uclibc/usr/bin/../lib/gcc/mipsel-linux-uclibc/4.3.3/include-fixed/limits.h:
+
+/opt/mipsel-linux-uclibc/usr/bin/../lib/gcc/mipsel-linux-uclibc/4.3.3/include-fixed/syslimits.h:
+
+/opt/mipsel-linux-uclibc/usr/include/limits.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/posix2_lim.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/xopen_lim.h:
+
+../../src/core/surface.h:
+
+../../lib/direct/serial.h:
+
+../../src/core/palette.h:
+
+../../src/core/system.h:
+
+../../src/core/windows.h:
+
+../../src/core/windows_internal.h:
+
+../../lib/direct/direct.h:
+
+../../lib/direct/memcpy.h:
+
+../../lib/direct/signals.h:
+
+../../lib/fusion/conf.h:
+
+../../src/misc/conf.h:
+
+../../src/misc/util.h:
+
+../../include/directfb_util.h:
+
+../../include/directfb_strings.h:

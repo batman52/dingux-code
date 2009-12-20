@@ -1,0 +1,36 @@
+#!/bin/sh
+
+# Modify these two variables to yours
+#export PATH=/opt/mipsel-linux-uclibc/bin:/opt/mipsel-linux-uclibc/usr/bin:"$PATH"
+#export SOURCE_PATH=/media/Data/dingoo/dingux/dev/openwrt/trunk/build_dir/target-_-
+export INSTALL_PATH=/opt/mipsel-linux-uclibc/usr
+
+export PKG_CONFIG_PATH=${INSTALL_PATH}/lib/pkgconfig
+#export CC=mipsel-linux-gcc
+
+BUILDDIR=`pwd`
+
+echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+echo "@@ building glib-2.22.2 ..."
+echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+
+# dependencies: none
+
+cd ${BUILDDIR}
+cd glib-2.22.2
+#make clean
+
+cd ..
+cp ./script/glib-config/configure ./glib-2.22.2
+cp ./script/glib-config/config.h ./glib-2.22.2
+cp ./script/glib-config/config.cache ./glib-2.22.2
+cd glib-2.22.2
+
+./configure --prefix=${INSTALL_PATH} --host=mipsel-linux --target=mipsel-linux --cache-file=config.cache 
+
+cd ..
+cp ./script/glib-config/config.h ./glib-2.22.2
+cd glib-2.22.2
+
+make
+make install

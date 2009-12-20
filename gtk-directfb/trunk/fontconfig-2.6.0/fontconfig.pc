@@ -1,0 +1,11 @@
+prefix=/opt/mipsel-linux-uclibc/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: Fontconfig
+Description: Font configuration and customization library
+Version: 2.6.0
+Libs: -L${libdir} -lfontconfig
+Libs.private: -lexpat -lfreetype -lz
+Cflags: -I${includedir}
