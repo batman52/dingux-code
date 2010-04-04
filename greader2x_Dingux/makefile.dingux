@@ -1,0 +1,25 @@
+LDFLAGS = -static
+
+CXX = mipsel-linux-g++
+STRIP = mipsel-linux-strip
+
+
+#CXXFLAGS = -I"/opt/mipsel-linux-uclibc/usr/include" -I"/opt/mipsel-linux-uclibc/usr/include/SDL" -DGP2X -O3 -Wall
+CXXFLAGS = -I/opt/mipsel-linux-uclibc/usr/include -I/opt/mipsel-linux-uclibc/usr/include/SDL -O3 -Wall -g
+LIBS = -L/opt/mipsel-linux-uclibc/usr/lib -lSDL --start-group -lSDL_ttf -lfreetype -lSDL --end-group -lSDL_image -ljpeg -lpng12 -lz --start-group -lSDL_mixer -lmad -lvorbisidec -lSDL --end-group -lgcc -lm -lc -lpthread -ldl -lpthread -static /opt/mipsel-linux-uclibc/usr/lib/libmikmod.a
+
+TARGET = Greader2x.dge
+OBJS = main.o screen.o joystick.o conf_ed.o utils.o GetDir.o player.o contrib/unzip.o contrib/ioapi.o
+
+ALL_TARGETS = $(TARGET)
+
+all: $(ALL_TARGETS)
+
+$(TARGET): $(OBJS)
+		$(CXX) $(LDFLAGS) -o $(TARGET) $(OBJS) $(LIBS)
+		$(STRIP) $(TARGET)
+
+clean:
+		rm *.o
+		rm contrib/*.o
+		rm $(TARGET)
