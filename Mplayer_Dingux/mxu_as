@@ -1,0 +1,2483 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+  
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>mxu_as - ucosII in JZ4740_Project - Gitorious</title>
+<link href="/stylesheets/base.css?1258462303" media="screen" rel="stylesheet" type="text/css" /><script src="/javascripts/all.js?1258462303" type="text/javascript"></script>  
+</head>
+
+<body id="blobs">
+    <div id="header">
+    <h1 id="logo">
+      <a href="/"><img alt="Logo-cube-text" src="/images/logo-cube-text.png?1258462303" /></a>    </h1>
+    
+    <ul id="menu">
+              <li><a href="/projects">All Projects</a></li>
+        <li><a href="/teams">All Teams</a></li>
+                    <li><a href="/about">About Gitorious</a></li>
+            
+    	<li class="secondary"><a href="/users/new">Register</a></li>
+    <li class="secondary"><a href="/login">Login</a></li>
+    </ul>
+    
+          <div id="searchbox">
+        
+
+
+<div class="search_bar">
+<form action="http://gitorious.org/search" method="get"><p>
+  <input class="text search-field round-5" id="q" name="q" type="text" /> 
+  <input type="submit" value="Search" class="search-submit round-5" />
+</p>  
+<p class="hint search-hint">
+  eg. 'wrapper', 'category:python' or '"document database"'
+    - <small><a id="advanced-search-toggler" href="#advanced">Advanced search tips</a></small>
+  </p>
+</form></div>
+      </div>
+    
+        
+	  </div>
+    <ul id="breadcrumbs">
+    <li class="user"><a href="/~jz4740">jz4740</a></li><li class="repository"><a href="/~jz4740/jz4740_project/ucosII">ucosII</a></li><li class="branch"><a href="/~jz4740/jz4740_project/ucosII/commits/580224e">580224e</a></li><li class="tree"><a href="/~jz4740/jz4740_project/ucosII/trees/580224eb86acaaebd40925e17591fb69e14cc745">/</a></li><li class="file"><a href="/~jz4740/jz4740_project/ucosII/blobs/580224eb86acaaebd40925e17591fb69e14cc745/mxu_as">mxu_as</a></li>  </ul>
+    <div id="container" class="">
+    <div id="content" class="">
+      
+      
+
+
+
+
+<!-- mime: text/plain -->
+
+       <div id="long-file" style="display:none"
+                  class="help-box center error round-5">
+               <div class="icon error"></div>        <p>
+          This file looks large and may slow your browser down if we attempt
+          to syntax highlight it, so we're showing it without any
+          pretty colors.
+          <a href="#highlight-anyway" id="highlight-anyway">Highlight
+          it anyway</a>.
+        </p>
+     </div>    <table id="codeblob" class="highlighted lang">
+<tr id="line1">
+<td class="line-numbers"><a href="#line1" name="line1">1</a></td>
+<td class="code"><pre class="prettyprint lang-">#! /bin/bash</pre></td>
+</tr>
+<tr id="line2">
+<td class="line-numbers"><a href="#line2" name="line2">2</a></td>
+<td class="code"><pre class="prettyprint lang-"></pre></td>
+</tr>
+<tr id="line3">
+<td class="line-numbers"><a href="#line3" name="line3">3</a></td>
+<td class="code"><pre class="prettyprint lang-">#expand $1 | sed  's/^ \+//g' | \</pre></td>
+</tr>
+<tr id="line4">
+<td class="line-numbers"><a href="#line4" name="line4">4</a></td>
+<td class="code"><pre class="prettyprint lang-">awk '</pre></td>
+</tr>
+<tr id="line5">
+<td class="line-numbers"><a href="#line5" name="line5">5</a></td>
+<td class="code"><pre class="prettyprint lang-">BEGIN { FS=&quot;[, \t]+&quot;</pre></td>
+</tr>
+<tr id="line6">
+<td class="line-numbers"><a href="#line6" name="line6">6</a></td>
+<td class="code"><pre class="prettyprint lang-">############################################################################################</pre></td>
+</tr>
+<tr id="line7">
+<td class="line-numbers"><a href="#line7" name="line7">7</a></td>
+<td class="code"><pre class="prettyprint lang-">#Common variables definition begins from here</pre></td>
+</tr>
+<tr id="line8">
+<td class="line-numbers"><a href="#line8" name="line8">8</a></td>
+<td class="code"><pre class="prettyprint lang-">############################################################################################</pre></td>
+</tr>
+<tr id="line9">
+<td class="line-numbers"><a href="#line9" name="line9">9</a></td>
+<td class="code"><pre class="prettyprint lang-">	MXINSN_OK=0; SPECIAL2=&quot;011100&quot;;</pre></td>
+</tr>
+<tr id="line10">
+<td class="line-numbers"><a href="#line10" name="line10">10</a></td>
+<td class="code"><pre class="prettyprint lang-">	MINOR0=&quot;MINOR0&quot;; EXTEND=&quot;EXTEND&quot;;</pre></td>
+</tr>
+<tr id="line11">
+<td class="line-numbers"><a href="#line11" name="line11">11</a></td>
+<td class="code"><pre class="prettyprint lang-">	WW=&quot;WW&quot;; LW=&quot;LW&quot;; HW=&quot;HW&quot;; XW=&quot;XW&quot;; AA=&quot;AA&quot;; AS=&quot;AS&quot;; SA=&quot;SA&quot;; SS=&quot;SS&quot;;</pre></td>
+</tr>
+<tr id="line12">
+<td class="line-numbers"><a href="#line12" name="line12">12</a></td>
+<td class="code"><pre class="prettyprint lang-">	PTN0=&quot;PTN0&quot;; PTN1=&quot;PTN1&quot;; PTN2=&quot;PTN2&quot;; PTN3=&quot;PTN3&quot;;</pre></td>
+</tr>
+<tr id="line13">
+<td class="line-numbers"><a href="#line13" name="line13">13</a></td>
+<td class="code"><pre class="prettyprint lang-">#&lt;------MNEMONIC SYMBOLs</pre></td>
+</tr>
+<tr id="line14">
+<td class="line-numbers"><a href="#line14" name="line14">14</a></td>
+<td class="code"><pre class="prettyprint lang-">	D16MUL=&quot;D16MUL&quot;; D16MULF=&quot;D16MULF&quot;; D16MAC=&quot;D16MAC&quot;; D16MACF=&quot;D16MACF&quot;; S16MAD=&quot;S16MAD&quot;;</pre></td>
+</tr>
+<tr id="line15">
+<td class="line-numbers"><a href="#line15" name="line15">15</a></td>
+<td class="code"><pre class="prettyprint lang-">	D16MADL=&quot;D16MADL&quot;; Q16ADD=&quot;Q16ADD&quot;; Q8MUL=&quot;Q8MUL&quot;; Q8MAC=&quot;Q8MAC&quot;; Q8MADL=&quot;Q8MADL&quot;;</pre></td>
+</tr>
+<tr id="line16">
+<td class="line-numbers"><a href="#line16" name="line16">16</a></td>
+<td class="code"><pre class="prettyprint lang-">	S32SFL=&quot;S32SFL&quot;; Q8SAD=&quot;Q8SAD&quot;; D32ADD=&quot;D32ADD&quot;; D32ACC=&quot;D32ACC&quot;; Q16ACC=&quot;Q16ACC&quot;;</pre></td>
+</tr>
+<tr id="line17">
+<td class="line-numbers"><a href="#line17" name="line17">17</a></td>
+<td class="code"><pre class="prettyprint lang-">	Q8ADDE=&quot;Q8ADDE&quot;; Q8ACCE=&quot;Q8ACCE&quot;; S32CPS=&quot;S32CPS&quot;; D16CPS=&quot;D16CPS&quot;; Q8ABD=&quot;Q8ABD&quot;;</pre></td>
+</tr>
+<tr id="line18">
+<td class="line-numbers"><a href="#line18" name="line18">18</a></td>
+<td class="code"><pre class="prettyprint lang-">	Q16SAT=&quot;Q16SAT&quot;; D16AVG=&quot;D16AVG&quot;; D16AVGR=&quot;D16AVGR&quot;; Q8AVG=&quot;Q8AVG&quot;; Q8AVGR=&quot;Q8AVGR&quot;;</pre></td>
+</tr>
+<tr id="line19">
+<td class="line-numbers"><a href="#line19" name="line19">19</a></td>
+<td class="code"><pre class="prettyprint lang-">	Q8ADD=&quot;Q8ADD&quot;; S32MAX=&quot;S32MAX&quot;; S32MIN=&quot;S32MIN&quot;; D16MAX=&quot;D16MAX&quot;; D16MIN=&quot;D16MIN&quot;;</pre></td>
+</tr>
+<tr id="line20">
+<td class="line-numbers"><a href="#line20" name="line20">20</a></td>
+<td class="code"><pre class="prettyprint lang-">	Q8MAX=&quot;Q8MAX&quot;; Q8MIN=&quot;Q8MIN&quot;; Q8SLT=&quot;Q8SLT&quot;; D32SLL=&quot;D32SLL&quot;; D32SLR=&quot;D32SLR&quot;;</pre></td>
+</tr>
+<tr id="line21">
+<td class="line-numbers"><a href="#line21" name="line21">21</a></td>
+<td class="code"><pre class="prettyprint lang-">	D32SARL=&quot;D32SARL&quot;; D32SAR=&quot;D32SAR&quot;; Q16SLL=&quot;Q16SLL&quot;; Q16SLR=&quot;Q16SLR&quot;; Q16SAR=&quot;Q16SAR&quot;;</pre></td>
+</tr>
+<tr id="line22">
+<td class="line-numbers"><a href="#line22" name="line22">22</a></td>
+<td class="code"><pre class="prettyprint lang-">	D32SLLV=&quot;D32SLLV&quot;; D32SLRV=&quot;D32SLRV&quot;; D32SARV=&quot;D32SARV&quot;; Q16SLLV=&quot;Q16SLLV&quot;; </pre></td>
+</tr>
+<tr id="line23">
+<td class="line-numbers"><a href="#line23" name="line23">23</a></td>
+<td class="code"><pre class="prettyprint lang-">	Q16SLRV=&quot;Q16SLRV&quot;; Q16SARV=&quot;Q16SARV&quot;; D32SARW=&quot;D32SARW&quot;; S32ALN=&quot;S32ALN&quot;; S32M2I=&quot;S32M2I&quot;; </pre></td>
+</tr>
+<tr id="line24">
+<td class="line-numbers"><a href="#line24" name="line24">24</a></td>
+<td class="code"><pre class="prettyprint lang-">	S32I2M=&quot;S32I2M&quot;; S32LDD=&quot;S32LDD&quot;; S32STD=&quot;S32STD&quot;; S32LDI=&quot;S32LDI&quot;; S32SDI=&quot;S32SDI&quot;;</pre></td>
+</tr>
+<tr id="line25">
+<td class="line-numbers"><a href="#line25" name="line25">25</a></td>
+<td class="code"><pre class="prettyprint lang-">	S32LDDV=&quot;S32LDDV&quot;; S32STDV=&quot;S32STDV&quot;; S32LDIV=&quot;S32LDIV&quot;; S32SDIV=&quot;S32SDIV&quot;; </pre></td>
+</tr>
+<tr id="line26">
+<td class="line-numbers"><a href="#line26" name="line26">26</a></td>
+<td class="code"><pre class="prettyprint lang-"></pre></td>
+</tr>
+<tr id="line27">
+<td class="line-numbers"><a href="#line27" name="line27">27</a></td>
+<td class="code"><pre class="prettyprint lang-">#&lt;------XRF SYMBOL</pre></td>
+</tr>
+<tr id="line28">
+<td class="line-numbers"><a href="#line28" name="line28">28</a></td>
+<td class="code"><pre class="prettyprint lang-">	XR0=&quot;XR0&quot;; XR1=&quot;XR1&quot;; XR2=&quot;XR2&quot;; XR3=&quot;XR3&quot;; XR4=&quot;XR4&quot;; XR5=&quot;XR5&quot;; XR6=&quot;XR6&quot;; XR7=&quot;XR7&quot;;</pre></td>
+</tr>
+<tr id="line29">
+<td class="line-numbers"><a href="#line29" name="line29">29</a></td>
+<td class="code"><pre class="prettyprint lang-">	XR8=&quot;XR8&quot;; XR9=&quot;XR9&quot;; XR10=&quot;XR10&quot;; XR11=&quot;XR11&quot;; XR12=&quot;XR12&quot;; XR13=&quot;XR13&quot;; XR14=&quot;XR14&quot;; </pre></td>
+</tr>
+<tr id="line30">
+<td class="line-numbers"><a href="#line30" name="line30">30</a></td>
+<td class="code"><pre class="prettyprint lang-">	XR15=&quot;XR15&quot;; XR16=&quot;XR16&quot;;</pre></td>
+</tr>
+<tr id="line31">
+<td class="line-numbers"><a href="#line31" name="line31">31</a></td>
+<td class="code"><pre class="prettyprint lang-"></pre></td>
+</tr>
+<tr id="line32">
+<td class="line-numbers"><a href="#line32" name="line32">32</a></td>
+<td class="code"><pre class="prettyprint lang-">#&lt;------GRF alias</pre></td>
+</tr>
+<tr id="line33">
+<td class="line-numbers"><a href="#line33" name="line33">33</a></td>
+<td class="code"><pre class="prettyprint lang-">	ZERO=&quot;ZERO&quot;; AT=&quot;AT&quot;; V0=&quot;V0&quot;; V1=&quot;V1&quot;; A0=&quot;A0&quot;; A1=&quot;A1&quot;; A2=&quot;A2&quot;; A3=&quot;A3&quot;;</pre></td>
+</tr>
+<tr id="line34">
+<td class="line-numbers"><a href="#line34" name="line34">34</a></td>
+<td class="code"><pre class="prettyprint lang-">	T0=&quot;T0&quot;; T1=&quot;T1&quot;; T2=&quot;T2&quot;; T3=&quot;T3&quot;; T4=&quot;T4&quot;; T5=&quot;T5&quot;; T6=&quot;T6&quot;; T7=&quot;T7&quot;;</pre></td>
+</tr>
+<tr id="line35">
+<td class="line-numbers"><a href="#line35" name="line35">35</a></td>
+<td class="code"><pre class="prettyprint lang-">	S0=&quot;S0&quot;; S1=&quot;S1&quot;; S2=&quot;S2&quot;; S3=&quot;S3&quot;; S4=&quot;S4&quot;; S5=&quot;S5&quot;; S6=&quot;S6&quot;; S7=&quot;S7&quot;;</pre></td>
+</tr>
+<tr id="line36">
+<td class="line-numbers"><a href="#line36" name="line36">36</a></td>
+<td class="code"><pre class="prettyprint lang-">	T8=&quot;T8&quot;; T9=&quot;T9&quot;; K0=&quot;K0&quot;; K1=&quot;K1&quot;; GP=&quot;GP&quot;; SP=&quot;SP&quot;; S8=&quot;S8&quot;; RA=&quot;RA&quot;;</pre></td>
+</tr>
+<tr id="line37">
+<td class="line-numbers"><a href="#line37" name="line37">37</a></td>
+<td class="code"><pre class="prettyprint lang-">	FP=&quot;FP&quot;;</pre></td>
+</tr>
+<tr id="line38">
+<td class="line-numbers"><a href="#line38" name="line38">38</a></td>
+<td class="code"><pre class="prettyprint lang-"></pre></td>
+</tr>
+<tr id="line39">
+<td class="line-numbers"><a href="#line39" name="line39">39</a></td>
+<td class="code"><pre class="prettyprint lang-">#&lt;------Dual MUL/MAC/ADD16 pattern</pre></td>
+</tr>
+<tr id="line40">
+<td class="line-numbers"><a href="#line40" name="line40">40</a></td>
+<td class="code"><pre class="prettyprint lang-">	MUL_PTN[WW]=&quot;00&quot;; MUL_PTN[LW]=&quot;01&quot;; MUL_PTN[HW]=&quot;10&quot;; MUL_PTN[XW]=&quot;11&quot;; </pre></td>
+</tr>
+<tr id="line41">
+<td class="line-numbers"><a href="#line41" name="line41">41</a></td>
+<td class="code"><pre class="prettyprint lang-">	MUL_PTN[0]=&quot;00&quot;; MUL_PTN[1]=&quot;01&quot;; MUL_PTN[2]=&quot;10&quot;; MUL_PTN[3]=&quot;11&quot;; </pre></td>
+</tr>
+<tr id="line42">
+<td class="line-numbers"><a href="#line42" name="line42">42</a></td>
+<td class="code"><pre class="prettyprint lang-"></pre></td>
+</tr>
+<tr id="line43">
+<td class="line-numbers"><a href="#line43" name="line43">43</a></td>
+<td class="code"><pre class="prettyprint lang-">#&lt;------MAC add/sub combinations</pre></td>
+</tr>
+<tr id="line44">
+<td class="line-numbers"><a href="#line44" name="line44">44</a></td>
+<td class="code"><pre class="prettyprint lang-">	MAC_AS[AA]=&quot;00&quot;; MAC_AS[AS]=&quot;01&quot;; MAC_AS[SA]=&quot;10&quot;; MAC_AS[SS]=&quot;11&quot;;</pre></td>
+</tr>
+<tr id="line45">
+<td class="line-numbers"><a href="#line45" name="line45">45</a></td>
+<td class="code"><pre class="prettyprint lang-">	MAC_AS[0]=&quot;00&quot;;  MAC_AS[1]=&quot;01&quot;; MAC_AS[2]=&quot;10&quot;; MAC_AS[3]=&quot;11&quot;;</pre></td>
+</tr>
+<tr id="line46">
+<td class="line-numbers"><a href="#line46" name="line46">46</a></td>
+<td class="code"><pre class="prettyprint lang-"></pre></td>
+</tr>
+<tr id="line47">
+<td class="line-numbers"><a href="#line47" name="line47">47</a></td>
+<td class="code"><pre class="prettyprint lang-">#&lt;------XRF encoding</pre></td>
+</tr>
+<tr id="line48">
+<td class="line-numbers"><a href="#line48" name="line48">48</a></td>
+<td class="code"><pre class="prettyprint lang-">	xrf[XR0]=&quot;0000&quot;; xrf[XR1]=&quot;0001&quot;; xrf[XR2]=&quot;0010&quot;; xrf[XR3]=&quot;0011&quot;; </pre></td>
+</tr>
+<tr id="line49">
+<td class="line-numbers"><a href="#line49" name="line49">49</a></td>
+<td class="code"><pre class="prettyprint lang-">	xrf[XR4]=&quot;0100&quot;; xrf[XR5]=&quot;0101&quot;; xrf[XR6]=&quot;0110&quot;; xrf[XR7]=&quot;0111&quot;;</pre></td>
+</tr>
+<tr id="line50">
+<td class="line-numbers"><a href="#line50" name="line50">50</a></td>
+<td class="code"><pre class="prettyprint lang-">	xrf[XR8]=&quot;1000&quot;; xrf[XR9]=&quot;1001&quot;; xrf[XR10]=&quot;1010&quot;; xrf[XR11]=&quot;1011&quot;; </pre></td>
+</tr>
+<tr id="line51">
+<td class="line-numbers"><a href="#line51" name="line51">51</a></td>
+<td class="code"><pre class="prettyprint lang-">	xrf[XR12]=&quot;1100&quot;; xrf[XR13]=&quot;1101&quot;; xrf[XR14]=&quot;1110&quot;; xrf[XR15]=&quot;1111&quot;;</pre></td>
+</tr>
+<tr id="line52">
+<td class="line-numbers"><a href="#line52" name="line52">52</a></td>
+<td class="code"><pre class="prettyprint lang-"></pre></td>
+</tr>
+<tr id="line53">
+<td class="line-numbers"><a href="#line53" name="line53">53</a></td>
+<td class="code"><pre class="prettyprint lang-">#&lt;------GRF encoding</pre></td>
+</tr>
+<tr id="line54">
+<td class="line-numbers"><a href="#line54" name="line54">54</a></td>
+<td class="code"><pre class="prettyprint lang-">	grf[ZERO]=&quot;0&quot;; grf[AT]=&quot;1&quot;; grf[V0]=&quot;2&quot;; grf[V1]=&quot;3&quot;; grf[A0]=&quot;4&quot;; grf[A1]=&quot;5&quot;; </pre></td>
+</tr>
+<tr id="line55">
+<td class="line-numbers"><a href="#line55" name="line55">55</a></td>
+<td class="code"><pre class="prettyprint lang-">	grf[A2]=&quot;6&quot;; grf[A3]=&quot;7&quot;; grf[T0]=&quot;8&quot;; grf[T1]=&quot;9&quot;; grf[T2]=&quot;10&quot;; grf[T3]=&quot;11&quot;; </pre></td>
+</tr>
+<tr id="line56">
+<td class="line-numbers"><a href="#line56" name="line56">56</a></td>
+<td class="code"><pre class="prettyprint lang-">	grf[T4]=&quot;12&quot;; grf[T5]=&quot;13&quot;; grf[T6]=&quot;14&quot;; grf[T7]=&quot;15&quot;; grf[S0]=&quot;16&quot;; grf[S1]=&quot;17&quot;; </pre></td>
+</tr>
+<tr id="line57">
+<td class="line-numbers"><a href="#line57" name="line57">57</a></td>
+<td class="code"><pre class="prettyprint lang-">	grf[S2]=&quot;18&quot;; grf[S3]=&quot;19&quot;; grf[S4]=&quot;20&quot;; grf[S5]=&quot;21&quot;; grf[S6]=&quot;22&quot;; grf[S7]=&quot;23&quot;; </pre></td>
+</tr>
+<tr id="line58">
+<td class="line-numbers"><a href="#line58" name="line58">58</a></td>
+<td class="code"><pre class="prettyprint lang-">	grf[T8]=&quot;24&quot;; grf[T9]=&quot;25&quot;; grf[K0]=&quot;26&quot;; grf[K1]=&quot;27&quot;; grf[GP]=&quot;28&quot;; grf[SP]=&quot;29&quot;; </pre></td>
+</tr>
+<tr id="line59">
+<td class="line-numbers"><a href="#line59" name="line59">59</a></td>
+<td class="code"><pre class="prettyprint lang-">	grf[S8]=&quot;30&quot;; grf[RA]=&quot;31&quot;; grf[FP]=&quot;30&quot;;	</pre></td>
+</tr>
+<tr id="line60">
+<td class="line-numbers"><a href="#line60" name="line60">60</a></td>
+<td class="code"><pre class="prettyprint lang-">	</pre></td>
+</tr>
+<tr id="line61">
+<td class="line-numbers"><a href="#line61" name="line61">61</a></td>
+<td class="code"><pre class="prettyprint lang-">#&lt;------MINOR and EXTEND field</pre></td>
+</tr>
+<tr id="line62">
+<td class="line-numbers"><a href="#line62" name="line62">62</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[D16MUL,MINOR0] =&quot;&quot;; insn[D16MUL,EXTEND] =&quot;001000&quot;;</pre></td>
+</tr>
+<tr id="line63">
+<td class="line-numbers"><a href="#line63" name="line63">63</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[D16MULF,MINOR0] =&quot;&quot;; insn[D16MULF,EXTEND] =&quot;001001&quot;;</pre></td>
+</tr>
+<tr id="line64">
+<td class="line-numbers"><a href="#line64" name="line64">64</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[D16MAC,MINOR0] =&quot;&quot;; insn[D16MAC,EXTEND] =&quot;001010&quot;;</pre></td>
+</tr>
+<tr id="line65">
+<td class="line-numbers"><a href="#line65" name="line65">65</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[D16MACF,MINOR0] =&quot;&quot;; insn[D16MACF,EXTEND] =&quot;001011&quot;;</pre></td>
+</tr>
+<tr id="line66">
+<td class="line-numbers"><a href="#line66" name="line66">66</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[D16MADL,MINOR0] =&quot;&quot;; insn[D16MADL,EXTEND] =&quot;001100&quot;;</pre></td>
+</tr>
+<tr id="line67">
+<td class="line-numbers"><a href="#line67" name="line67">67</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[S16MAD,MINOR0] =&quot;&quot;; insn[S16MAD,EXTEND] =&quot;001101&quot;;</pre></td>
+</tr>
+<tr id="line68">
+<td class="line-numbers"><a href="#line68" name="line68">68</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[Q16ADD,MINOR0] =&quot;&quot;; insn[Q16ADD,EXTEND] =&quot;001110&quot;;</pre></td>
+</tr>
+<tr id="line69">
+<td class="line-numbers"><a href="#line69" name="line69">69</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[Q8MUL,MINOR0] =&quot;&quot;; insn[Q8MUL,EXTEND] =&quot;111000&quot;;</pre></td>
+</tr>
+<tr id="line70">
+<td class="line-numbers"><a href="#line70" name="line70">70</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[Q8MAC,MINOR0] =&quot;&quot;; insn[Q8MAC,EXTEND] =&quot;111010&quot;;</pre></td>
+</tr>
+<tr id="line71">
+<td class="line-numbers"><a href="#line71" name="line71">71</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[Q8MADL,MINOR0] =&quot;&quot;; insn[Q8MADL,EXTEND] =&quot;111100&quot;;</pre></td>
+</tr>
+<tr id="line72">
+<td class="line-numbers"><a href="#line72" name="line72">72</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[Q8SAD,MINOR0] =&quot;&quot;; insn[Q8SAD,EXTEND] =&quot;111110&quot;;</pre></td>
+</tr>
+<tr id="line73">
+<td class="line-numbers"><a href="#line73" name="line73">73</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[D32ADD,MINOR0] =&quot;&quot;; insn[D32ADD,EXTEND] =&quot;011000&quot;;</pre></td>
+</tr>
+<tr id="line74">
+<td class="line-numbers"><a href="#line74" name="line74">74</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[D32ACC,MINOR0] =&quot;&quot;; insn[D32ACC,EXTEND] =&quot;011001&quot;;</pre></td>
+</tr>
+<tr id="line75">
+<td class="line-numbers"><a href="#line75" name="line75">75</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[Q16ACC,MINOR0] =&quot;&quot;; insn[Q16ACC,EXTEND] =&quot;011011&quot;;</pre></td>
+</tr>
+<tr id="line76">
+<td class="line-numbers"><a href="#line76" name="line76">76</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[Q8ADDE,MINOR0] =&quot;&quot;; insn[Q8ADDE,EXTEND] =&quot;011100&quot;;</pre></td>
+</tr>
+<tr id="line77">
+<td class="line-numbers"><a href="#line77" name="line77">77</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[Q8ACCE,MINOR0] =&quot;&quot;; insn[Q8ACCE,EXTEND] =&quot;011101&quot;;</pre></td>
+</tr>
+<tr id="line78">
+<td class="line-numbers"><a href="#line78" name="line78">78</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[D16CPS,MINOR0] =&quot;010&quot;; insn[D16CPS,EXTEND] =&quot;000111&quot;;</pre></td>
+</tr>
+<tr id="line79">
+<td class="line-numbers"><a href="#line79" name="line79">79</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[Q8ABD,MINOR0] =&quot;100&quot;; insn[Q8ABD,EXTEND] =&quot;000111&quot;;</pre></td>
+</tr>
+<tr id="line80">
+<td class="line-numbers"><a href="#line80" name="line80">80</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[Q16SAT,MINOR0] =&quot;110&quot;; insn[Q16SAT,EXTEND] =&quot;000111&quot;;</pre></td>
+</tr>
+<tr id="line81">
+<td class="line-numbers"><a href="#line81" name="line81">81</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[D16AVG,MINOR0] =&quot;010&quot;; insn[D16AVG,EXTEND] =&quot;000110&quot;;</pre></td>
+</tr>
+<tr id="line82">
+<td class="line-numbers"><a href="#line82" name="line82">82</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[D16AVGR,MINOR0] =&quot;011&quot;; insn[D16AVGR,EXTEND] =&quot;000110&quot;;</pre></td>
+</tr>
+<tr id="line83">
+<td class="line-numbers"><a href="#line83" name="line83">83</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[Q8AVG,MINOR0] =&quot;100&quot;; insn[Q8AVG,EXTEND] =&quot;000110&quot;;</pre></td>
+</tr>
+<tr id="line84">
+<td class="line-numbers"><a href="#line84" name="line84">84</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[Q8AVGR,MINOR0] =&quot;101&quot;; insn[Q8AVGR,EXTEND] =&quot;000110&quot;;</pre></td>
+</tr>
+<tr id="line85">
+<td class="line-numbers"><a href="#line85" name="line85">85</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[Q8ADD,MINOR0] =&quot;111&quot;; insn[Q8ADD,EXTEND] =&quot;000110&quot;;</pre></td>
+</tr>
+<tr id="line86">
+<td class="line-numbers"><a href="#line86" name="line86">86</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[D16MAX,MINOR0] =&quot;010&quot;; insn[D16MAX,EXTEND] =&quot;000011&quot;;</pre></td>
+</tr>
+<tr id="line87">
+<td class="line-numbers"><a href="#line87" name="line87">87</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[D16MIN,MINOR0] =&quot;011&quot;; insn[D16MIN,EXTEND] =&quot;000011&quot;;</pre></td>
+</tr>
+<tr id="line88">
+<td class="line-numbers"><a href="#line88" name="line88">88</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[Q8MAX,MINOR0] =&quot;100&quot;; insn[Q8MAX,EXTEND] =&quot;000011&quot;;</pre></td>
+</tr>
+<tr id="line89">
+<td class="line-numbers"><a href="#line89" name="line89">89</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[Q8MIN,MINOR0] =&quot;101&quot;; insn[Q8MIN,EXTEND] =&quot;000011&quot;;</pre></td>
+</tr>
+<tr id="line90">
+<td class="line-numbers"><a href="#line90" name="line90">90</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[Q8SLT,MINOR0] =&quot;110&quot;; insn[Q8SLT,EXTEND] =&quot;000011&quot;;</pre></td>
+</tr>
+<tr id="line91">
+<td class="line-numbers"><a href="#line91" name="line91">91</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[D32SLL,MINOR0] =&quot;&quot;; insn[D32SLL,EXTEND] =&quot;110000&quot;;</pre></td>
+</tr>
+<tr id="line92">
+<td class="line-numbers"><a href="#line92" name="line92">92</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[D32SLR,MINOR0] =&quot;&quot;; insn[D32SLR,EXTEND] =&quot;110001&quot;;</pre></td>
+</tr>
+<tr id="line93">
+<td class="line-numbers"><a href="#line93" name="line93">93</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[D32SARL,MINOR0] =&quot;&quot;; insn[D32SARL,EXTEND] =&quot;110010&quot;;</pre></td>
+</tr>
+<tr id="line94">
+<td class="line-numbers"><a href="#line94" name="line94">94</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[D32SAR,MINOR0] =&quot;&quot;; insn[D32SAR,EXTEND] =&quot;110011&quot;;</pre></td>
+</tr>
+<tr id="line95">
+<td class="line-numbers"><a href="#line95" name="line95">95</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[Q16SLL,MINOR0] =&quot;&quot;; insn[Q16SLL,EXTEND] =&quot;110100&quot;;</pre></td>
+</tr>
+<tr id="line96">
+<td class="line-numbers"><a href="#line96" name="line96">96</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[Q16SLR,MINOR0] =&quot;&quot;; insn[Q16SLR,EXTEND] =&quot;110101&quot;;</pre></td>
+</tr>
+<tr id="line97">
+<td class="line-numbers"><a href="#line97" name="line97">97</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[Q16SAR,MINOR0] =&quot;&quot;; insn[Q16SAR,EXTEND] =&quot;110111&quot;;</pre></td>
+</tr>
+<tr id="line98">
+<td class="line-numbers"><a href="#line98" name="line98">98</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[D32SLLV,MINOR0] =&quot;000&quot;; insn[D32SLLV,EXTEND] =&quot;110110&quot;;</pre></td>
+</tr>
+<tr id="line99">
+<td class="line-numbers"><a href="#line99" name="line99">99</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[D32SLRV,MINOR0] =&quot;001&quot;; insn[D32SLRV,EXTEND] =&quot;110110&quot;;</pre></td>
+</tr>
+<tr id="line100">
+<td class="line-numbers"><a href="#line100" name="line100">100</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[D32SARV,MINOR0] =&quot;011&quot;; insn[D32SARV,EXTEND] =&quot;110110&quot;;</pre></td>
+</tr>
+<tr id="line101">
+<td class="line-numbers"><a href="#line101" name="line101">101</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[Q16SLLV,MINOR0] =&quot;100&quot;; insn[Q16SLLV,EXTEND] =&quot;110110&quot;;</pre></td>
+</tr>
+<tr id="line102">
+<td class="line-numbers"><a href="#line102" name="line102">102</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[Q16SLRV,MINOR0] =&quot;101&quot;; insn[Q16SLRV,EXTEND] =&quot;110110&quot;;</pre></td>
+</tr>
+<tr id="line103">
+<td class="line-numbers"><a href="#line103" name="line103">103</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[Q16SARV,MINOR0] =&quot;111&quot;; insn[Q16SARV,EXTEND] =&quot;110110&quot;;</pre></td>
+</tr>
+<tr id="line104">
+<td class="line-numbers"><a href="#line104" name="line104">104</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[D32SARW,MINOR0] =&quot;000&quot;; insn[D32SARW,EXTEND] =&quot;100111&quot;;</pre></td>
+</tr>
+<tr id="line105">
+<td class="line-numbers"><a href="#line105" name="line105">105</a></td>
+<td class="code"><pre class="prettyprint lang-"></pre></td>
+</tr>
+<tr id="line106">
+<td class="line-numbers"><a href="#line106" name="line106">106</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[S32SFL,MINOR0] =&quot;&quot;; insn[S32SFL,EXTEND] =&quot;111101&quot;;</pre></td>
+</tr>
+<tr id="line107">
+<td class="line-numbers"><a href="#line107" name="line107">107</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[S32CPS,MINOR0] =&quot;000&quot;; insn[S32CPS,EXTEND] =&quot;000111&quot;;</pre></td>
+</tr>
+<tr id="line108">
+<td class="line-numbers"><a href="#line108" name="line108">108</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[S32MAX,MINOR0] =&quot;000&quot;; insn[S32MAX,EXTEND] =&quot;000011&quot;;</pre></td>
+</tr>
+<tr id="line109">
+<td class="line-numbers"><a href="#line109" name="line109">109</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[S32MIN,MINOR0] =&quot;001&quot;; insn[S32MIN,EXTEND] =&quot;000011&quot;;</pre></td>
+</tr>
+<tr id="line110">
+<td class="line-numbers"><a href="#line110" name="line110">110</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[S32ALN,MINOR0] =&quot;001&quot;; insn[S32ALN,EXTEND] =&quot;100111&quot;;</pre></td>
+</tr>
+<tr id="line111">
+<td class="line-numbers"><a href="#line111" name="line111">111</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[S32M2I,MINOR0] =&quot;&quot;; insn[S32M2I,EXTEND] =&quot;101110&quot;;</pre></td>
+</tr>
+<tr id="line112">
+<td class="line-numbers"><a href="#line112" name="line112">112</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[S32I2M,MINOR0] =&quot;&quot;; insn[S32I2M,EXTEND] =&quot;101111&quot;;</pre></td>
+</tr>
+<tr id="line113">
+<td class="line-numbers"><a href="#line113" name="line113">113</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[S32LDD,MINOR0] =&quot;&quot;; insn[S32LDD,EXTEND] =&quot;010000&quot;;</pre></td>
+</tr>
+<tr id="line114">
+<td class="line-numbers"><a href="#line114" name="line114">114</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[S32STD,MINOR0] =&quot;&quot;; insn[S32STD,EXTEND] =&quot;010001&quot;;</pre></td>
+</tr>
+<tr id="line115">
+<td class="line-numbers"><a href="#line115" name="line115">115</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[S32LDI,MINOR0] =&quot;&quot;; insn[S32LDI,EXTEND] =&quot;010100&quot;;</pre></td>
+</tr>
+<tr id="line116">
+<td class="line-numbers"><a href="#line116" name="line116">116</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[S32SDI,MINOR0] =&quot;&quot;; insn[S32SDI,EXTEND] =&quot;010101&quot;;</pre></td>
+</tr>
+<tr id="line117">
+<td class="line-numbers"><a href="#line117" name="line117">117</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[S32LDDV,MINOR0] =&quot;&quot;; insn[S32LDDV,EXTEND] =&quot;010010&quot;;</pre></td>
+</tr>
+<tr id="line118">
+<td class="line-numbers"><a href="#line118" name="line118">118</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[S32STDV,MINOR0] =&quot;&quot;; insn[S32STDV,EXTEND] =&quot;010011&quot;;</pre></td>
+</tr>
+<tr id="line119">
+<td class="line-numbers"><a href="#line119" name="line119">119</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[S32LDIV,MINOR0] =&quot;&quot;; insn[S32LDIV,EXTEND] =&quot;010110&quot;;</pre></td>
+</tr>
+<tr id="line120">
+<td class="line-numbers"><a href="#line120" name="line120">120</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[S32SDIV,MINOR0] =&quot;&quot;; insn[S32SDIV,EXTEND] =&quot;010111&quot;;</pre></td>
+</tr>
+<tr id="line121">
+<td class="line-numbers"><a href="#line121" name="line121">121</a></td>
+<td class="code"><pre class="prettyprint lang-"></pre></td>
+</tr>
+<tr id="line122">
+<td class="line-numbers"><a href="#line122" name="line122">122</a></td>
+<td class="code"><pre class="prettyprint lang-">#&lt;------Specific binary code of S32SFL</pre></td>
+</tr>
+<tr id="line123">
+<td class="line-numbers"><a href="#line123" name="line123">123</a></td>
+<td class="code"><pre class="prettyprint lang-">	SFL_PTN[PTN0]=&quot;00&quot;; SFL_PTN[PTN1]=&quot;01&quot;;	SFL_PTN[PTN2]=&quot;10&quot;; SFL_PTN[PTN3]=&quot;11&quot;;</pre></td>
+</tr>
+<tr id="line124">
+<td class="line-numbers"><a href="#line124" name="line124">124</a></td>
+<td class="code"><pre class="prettyprint lang-">	SFL_PTN[0]=&quot;00&quot;; SFL_PTN[1]=&quot;01&quot;; SFL_PTN[2]=&quot;10&quot;; SFL_PTN[3]=&quot;11&quot;;</pre></td>
+</tr>
+<tr id="line125">
+<td class="line-numbers"><a href="#line125" name="line125">125</a></td>
+<td class="code"><pre class="prettyprint lang-"> }</pre></td>
+</tr>
+<tr id="line126">
+<td class="line-numbers"><a href="#line126" name="line126">126</a></td>
+<td class="code"><pre class="prettyprint lang-"></pre></td>
+</tr>
+<tr id="line127">
+<td class="line-numbers"><a href="#line127" name="line127">127</a></td>
+<td class="code"><pre class="prettyprint lang-">############################################################################################</pre></td>
+</tr>
+<tr id="line128">
+<td class="line-numbers"><a href="#line128" name="line128">128</a></td>
+<td class="code"><pre class="prettyprint lang-">#Real assemble process begins from here</pre></td>
+</tr>
+<tr id="line129">
+<td class="line-numbers"><a href="#line129" name="line129">129</a></td>
+<td class="code"><pre class="prettyprint lang-">############################################################################################</pre></td>
+</tr>
+<tr id="line130">
+<td class="line-numbers"><a href="#line130" name="line130">130</a></td>
+<td class="code"><pre class="prettyprint lang-"># Preprocess each record</pre></td>
+</tr>
+<tr id="line131">
+<td class="line-numbers"><a href="#line131" name="line131">131</a></td>
+<td class="code"><pre class="prettyprint lang-">	(NF != 0) {sub(/^[ \t]+/, &quot;&quot;, $0); MXINSN_OK=0; cur_line=$0;}</pre></td>
+</tr>
+<tr id="line132">
+<td class="line-numbers"><a href="#line132" name="line132">132</a></td>
+<td class="code"><pre class="prettyprint lang-">	( match(toupper($0), &quot;^[A-Z_][0-9A-Z_]*[ \t]*:[ \t]*[0-9A-Z_]+&quot;) == 1) { \</pre></td>
+</tr>
+<tr id="line133">
+<td class="line-numbers"><a href="#line133" name="line133">133</a></td>
+<td class="code"><pre class="prettyprint lang-">	as_label=substr($0, 1, RLENGTH); print as_label; $0=substr($0,RLENGTH+1) }</pre></td>
+</tr>
+<tr id="line134">
+<td class="line-numbers"><a href="#line134" name="line134">134</a></td>
+<td class="code"><pre class="prettyprint lang-"></pre></td>
+</tr>
+<tr id="line135">
+<td class="line-numbers"><a href="#line135" name="line135">135</a></td>
+<td class="code"><pre class="prettyprint lang-">#&lt;---------------------------------------------------------------------------Q8</pre></td>
+</tr>
+<tr id="line136">
+<td class="line-numbers"><a href="#line136" name="line136">136</a></td>
+<td class="code"><pre class="prettyprint lang-">	( match(toupper($1),&quot;Q8&quot;) == 1 ) { sub(/\#.*$/, &quot;&quot;, $0); sub(/[ \t]+$/, &quot;&quot;, $0);</pre></td>
+</tr>
+<tr id="line137">
+<td class="line-numbers"><a href="#line137" name="line137">137</a></td>
+<td class="code"><pre class="prettyprint lang-">	$0 = toupper($0); tmp=$0; gsub(/[ \t]+/, &quot;&quot;, tmp);</pre></td>
+</tr>
+<tr id="line138">
+<td class="line-numbers"><a href="#line138" name="line138">138</a></td>
+<td class="code"><pre class="prettyprint lang-"></pre></td>
+</tr>
+<tr id="line139">
+<td class="line-numbers"><a href="#line139" name="line139">139</a></td>
+<td class="code"><pre class="prettyprint lang-">	q8_eptn2=&quot;00&quot;; q8_optn2=&quot;00&quot;;</pre></td>
+</tr>
+<tr id="line140">
+<td class="line-numbers"><a href="#line140" name="line140">140</a></td>
+<td class="code"><pre class="prettyprint lang-"></pre></td>
+</tr>
+<tr id="line141">
+<td class="line-numbers"><a href="#line141" name="line141">141</a></td>
+<td class="code"><pre class="prettyprint lang-">	if (match($1, &quot;Q8MUL&quot;)==1) {</pre></td>
+</tr>
+<tr id="line142">
+<td class="line-numbers"><a href="#line142" name="line142">142</a></td>
+<td class="code"><pre class="prettyprint lang-">	assert(match(tmp, &quot;Q8MULXR([0-9]|1[0-5]),XR([0-9]|1[0-5]),XR([0-9]|1[0-5]),\</pre></td>
+</tr>
+<tr id="line143">
+<td class="line-numbers"><a href="#line143" name="line143">143</a></td>
+<td class="code"><pre class="prettyprint lang-">XR([0-9]|1[0-5])$&quot;)==1, &quot;syntax err&quot;);</pre></td>
+</tr>
+<tr id="line144">
+<td class="line-numbers"><a href="#line144" name="line144">144</a></td>
+<td class="code"><pre class="prettyprint lang-">	MXINSN_OK=1;</pre></td>
+</tr>
+<tr id="line145">
+<td class="line-numbers"><a href="#line145" name="line145">145</a></td>
+<td class="code"><pre class="prettyprint lang-">	Q8_XRD=xrf[$5];</pre></td>
+</tr>
+<tr id="line146">
+<td class="line-numbers"><a href="#line146" name="line146">146</a></td>
+<td class="code"><pre class="prettyprint lang-">	printf &quot;.word\t0b%s%s%s%s%s%s%s%s%s\t\#%s\n&quot;, SPECIAL2, q8_eptn2, q8_optn2, \</pre></td>
+</tr>
+<tr id="line147">
+<td class="line-numbers"><a href="#line147" name="line147">147</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[$1,MINOR0], Q8_XRD, xrf[$4], xrf[$3], xrf[$2], insn[$1,EXTEND], $0;</pre></td>
+</tr>
+<tr id="line148">
+<td class="line-numbers"><a href="#line148" name="line148">148</a></td>
+<td class="code"><pre class="prettyprint lang-">	next</pre></td>
+</tr>
+<tr id="line149">
+<td class="line-numbers"><a href="#line149" name="line149">149</a></td>
+<td class="code"><pre class="prettyprint lang-">	}</pre></td>
+</tr>
+<tr id="line150">
+<td class="line-numbers"><a href="#line150" name="line150">150</a></td>
+<td class="code"><pre class="prettyprint lang-">	if (match($1, &quot;Q8MAC&quot;)==1) {</pre></td>
+</tr>
+<tr id="line151">
+<td class="line-numbers"><a href="#line151" name="line151">151</a></td>
+<td class="code"><pre class="prettyprint lang-">	assert(match(tmp, &quot;Q8MACXR([0-9]|1[0-5]),XR([0-9]|1[0-5]),XR([0-9]|1[0-5]),\</pre></td>
+</tr>
+<tr id="line152">
+<td class="line-numbers"><a href="#line152" name="line152">152</a></td>
+<td class="code"><pre class="prettyprint lang-">XR([0-9]|1[0-5]),([AS][AS]|[0-3])$&quot;)==1, &quot;syntax err&quot;);</pre></td>
+</tr>
+<tr id="line153">
+<td class="line-numbers"><a href="#line153" name="line153">153</a></td>
+<td class="code"><pre class="prettyprint lang-">	MXINSN_OK=1;</pre></td>
+</tr>
+<tr id="line154">
+<td class="line-numbers"><a href="#line154" name="line154">154</a></td>
+<td class="code"><pre class="prettyprint lang-">	q8_eptn2 = MAC_AS[$NF];</pre></td>
+</tr>
+<tr id="line155">
+<td class="line-numbers"><a href="#line155" name="line155">155</a></td>
+<td class="code"><pre class="prettyprint lang-">	Q8_XRD=xrf[$5];</pre></td>
+</tr>
+<tr id="line156">
+<td class="line-numbers"><a href="#line156" name="line156">156</a></td>
+<td class="code"><pre class="prettyprint lang-">	printf &quot;.word\t0b%s%s%s%s%s%s%s%s%s\t\#%s\n&quot;, SPECIAL2, q8_eptn2, q8_optn2, \</pre></td>
+</tr>
+<tr id="line157">
+<td class="line-numbers"><a href="#line157" name="line157">157</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[$1,MINOR0], Q8_XRD, xrf[$4], xrf[$3], xrf[$2], insn[$1,EXTEND], $0; </pre></td>
+</tr>
+<tr id="line158">
+<td class="line-numbers"><a href="#line158" name="line158">158</a></td>
+<td class="code"><pre class="prettyprint lang-">	next</pre></td>
+</tr>
+<tr id="line159">
+<td class="line-numbers"><a href="#line159" name="line159">159</a></td>
+<td class="code"><pre class="prettyprint lang-">	}</pre></td>
+</tr>
+<tr id="line160">
+<td class="line-numbers"><a href="#line160" name="line160">160</a></td>
+<td class="code"><pre class="prettyprint lang-">	if (match($1, &quot;Q8MADL&quot;)==1) {</pre></td>
+</tr>
+<tr id="line161">
+<td class="line-numbers"><a href="#line161" name="line161">161</a></td>
+<td class="code"><pre class="prettyprint lang-">	assert(match(tmp, &quot;Q8MADLXR([0-9]|1[0-5]),XR([0-9]|1[0-5]),XR([0-9]|1[0-5]),\</pre></td>
+</tr>
+<tr id="line162">
+<td class="line-numbers"><a href="#line162" name="line162">162</a></td>
+<td class="code"><pre class="prettyprint lang-">XR([0-9]|1[0-5]),([AS][AS]|[0-3])$&quot;)==1, &quot;syntax err&quot;);</pre></td>
+</tr>
+<tr id="line163">
+<td class="line-numbers"><a href="#line163" name="line163">163</a></td>
+<td class="code"><pre class="prettyprint lang-">	MXINSN_OK=1;</pre></td>
+</tr>
+<tr id="line164">
+<td class="line-numbers"><a href="#line164" name="line164">164</a></td>
+<td class="code"><pre class="prettyprint lang-">	q8_eptn2 = MAC_AS[$NF];</pre></td>
+</tr>
+<tr id="line165">
+<td class="line-numbers"><a href="#line165" name="line165">165</a></td>
+<td class="code"><pre class="prettyprint lang-">	Q8_XRD=xrf[$5];</pre></td>
+</tr>
+<tr id="line166">
+<td class="line-numbers"><a href="#line166" name="line166">166</a></td>
+<td class="code"><pre class="prettyprint lang-">	printf &quot;.word\t0b%s%s%s%s%s%s%s%s%s\t\#%s\n&quot;, SPECIAL2, q8_eptn2, q8_optn2, \</pre></td>
+</tr>
+<tr id="line167">
+<td class="line-numbers"><a href="#line167" name="line167">167</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[$1,MINOR0], Q8_XRD, xrf[$4], xrf[$3], xrf[$2], insn[$1,EXTEND], $0; </pre></td>
+</tr>
+<tr id="line168">
+<td class="line-numbers"><a href="#line168" name="line168">168</a></td>
+<td class="code"><pre class="prettyprint lang-">	next</pre></td>
+</tr>
+<tr id="line169">
+<td class="line-numbers"><a href="#line169" name="line169">169</a></td>
+<td class="code"><pre class="prettyprint lang-">	}</pre></td>
+</tr>
+<tr id="line170">
+<td class="line-numbers"><a href="#line170" name="line170">170</a></td>
+<td class="code"><pre class="prettyprint lang-">	if (match($1, &quot;Q8SAD&quot;)==1) {</pre></td>
+</tr>
+<tr id="line171">
+<td class="line-numbers"><a href="#line171" name="line171">171</a></td>
+<td class="code"><pre class="prettyprint lang-">	assert(match(tmp, &quot;Q8SADXR([0-9]|1[0-5]),XR([0-9]|1[0-5]),XR([0-9]|1[0-5]),\</pre></td>
+</tr>
+<tr id="line172">
+<td class="line-numbers"><a href="#line172" name="line172">172</a></td>
+<td class="code"><pre class="prettyprint lang-">XR([0-9]|1[0-5])$&quot;)==1, &quot;syntax err&quot;);</pre></td>
+</tr>
+<tr id="line173">
+<td class="line-numbers"><a href="#line173" name="line173">173</a></td>
+<td class="code"><pre class="prettyprint lang-">	MXINSN_OK=1;</pre></td>
+</tr>
+<tr id="line174">
+<td class="line-numbers"><a href="#line174" name="line174">174</a></td>
+<td class="code"><pre class="prettyprint lang-">	Q8_XRD=xrf[$5];</pre></td>
+</tr>
+<tr id="line175">
+<td class="line-numbers"><a href="#line175" name="line175">175</a></td>
+<td class="code"><pre class="prettyprint lang-">	printf &quot;.word\t0b%s%s%s%s%s%s%s%s%s\t\#%s\n&quot;, SPECIAL2, q8_eptn2, q8_optn2, \</pre></td>
+</tr>
+<tr id="line176">
+<td class="line-numbers"><a href="#line176" name="line176">176</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[$1,MINOR0], Q8_XRD, xrf[$4], xrf[$3], xrf[$2], insn[$1,EXTEND], $0; </pre></td>
+</tr>
+<tr id="line177">
+<td class="line-numbers"><a href="#line177" name="line177">177</a></td>
+<td class="code"><pre class="prettyprint lang-">	next</pre></td>
+</tr>
+<tr id="line178">
+<td class="line-numbers"><a href="#line178" name="line178">178</a></td>
+<td class="code"><pre class="prettyprint lang-">	}</pre></td>
+</tr>
+<tr id="line179">
+<td class="line-numbers"><a href="#line179" name="line179">179</a></td>
+<td class="code"><pre class="prettyprint lang-">	if (match($1, &quot;Q8A(DD|CC)E&quot;)==1) {</pre></td>
+</tr>
+<tr id="line180">
+<td class="line-numbers"><a href="#line180" name="line180">180</a></td>
+<td class="code"><pre class="prettyprint lang-">	assert(match(tmp, &quot;Q8A(DD|CC)EXR([0-9]|1[0-5]),XR([0-9]|1[0-5]),XR([0-9]|1[0-5]),\</pre></td>
+</tr>
+<tr id="line181">
+<td class="line-numbers"><a href="#line181" name="line181">181</a></td>
+<td class="code"><pre class="prettyprint lang-">XR([0-9]|1[0-5]),([AS][AS]|[0-3])$&quot;)==1, &quot;syntax err&quot;);</pre></td>
+</tr>
+<tr id="line182">
+<td class="line-numbers"><a href="#line182" name="line182">182</a></td>
+<td class="code"><pre class="prettyprint lang-">	MXINSN_OK=1;</pre></td>
+</tr>
+<tr id="line183">
+<td class="line-numbers"><a href="#line183" name="line183">183</a></td>
+<td class="code"><pre class="prettyprint lang-">	q8_eptn2 = MAC_AS[$NF];</pre></td>
+</tr>
+<tr id="line184">
+<td class="line-numbers"><a href="#line184" name="line184">184</a></td>
+<td class="code"><pre class="prettyprint lang-">	Q8_XRD=xrf[$5];</pre></td>
+</tr>
+<tr id="line185">
+<td class="line-numbers"><a href="#line185" name="line185">185</a></td>
+<td class="code"><pre class="prettyprint lang-">	printf &quot;.word\t0b%s%s%s%s%s%s%s%s%s\t\#%s\n&quot;, SPECIAL2, q8_eptn2, q8_optn2, \</pre></td>
+</tr>
+<tr id="line186">
+<td class="line-numbers"><a href="#line186" name="line186">186</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[$1,MINOR0], Q8_XRD, xrf[$4], xrf[$3], xrf[$2], insn[$1,EXTEND], $0; </pre></td>
+</tr>
+<tr id="line187">
+<td class="line-numbers"><a href="#line187" name="line187">187</a></td>
+<td class="code"><pre class="prettyprint lang-">	next</pre></td>
+</tr>
+<tr id="line188">
+<td class="line-numbers"><a href="#line188" name="line188">188</a></td>
+<td class="code"><pre class="prettyprint lang-">	}</pre></td>
+</tr>
+<tr id="line189">
+<td class="line-numbers"><a href="#line189" name="line189">189</a></td>
+<td class="code"><pre class="prettyprint lang-">	if (match($1, &quot;Q8ABD&quot;)==1) {</pre></td>
+</tr>
+<tr id="line190">
+<td class="line-numbers"><a href="#line190" name="line190">190</a></td>
+<td class="code"><pre class="prettyprint lang-">	assert(match(tmp, &quot;Q8ABDXR([0-9]|1[0-5]),XR([0-9]|1[0-5]),XR([0-9]|1[0-5])$&quot;\</pre></td>
+</tr>
+<tr id="line191">
+<td class="line-numbers"><a href="#line191" name="line191">191</a></td>
+<td class="code"><pre class="prettyprint lang-">)==1, &quot;syntax err&quot;);</pre></td>
+</tr>
+<tr id="line192">
+<td class="line-numbers"><a href="#line192" name="line192">192</a></td>
+<td class="code"><pre class="prettyprint lang-">	MXINSN_OK=1;</pre></td>
+</tr>
+<tr id="line193">
+<td class="line-numbers"><a href="#line193" name="line193">193</a></td>
+<td class="code"><pre class="prettyprint lang-">	q8_optn2=&quot;000&quot;;</pre></td>
+</tr>
+<tr id="line194">
+<td class="line-numbers"><a href="#line194" name="line194">194</a></td>
+<td class="code"><pre class="prettyprint lang-">	Q8_XRD=&quot;&quot;;</pre></td>
+</tr>
+<tr id="line195">
+<td class="line-numbers"><a href="#line195" name="line195">195</a></td>
+<td class="code"><pre class="prettyprint lang-">	printf &quot;.word\t0b%s%s%s%s%s%s%s%s%s\t\#%s\n&quot;, SPECIAL2, q8_eptn2, q8_optn2, \</pre></td>
+</tr>
+<tr id="line196">
+<td class="line-numbers"><a href="#line196" name="line196">196</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[$1,MINOR0], Q8_XRD, xrf[$4], xrf[$3], xrf[$2], insn[$1,EXTEND], $0; </pre></td>
+</tr>
+<tr id="line197">
+<td class="line-numbers"><a href="#line197" name="line197">197</a></td>
+<td class="code"><pre class="prettyprint lang-">	next</pre></td>
+</tr>
+<tr id="line198">
+<td class="line-numbers"><a href="#line198" name="line198">198</a></td>
+<td class="code"><pre class="prettyprint lang-">	}</pre></td>
+</tr>
+<tr id="line199">
+<td class="line-numbers"><a href="#line199" name="line199">199</a></td>
+<td class="code"><pre class="prettyprint lang-">	if (match($1, &quot;Q8AVG[R]?&quot;)==1) {</pre></td>
+</tr>
+<tr id="line200">
+<td class="line-numbers"><a href="#line200" name="line200">200</a></td>
+<td class="code"><pre class="prettyprint lang-">	assert(match(tmp, &quot;Q8AVG[R]?XR([0-9]|1[0-5]),XR([0-9]|1[0-5]),XR([0-9]|1[0-5])$&quot;\</pre></td>
+</tr>
+<tr id="line201">
+<td class="line-numbers"><a href="#line201" name="line201">201</a></td>
+<td class="code"><pre class="prettyprint lang-">)==1, &quot;syntax err&quot;);</pre></td>
+</tr>
+<tr id="line202">
+<td class="line-numbers"><a href="#line202" name="line202">202</a></td>
+<td class="code"><pre class="prettyprint lang-">	MXINSN_OK=1;</pre></td>
+</tr>
+<tr id="line203">
+<td class="line-numbers"><a href="#line203" name="line203">203</a></td>
+<td class="code"><pre class="prettyprint lang-">	q8_optn2=&quot;000&quot;;</pre></td>
+</tr>
+<tr id="line204">
+<td class="line-numbers"><a href="#line204" name="line204">204</a></td>
+<td class="code"><pre class="prettyprint lang-">	Q8_XRD=&quot;&quot;;</pre></td>
+</tr>
+<tr id="line205">
+<td class="line-numbers"><a href="#line205" name="line205">205</a></td>
+<td class="code"><pre class="prettyprint lang-">	printf &quot;.word\t0b%s%s%s%s%s%s%s%s%s\t\#%s\n&quot;, SPECIAL2, q8_eptn2, q8_optn2, \</pre></td>
+</tr>
+<tr id="line206">
+<td class="line-numbers"><a href="#line206" name="line206">206</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[$1,MINOR0], Q8_XRD, xrf[$4], xrf[$3], xrf[$2], insn[$1,EXTEND], $0; </pre></td>
+</tr>
+<tr id="line207">
+<td class="line-numbers"><a href="#line207" name="line207">207</a></td>
+<td class="code"><pre class="prettyprint lang-">	next</pre></td>
+</tr>
+<tr id="line208">
+<td class="line-numbers"><a href="#line208" name="line208">208</a></td>
+<td class="code"><pre class="prettyprint lang-">	}</pre></td>
+</tr>
+<tr id="line209">
+<td class="line-numbers"><a href="#line209" name="line209">209</a></td>
+<td class="code"><pre class="prettyprint lang-">	if (match($1, &quot;Q8ADD&quot;)==1) {</pre></td>
+</tr>
+<tr id="line210">
+<td class="line-numbers"><a href="#line210" name="line210">210</a></td>
+<td class="code"><pre class="prettyprint lang-">	assert(match(tmp, &quot;Q8ADDXR([0-9]|1[0-5]),XR([0-9]|1[0-5]),XR([0-9]|1[0-5]),\</pre></td>
+</tr>
+<tr id="line211">
+<td class="line-numbers"><a href="#line211" name="line211">211</a></td>
+<td class="code"><pre class="prettyprint lang-">([AS][AS]|[0-3])$&quot;)==1, &quot;syntax err&quot;);</pre></td>
+</tr>
+<tr id="line212">
+<td class="line-numbers"><a href="#line212" name="line212">212</a></td>
+<td class="code"><pre class="prettyprint lang-">	MXINSN_OK=1;</pre></td>
+</tr>
+<tr id="line213">
+<td class="line-numbers"><a href="#line213" name="line213">213</a></td>
+<td class="code"><pre class="prettyprint lang-">	q8_eptn2 = MAC_AS[$NF];</pre></td>
+</tr>
+<tr id="line214">
+<td class="line-numbers"><a href="#line214" name="line214">214</a></td>
+<td class="code"><pre class="prettyprint lang-">	q8_optn2=&quot;000&quot;;</pre></td>
+</tr>
+<tr id="line215">
+<td class="line-numbers"><a href="#line215" name="line215">215</a></td>
+<td class="code"><pre class="prettyprint lang-">	Q8_XRD=&quot;&quot;;</pre></td>
+</tr>
+<tr id="line216">
+<td class="line-numbers"><a href="#line216" name="line216">216</a></td>
+<td class="code"><pre class="prettyprint lang-">	printf &quot;.word\t0b%s%s%s%s%s%s%s%s%s\t\#%s\n&quot;, SPECIAL2, q8_eptn2, q8_optn2, \</pre></td>
+</tr>
+<tr id="line217">
+<td class="line-numbers"><a href="#line217" name="line217">217</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[$1,MINOR0], Q8_XRD, xrf[$4], xrf[$3], xrf[$2], insn[$1,EXTEND], $0; </pre></td>
+</tr>
+<tr id="line218">
+<td class="line-numbers"><a href="#line218" name="line218">218</a></td>
+<td class="code"><pre class="prettyprint lang-">	next</pre></td>
+</tr>
+<tr id="line219">
+<td class="line-numbers"><a href="#line219" name="line219">219</a></td>
+<td class="code"><pre class="prettyprint lang-">	}</pre></td>
+</tr>
+<tr id="line220">
+<td class="line-numbers"><a href="#line220" name="line220">220</a></td>
+<td class="code"><pre class="prettyprint lang-">	if (match($1, &quot;Q8M(AX|IN)&quot;)==1) {</pre></td>
+</tr>
+<tr id="line221">
+<td class="line-numbers"><a href="#line221" name="line221">221</a></td>
+<td class="code"><pre class="prettyprint lang-">	assert(match(tmp, &quot;Q8M(AX|IN)XR([0-9]|1[0-5]),XR([0-9]|1[0-5]),XR([0-9]|1[0-5])$&quot;\</pre></td>
+</tr>
+<tr id="line222">
+<td class="line-numbers"><a href="#line222" name="line222">222</a></td>
+<td class="code"><pre class="prettyprint lang-">)==1, &quot;syntax err&quot;);</pre></td>
+</tr>
+<tr id="line223">
+<td class="line-numbers"><a href="#line223" name="line223">223</a></td>
+<td class="code"><pre class="prettyprint lang-">	MXINSN_OK=1;</pre></td>
+</tr>
+<tr id="line224">
+<td class="line-numbers"><a href="#line224" name="line224">224</a></td>
+<td class="code"><pre class="prettyprint lang-">	q8_optn2=&quot;000&quot;;</pre></td>
+</tr>
+<tr id="line225">
+<td class="line-numbers"><a href="#line225" name="line225">225</a></td>
+<td class="code"><pre class="prettyprint lang-">	Q8_XRD=&quot;&quot;;</pre></td>
+</tr>
+<tr id="line226">
+<td class="line-numbers"><a href="#line226" name="line226">226</a></td>
+<td class="code"><pre class="prettyprint lang-">	printf &quot;.word\t0b%s%s%s%s%s%s%s%s%s\t\#%s\n&quot;, SPECIAL2, q8_eptn2, q8_optn2, \</pre></td>
+</tr>
+<tr id="line227">
+<td class="line-numbers"><a href="#line227" name="line227">227</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[$1,MINOR0], Q8_XRD, xrf[$4], xrf[$3], xrf[$2], insn[$1,EXTEND], $0; </pre></td>
+</tr>
+<tr id="line228">
+<td class="line-numbers"><a href="#line228" name="line228">228</a></td>
+<td class="code"><pre class="prettyprint lang-">	next</pre></td>
+</tr>
+<tr id="line229">
+<td class="line-numbers"><a href="#line229" name="line229">229</a></td>
+<td class="code"><pre class="prettyprint lang-">	}</pre></td>
+</tr>
+<tr id="line230">
+<td class="line-numbers"><a href="#line230" name="line230">230</a></td>
+<td class="code"><pre class="prettyprint lang-">	if (match($1, &quot;Q8SLT&quot;)==1) {</pre></td>
+</tr>
+<tr id="line231">
+<td class="line-numbers"><a href="#line231" name="line231">231</a></td>
+<td class="code"><pre class="prettyprint lang-">	assert(match(tmp, &quot;Q8SLTXR([0-9]|1[0-5]),XR([0-9]|1[0-5]),XR([0-9]|1[0-5])$&quot;\</pre></td>
+</tr>
+<tr id="line232">
+<td class="line-numbers"><a href="#line232" name="line232">232</a></td>
+<td class="code"><pre class="prettyprint lang-">)==1, &quot;syntax err&quot;);</pre></td>
+</tr>
+<tr id="line233">
+<td class="line-numbers"><a href="#line233" name="line233">233</a></td>
+<td class="code"><pre class="prettyprint lang-">	MXINSN_OK=1;</pre></td>
+</tr>
+<tr id="line234">
+<td class="line-numbers"><a href="#line234" name="line234">234</a></td>
+<td class="code"><pre class="prettyprint lang-">	q8_optn2=&quot;000&quot;;</pre></td>
+</tr>
+<tr id="line235">
+<td class="line-numbers"><a href="#line235" name="line235">235</a></td>
+<td class="code"><pre class="prettyprint lang-">	Q8_XRD=&quot;&quot;;</pre></td>
+</tr>
+<tr id="line236">
+<td class="line-numbers"><a href="#line236" name="line236">236</a></td>
+<td class="code"><pre class="prettyprint lang-">	printf &quot;.word\t0b%s%s%s%s%s%s%s%s%s\t\#%s\n&quot;, SPECIAL2, q8_eptn2, q8_optn2, \</pre></td>
+</tr>
+<tr id="line237">
+<td class="line-numbers"><a href="#line237" name="line237">237</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[$1,MINOR0], Q8_XRD, xrf[$4], xrf[$3], xrf[$2], insn[$1,EXTEND], $0; </pre></td>
+</tr>
+<tr id="line238">
+<td class="line-numbers"><a href="#line238" name="line238">238</a></td>
+<td class="code"><pre class="prettyprint lang-">	next</pre></td>
+</tr>
+<tr id="line239">
+<td class="line-numbers"><a href="#line239" name="line239">239</a></td>
+<td class="code"><pre class="prettyprint lang-">	}</pre></td>
+</tr>
+<tr id="line240">
+<td class="line-numbers"><a href="#line240" name="line240">240</a></td>
+<td class="code"><pre class="prettyprint lang-">$0 = cur_line;</pre></td>
+</tr>
+<tr id="line241">
+<td class="line-numbers"><a href="#line241" name="line241">241</a></td>
+<td class="code"><pre class="prettyprint lang-">}</pre></td>
+</tr>
+<tr id="line242">
+<td class="line-numbers"><a href="#line242" name="line242">242</a></td>
+<td class="code"><pre class="prettyprint lang-"></pre></td>
+</tr>
+<tr id="line243">
+<td class="line-numbers"><a href="#line243" name="line243">243</a></td>
+<td class="code"><pre class="prettyprint lang-">#&lt;---------------------------------------------------------------------------Q16/D16/S16</pre></td>
+</tr>
+<tr id="line244">
+<td class="line-numbers"><a href="#line244" name="line244">244</a></td>
+<td class="code"><pre class="prettyprint lang-">	( match(toupper($1),&quot;[QDS]16&quot;) == 1 ) { sub(/\#.*$/, &quot;&quot;, $0); sub(/[ \t]+$/, &quot;&quot;, $0);</pre></td>
+</tr>
+<tr id="line245">
+<td class="line-numbers"><a href="#line245" name="line245">245</a></td>
+<td class="code"><pre class="prettyprint lang-">	$0 = toupper($0); tmp=$0; gsub(/[ \t]+/, &quot;&quot;, tmp);</pre></td>
+</tr>
+<tr id="line246">
+<td class="line-numbers"><a href="#line246" name="line246">246</a></td>
+<td class="code"><pre class="prettyprint lang-"></pre></td>
+</tr>
+<tr id="line247">
+<td class="line-numbers"><a href="#line247" name="line247">247</a></td>
+<td class="code"><pre class="prettyprint lang-">	q16_eptn2=&quot;00&quot;; q16_optn2=&quot;00&quot;; </pre></td>
+</tr>
+<tr id="line248">
+<td class="line-numbers"><a href="#line248" name="line248">248</a></td>
+<td class="code"><pre class="prettyprint lang-"></pre></td>
+</tr>
+<tr id="line249">
+<td class="line-numbers"><a href="#line249" name="line249">249</a></td>
+<td class="code"><pre class="prettyprint lang-">	if (match($1, &quot;D16MUL[F]?&quot;)==1) {</pre></td>
+</tr>
+<tr id="line250">
+<td class="line-numbers"><a href="#line250" name="line250">250</a></td>
+<td class="code"><pre class="prettyprint lang-">	if ($1 ~/F/) {</pre></td>
+</tr>
+<tr id="line251">
+<td class="line-numbers"><a href="#line251" name="line251">251</a></td>
+<td class="code"><pre class="prettyprint lang-">	assert(match(tmp, &quot;D16MULFXR([0-9]|1[0-5]),XR([0-9]|1[0-5]),XR([0-9]|1[0-5]),\</pre></td>
+</tr>
+<tr id="line252">
+<td class="line-numbers"><a href="#line252" name="line252">252</a></td>
+<td class="code"><pre class="prettyprint lang-">([WLHX]W|[0-3])$&quot;)==1, &quot;syntax err&quot;);</pre></td>
+</tr>
+<tr id="line253">
+<td class="line-numbers"><a href="#line253" name="line253">253</a></td>
+<td class="code"><pre class="prettyprint lang-">	MXINSN_OK=1;</pre></td>
+</tr>
+<tr id="line254">
+<td class="line-numbers"><a href="#line254" name="line254">254</a></td>
+<td class="code"><pre class="prettyprint lang-">	q16_optn2 = MUL_PTN[$NF];</pre></td>
+</tr>
+<tr id="line255">
+<td class="line-numbers"><a href="#line255" name="line255">255</a></td>
+<td class="code"><pre class="prettyprint lang-">	Q16_XRD=&quot;0000&quot;;</pre></td>
+</tr>
+<tr id="line256">
+<td class="line-numbers"><a href="#line256" name="line256">256</a></td>
+<td class="code"><pre class="prettyprint lang-">	printf &quot;.word\t0b%s%s%s%s%s%s%s%s%s\t\#%s\n&quot;, SPECIAL2, q16_eptn2, q16_optn2, \</pre></td>
+</tr>
+<tr id="line257">
+<td class="line-numbers"><a href="#line257" name="line257">257</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[$1,MINOR0], Q16_XRD, xrf[$4], xrf[$3], xrf[$2], insn[$1,EXTEND], $0; </pre></td>
+</tr>
+<tr id="line258">
+<td class="line-numbers"><a href="#line258" name="line258">258</a></td>
+<td class="code"><pre class="prettyprint lang-">	next</pre></td>
+</tr>
+<tr id="line259">
+<td class="line-numbers"><a href="#line259" name="line259">259</a></td>
+<td class="code"><pre class="prettyprint lang-">	} else {</pre></td>
+</tr>
+<tr id="line260">
+<td class="line-numbers"><a href="#line260" name="line260">260</a></td>
+<td class="code"><pre class="prettyprint lang-">	assert(match(tmp, &quot;D16MULXR([0-9]|1[0-5]),XR([0-9]|1[0-5]),XR([0-9]|1[0-5]),\</pre></td>
+</tr>
+<tr id="line261">
+<td class="line-numbers"><a href="#line261" name="line261">261</a></td>
+<td class="code"><pre class="prettyprint lang-">XR([0-9]|1[0-5]),([WLHX]W|[0-3])$&quot;)==1, &quot;syntax err&quot;);</pre></td>
+</tr>
+<tr id="line262">
+<td class="line-numbers"><a href="#line262" name="line262">262</a></td>
+<td class="code"><pre class="prettyprint lang-">	MXINSN_OK=1;</pre></td>
+</tr>
+<tr id="line263">
+<td class="line-numbers"><a href="#line263" name="line263">263</a></td>
+<td class="code"><pre class="prettyprint lang-">	q16_optn2 = MUL_PTN[$NF];</pre></td>
+</tr>
+<tr id="line264">
+<td class="line-numbers"><a href="#line264" name="line264">264</a></td>
+<td class="code"><pre class="prettyprint lang-">	Q16_XRD=xrf[$5];</pre></td>
+</tr>
+<tr id="line265">
+<td class="line-numbers"><a href="#line265" name="line265">265</a></td>
+<td class="code"><pre class="prettyprint lang-">	printf &quot;.word\t0b%s%s%s%s%s%s%s%s%s\t\#%s\n&quot;, SPECIAL2, q16_eptn2, q16_optn2, \</pre></td>
+</tr>
+<tr id="line266">
+<td class="line-numbers"><a href="#line266" name="line266">266</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[$1,MINOR0], Q16_XRD, xrf[$4], xrf[$3], xrf[$2], insn[$1,EXTEND], $0; </pre></td>
+</tr>
+<tr id="line267">
+<td class="line-numbers"><a href="#line267" name="line267">267</a></td>
+<td class="code"><pre class="prettyprint lang-">	next</pre></td>
+</tr>
+<tr id="line268">
+<td class="line-numbers"><a href="#line268" name="line268">268</a></td>
+<td class="code"><pre class="prettyprint lang-">	}</pre></td>
+</tr>
+<tr id="line269">
+<td class="line-numbers"><a href="#line269" name="line269">269</a></td>
+<td class="code"><pre class="prettyprint lang-">	}</pre></td>
+</tr>
+<tr id="line270">
+<td class="line-numbers"><a href="#line270" name="line270">270</a></td>
+<td class="code"><pre class="prettyprint lang-">	if (match($1, &quot;D16MAC[F]?&quot;)==1) {</pre></td>
+</tr>
+<tr id="line271">
+<td class="line-numbers"><a href="#line271" name="line271">271</a></td>
+<td class="code"><pre class="prettyprint lang-">	assert(match(tmp, &quot;D16MAC[F]?XR([0-9]|1[0-5]),XR([0-9]|1[0-5]),XR([0-9]|1[0-5]),\</pre></td>
+</tr>
+<tr id="line272">
+<td class="line-numbers"><a href="#line272" name="line272">272</a></td>
+<td class="code"><pre class="prettyprint lang-">XR([0-9]|1[0-5]),([AS][AS]|[0-3]),([WLHX]W|[0-3])$&quot;)==1, &quot;syntax err&quot;);</pre></td>
+</tr>
+<tr id="line273">
+<td class="line-numbers"><a href="#line273" name="line273">273</a></td>
+<td class="code"><pre class="prettyprint lang-">	MXINSN_OK=1;</pre></td>
+</tr>
+<tr id="line274">
+<td class="line-numbers"><a href="#line274" name="line274">274</a></td>
+<td class="code"><pre class="prettyprint lang-">	q16_eptn2 = MAC_AS[$(NF-1)];</pre></td>
+</tr>
+<tr id="line275">
+<td class="line-numbers"><a href="#line275" name="line275">275</a></td>
+<td class="code"><pre class="prettyprint lang-">	q16_optn2 = MUL_PTN[$NF];</pre></td>
+</tr>
+<tr id="line276">
+<td class="line-numbers"><a href="#line276" name="line276">276</a></td>
+<td class="code"><pre class="prettyprint lang-">	Q16_XRD=xrf[$5];</pre></td>
+</tr>
+<tr id="line277">
+<td class="line-numbers"><a href="#line277" name="line277">277</a></td>
+<td class="code"><pre class="prettyprint lang-">	printf &quot;.word\t0b%s%s%s%s%s%s%s%s%s\t\#%s\n&quot;, SPECIAL2, q16_eptn2, q16_optn2, \</pre></td>
+</tr>
+<tr id="line278">
+<td class="line-numbers"><a href="#line278" name="line278">278</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[$1,MINOR0], Q16_XRD, xrf[$4], xrf[$3], xrf[$2], insn[$1,EXTEND], $0; </pre></td>
+</tr>
+<tr id="line279">
+<td class="line-numbers"><a href="#line279" name="line279">279</a></td>
+<td class="code"><pre class="prettyprint lang-">	next</pre></td>
+</tr>
+<tr id="line280">
+<td class="line-numbers"><a href="#line280" name="line280">280</a></td>
+<td class="code"><pre class="prettyprint lang-">	}</pre></td>
+</tr>
+<tr id="line281">
+<td class="line-numbers"><a href="#line281" name="line281">281</a></td>
+<td class="code"><pre class="prettyprint lang-">	if (match($1, &quot;D16MADL&quot;)==1) {</pre></td>
+</tr>
+<tr id="line282">
+<td class="line-numbers"><a href="#line282" name="line282">282</a></td>
+<td class="code"><pre class="prettyprint lang-">	assert(match(tmp, &quot;D16MADLXR([0-9]|1[0-5]),XR([0-9]|1[0-5]),XR([0-9]|1[0-5]),\</pre></td>
+</tr>
+<tr id="line283">
+<td class="line-numbers"><a href="#line283" name="line283">283</a></td>
+<td class="code"><pre class="prettyprint lang-">XR([0-9]|1[0-5]),([AS][AS]|[0-3]),([WLHX]W|[0-3])$&quot;)==1, &quot;syntax err&quot;);</pre></td>
+</tr>
+<tr id="line284">
+<td class="line-numbers"><a href="#line284" name="line284">284</a></td>
+<td class="code"><pre class="prettyprint lang-">	MXINSN_OK=1;</pre></td>
+</tr>
+<tr id="line285">
+<td class="line-numbers"><a href="#line285" name="line285">285</a></td>
+<td class="code"><pre class="prettyprint lang-">	q16_eptn2 = MAC_AS[$(NF-1)];</pre></td>
+</tr>
+<tr id="line286">
+<td class="line-numbers"><a href="#line286" name="line286">286</a></td>
+<td class="code"><pre class="prettyprint lang-">	q16_optn2 = MUL_PTN[$NF];</pre></td>
+</tr>
+<tr id="line287">
+<td class="line-numbers"><a href="#line287" name="line287">287</a></td>
+<td class="code"><pre class="prettyprint lang-">	Q16_XRD=xrf[$5];</pre></td>
+</tr>
+<tr id="line288">
+<td class="line-numbers"><a href="#line288" name="line288">288</a></td>
+<td class="code"><pre class="prettyprint lang-">	printf &quot;.word\t0b%s%s%s%s%s%s%s%s%s\t\#%s\n&quot;, SPECIAL2, q16_eptn2, q16_optn2, \</pre></td>
+</tr>
+<tr id="line289">
+<td class="line-numbers"><a href="#line289" name="line289">289</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[$1,MINOR0], Q16_XRD, xrf[$4], xrf[$3], xrf[$2], insn[$1,EXTEND], $0; </pre></td>
+</tr>
+<tr id="line290">
+<td class="line-numbers"><a href="#line290" name="line290">290</a></td>
+<td class="code"><pre class="prettyprint lang-">	next</pre></td>
+</tr>
+<tr id="line291">
+<td class="line-numbers"><a href="#line291" name="line291">291</a></td>
+<td class="code"><pre class="prettyprint lang-">	}</pre></td>
+</tr>
+<tr id="line292">
+<td class="line-numbers"><a href="#line292" name="line292">292</a></td>
+<td class="code"><pre class="prettyprint lang-">	if (match($1, &quot;S16MAD&quot;)==1) {</pre></td>
+</tr>
+<tr id="line293">
+<td class="line-numbers"><a href="#line293" name="line293">293</a></td>
+<td class="code"><pre class="prettyprint lang-">	assert(match(tmp, &quot;S16MADXR([0-9]|1[0-5]),XR([0-9]|1[0-5]),XR([0-9]|1[0-5]),\</pre></td>
+</tr>
+<tr id="line294">
+<td class="line-numbers"><a href="#line294" name="line294">294</a></td>
+<td class="code"><pre class="prettyprint lang-">XR([0-9]|1[0-5]),[AS01],(PTN[0-3]|[0-3])$&quot;)==1, &quot;syntax err&quot;);</pre></td>
+</tr>
+<tr id="line295">
+<td class="line-numbers"><a href="#line295" name="line295">295</a></td>
+<td class="code"><pre class="prettyprint lang-">	MXINSN_OK=1;</pre></td>
+</tr>
+<tr id="line296">
+<td class="line-numbers"><a href="#line296" name="line296">296</a></td>
+<td class="code"><pre class="prettyprint lang-">	if ($(NF-1) ~/[0A]/) q16_eptn2 = &quot;00&quot;;</pre></td>
+</tr>
+<tr id="line297">
+<td class="line-numbers"><a href="#line297" name="line297">297</a></td>
+<td class="code"><pre class="prettyprint lang-">	else q16_eptn2 = &quot;01&quot;;</pre></td>
+</tr>
+<tr id="line298">
+<td class="line-numbers"><a href="#line298" name="line298">298</a></td>
+<td class="code"><pre class="prettyprint lang-">	q16_optn2 = SFL_PTN[$NF];</pre></td>
+</tr>
+<tr id="line299">
+<td class="line-numbers"><a href="#line299" name="line299">299</a></td>
+<td class="code"><pre class="prettyprint lang-">	Q16_XRD=xrf[$5];</pre></td>
+</tr>
+<tr id="line300">
+<td class="line-numbers"><a href="#line300" name="line300">300</a></td>
+<td class="code"><pre class="prettyprint lang-">	printf &quot;.word\t0b%s%s%s%s%s%s%s%s%s\t\#%s\n&quot;, SPECIAL2, q16_eptn2, q16_optn2, \</pre></td>
+</tr>
+<tr id="line301">
+<td class="line-numbers"><a href="#line301" name="line301">301</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[$1,MINOR0], Q16_XRD, xrf[$4], xrf[$3], xrf[$2], insn[$1,EXTEND], $0; </pre></td>
+</tr>
+<tr id="line302">
+<td class="line-numbers"><a href="#line302" name="line302">302</a></td>
+<td class="code"><pre class="prettyprint lang-">	next</pre></td>
+</tr>
+<tr id="line303">
+<td class="line-numbers"><a href="#line303" name="line303">303</a></td>
+<td class="code"><pre class="prettyprint lang-">	}</pre></td>
+</tr>
+<tr id="line304">
+<td class="line-numbers"><a href="#line304" name="line304">304</a></td>
+<td class="code"><pre class="prettyprint lang-">	if (match($1, &quot;Q16ADD&quot;)==1) {</pre></td>
+</tr>
+<tr id="line305">
+<td class="line-numbers"><a href="#line305" name="line305">305</a></td>
+<td class="code"><pre class="prettyprint lang-">	assert(match(tmp, &quot;Q16ADDXR([0-9]|1[0-5]),XR([0-9]|1[0-5]),XR([0-9]|1[0-5]),\</pre></td>
+</tr>
+<tr id="line306">
+<td class="line-numbers"><a href="#line306" name="line306">306</a></td>
+<td class="code"><pre class="prettyprint lang-">XR([0-9]|1[0-5]),([AS][AS]|[0-3]),([WLHX]W|[0-3])$&quot;)==1, &quot;syntax err&quot;);</pre></td>
+</tr>
+<tr id="line307">
+<td class="line-numbers"><a href="#line307" name="line307">307</a></td>
+<td class="code"><pre class="prettyprint lang-">	MXINSN_OK=1;</pre></td>
+</tr>
+<tr id="line308">
+<td class="line-numbers"><a href="#line308" name="line308">308</a></td>
+<td class="code"><pre class="prettyprint lang-">	q16_eptn2 = MAC_AS[$(NF-1)];</pre></td>
+</tr>
+<tr id="line309">
+<td class="line-numbers"><a href="#line309" name="line309">309</a></td>
+<td class="code"><pre class="prettyprint lang-">	q16_optn2 = MUL_PTN[$NF];</pre></td>
+</tr>
+<tr id="line310">
+<td class="line-numbers"><a href="#line310" name="line310">310</a></td>
+<td class="code"><pre class="prettyprint lang-">	Q16_XRD=xrf[$5];</pre></td>
+</tr>
+<tr id="line311">
+<td class="line-numbers"><a href="#line311" name="line311">311</a></td>
+<td class="code"><pre class="prettyprint lang-">	printf &quot;.word\t0b%s%s%s%s%s%s%s%s%s\t\#%s\n&quot;, SPECIAL2, q16_eptn2, q16_optn2, \</pre></td>
+</tr>
+<tr id="line312">
+<td class="line-numbers"><a href="#line312" name="line312">312</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[$1,MINOR0], Q16_XRD, xrf[$4], xrf[$3], xrf[$2], insn[$1,EXTEND], $0; </pre></td>
+</tr>
+<tr id="line313">
+<td class="line-numbers"><a href="#line313" name="line313">313</a></td>
+<td class="code"><pre class="prettyprint lang-">	next</pre></td>
+</tr>
+<tr id="line314">
+<td class="line-numbers"><a href="#line314" name="line314">314</a></td>
+<td class="code"><pre class="prettyprint lang-">	}</pre></td>
+</tr>
+<tr id="line315">
+<td class="line-numbers"><a href="#line315" name="line315">315</a></td>
+<td class="code"><pre class="prettyprint lang-">	if (match($1, &quot;Q16ACC&quot;)==1) {</pre></td>
+</tr>
+<tr id="line316">
+<td class="line-numbers"><a href="#line316" name="line316">316</a></td>
+<td class="code"><pre class="prettyprint lang-">	assert(match(tmp, &quot;Q16ACCXR([0-9]|1[0-5]),XR([0-9]|1[0-5]),XR([0-9]|1[0-5]),\</pre></td>
+</tr>
+<tr id="line317">
+<td class="line-numbers"><a href="#line317" name="line317">317</a></td>
+<td class="code"><pre class="prettyprint lang-">XR([0-9]|1[0-5]),([AS][AS]|[0-3])$&quot;)==1, &quot;syntax err&quot;);</pre></td>
+</tr>
+<tr id="line318">
+<td class="line-numbers"><a href="#line318" name="line318">318</a></td>
+<td class="code"><pre class="prettyprint lang-">	MXINSN_OK=1;</pre></td>
+</tr>
+<tr id="line319">
+<td class="line-numbers"><a href="#line319" name="line319">319</a></td>
+<td class="code"><pre class="prettyprint lang-">	q16_eptn2 = MAC_AS[$NF];</pre></td>
+</tr>
+<tr id="line320">
+<td class="line-numbers"><a href="#line320" name="line320">320</a></td>
+<td class="code"><pre class="prettyprint lang-">	Q16_XRD=xrf[$5];</pre></td>
+</tr>
+<tr id="line321">
+<td class="line-numbers"><a href="#line321" name="line321">321</a></td>
+<td class="code"><pre class="prettyprint lang-">	printf &quot;.word\t0b%s%s%s%s%s%s%s%s%s\t\#%s\n&quot;, SPECIAL2, q16_eptn2, q16_optn2, \</pre></td>
+</tr>
+<tr id="line322">
+<td class="line-numbers"><a href="#line322" name="line322">322</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[$1,MINOR0], Q16_XRD, xrf[$4], xrf[$3], xrf[$2], insn[$1,EXTEND], $0; </pre></td>
+</tr>
+<tr id="line323">
+<td class="line-numbers"><a href="#line323" name="line323">323</a></td>
+<td class="code"><pre class="prettyprint lang-">	next</pre></td>
+</tr>
+<tr id="line324">
+<td class="line-numbers"><a href="#line324" name="line324">324</a></td>
+<td class="code"><pre class="prettyprint lang-">	}</pre></td>
+</tr>
+<tr id="line325">
+<td class="line-numbers"><a href="#line325" name="line325">325</a></td>
+<td class="code"><pre class="prettyprint lang-">	if (match($1, &quot;D16CPS&quot;)==1) {</pre></td>
+</tr>
+<tr id="line326">
+<td class="line-numbers"><a href="#line326" name="line326">326</a></td>
+<td class="code"><pre class="prettyprint lang-">	assert(match(tmp, &quot;D16CPSXR([0-9]|1[0-5]),XR([0-9]|1[0-5]),XR([0-9]|1[0-5])$&quot;)\</pre></td>
+</tr>
+<tr id="line327">
+<td class="line-numbers"><a href="#line327" name="line327">327</a></td>
+<td class="code"><pre class="prettyprint lang-">==1, &quot;syntax err&quot;);</pre></td>
+</tr>
+<tr id="line328">
+<td class="line-numbers"><a href="#line328" name="line328">328</a></td>
+<td class="code"><pre class="prettyprint lang-">	MXINSN_OK=1;</pre></td>
+</tr>
+<tr id="line329">
+<td class="line-numbers"><a href="#line329" name="line329">329</a></td>
+<td class="code"><pre class="prettyprint lang-">	q16_optn2 = &quot;000&quot;;</pre></td>
+</tr>
+<tr id="line330">
+<td class="line-numbers"><a href="#line330" name="line330">330</a></td>
+<td class="code"><pre class="prettyprint lang-">	Q16_XRD=&quot;&quot;;</pre></td>
+</tr>
+<tr id="line331">
+<td class="line-numbers"><a href="#line331" name="line331">331</a></td>
+<td class="code"><pre class="prettyprint lang-">	printf &quot;.word\t0b%s%s%s%s%s%s%s%s%s\t\#%s\n&quot;, SPECIAL2, q16_eptn2, q16_optn2, \</pre></td>
+</tr>
+<tr id="line332">
+<td class="line-numbers"><a href="#line332" name="line332">332</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[$1,MINOR0], Q16_XRD, xrf[$4], xrf[$3], xrf[$2], insn[$1,EXTEND], $0; </pre></td>
+</tr>
+<tr id="line333">
+<td class="line-numbers"><a href="#line333" name="line333">333</a></td>
+<td class="code"><pre class="prettyprint lang-">	next</pre></td>
+</tr>
+<tr id="line334">
+<td class="line-numbers"><a href="#line334" name="line334">334</a></td>
+<td class="code"><pre class="prettyprint lang-">	}</pre></td>
+</tr>
+<tr id="line335">
+<td class="line-numbers"><a href="#line335" name="line335">335</a></td>
+<td class="code"><pre class="prettyprint lang-">	if (match($1, &quot;Q16SAT&quot;)==1) {</pre></td>
+</tr>
+<tr id="line336">
+<td class="line-numbers"><a href="#line336" name="line336">336</a></td>
+<td class="code"><pre class="prettyprint lang-">	assert(match(tmp, &quot;Q16SATXR([0-9]|1[0-5]),XR([0-9]|1[0-5]),XR([0-9]|1[0-5])$&quot;)\</pre></td>
+</tr>
+<tr id="line337">
+<td class="line-numbers"><a href="#line337" name="line337">337</a></td>
+<td class="code"><pre class="prettyprint lang-">==1, &quot;syntax err&quot;);</pre></td>
+</tr>
+<tr id="line338">
+<td class="line-numbers"><a href="#line338" name="line338">338</a></td>
+<td class="code"><pre class="prettyprint lang-">	MXINSN_OK=1;</pre></td>
+</tr>
+<tr id="line339">
+<td class="line-numbers"><a href="#line339" name="line339">339</a></td>
+<td class="code"><pre class="prettyprint lang-">	q16_optn2 = &quot;000&quot;;</pre></td>
+</tr>
+<tr id="line340">
+<td class="line-numbers"><a href="#line340" name="line340">340</a></td>
+<td class="code"><pre class="prettyprint lang-">	Q16_XRD=&quot;&quot;;</pre></td>
+</tr>
+<tr id="line341">
+<td class="line-numbers"><a href="#line341" name="line341">341</a></td>
+<td class="code"><pre class="prettyprint lang-">	printf &quot;.word\t0b%s%s%s%s%s%s%s%s%s\t\#%s\n&quot;, SPECIAL2, q16_eptn2, q16_optn2, \</pre></td>
+</tr>
+<tr id="line342">
+<td class="line-numbers"><a href="#line342" name="line342">342</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[$1,MINOR0], Q16_XRD, xrf[$4], xrf[$3], xrf[$2], insn[$1,EXTEND], $0; </pre></td>
+</tr>
+<tr id="line343">
+<td class="line-numbers"><a href="#line343" name="line343">343</a></td>
+<td class="code"><pre class="prettyprint lang-">	next</pre></td>
+</tr>
+<tr id="line344">
+<td class="line-numbers"><a href="#line344" name="line344">344</a></td>
+<td class="code"><pre class="prettyprint lang-">	}</pre></td>
+</tr>
+<tr id="line345">
+<td class="line-numbers"><a href="#line345" name="line345">345</a></td>
+<td class="code"><pre class="prettyprint lang-">	if (match($1, &quot;D16AVG[R]?&quot;)==1) {</pre></td>
+</tr>
+<tr id="line346">
+<td class="line-numbers"><a href="#line346" name="line346">346</a></td>
+<td class="code"><pre class="prettyprint lang-">	assert(match(tmp, &quot;D16AVG[R]?XR([0-9]|1[0-5]),XR([0-9]|1[0-5]),XR([0-9]|1[0-5])$&quot;\</pre></td>
+</tr>
+<tr id="line347">
+<td class="line-numbers"><a href="#line347" name="line347">347</a></td>
+<td class="code"><pre class="prettyprint lang-">)==1, &quot;syntax err&quot;);</pre></td>
+</tr>
+<tr id="line348">
+<td class="line-numbers"><a href="#line348" name="line348">348</a></td>
+<td class="code"><pre class="prettyprint lang-">	MXINSN_OK=1;</pre></td>
+</tr>
+<tr id="line349">
+<td class="line-numbers"><a href="#line349" name="line349">349</a></td>
+<td class="code"><pre class="prettyprint lang-">	q16_optn2 = &quot;000&quot;;</pre></td>
+</tr>
+<tr id="line350">
+<td class="line-numbers"><a href="#line350" name="line350">350</a></td>
+<td class="code"><pre class="prettyprint lang-">	Q16_XRD=&quot;&quot;;</pre></td>
+</tr>
+<tr id="line351">
+<td class="line-numbers"><a href="#line351" name="line351">351</a></td>
+<td class="code"><pre class="prettyprint lang-">	printf &quot;.word\t0b%s%s%s%s%s%s%s%s%s\t\#%s\n&quot;, SPECIAL2, q16_eptn2, q16_optn2, \</pre></td>
+</tr>
+<tr id="line352">
+<td class="line-numbers"><a href="#line352" name="line352">352</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[$1,MINOR0], Q16_XRD, xrf[$4], xrf[$3], xrf[$2], insn[$1,EXTEND], $0; </pre></td>
+</tr>
+<tr id="line353">
+<td class="line-numbers"><a href="#line353" name="line353">353</a></td>
+<td class="code"><pre class="prettyprint lang-">	next</pre></td>
+</tr>
+<tr id="line354">
+<td class="line-numbers"><a href="#line354" name="line354">354</a></td>
+<td class="code"><pre class="prettyprint lang-">	}</pre></td>
+</tr>
+<tr id="line355">
+<td class="line-numbers"><a href="#line355" name="line355">355</a></td>
+<td class="code"><pre class="prettyprint lang-">	if (match($1, &quot;D16M(AX|IN)&quot;)==1) {</pre></td>
+</tr>
+<tr id="line356">
+<td class="line-numbers"><a href="#line356" name="line356">356</a></td>
+<td class="code"><pre class="prettyprint lang-">	assert(match(tmp, &quot;D16M(AX|IN)XR([0-9]|1[0-5]),XR([0-9]|1[0-5]),XR([0-9]|1[0-5])$&quot;\</pre></td>
+</tr>
+<tr id="line357">
+<td class="line-numbers"><a href="#line357" name="line357">357</a></td>
+<td class="code"><pre class="prettyprint lang-">)==1, &quot;syntax err&quot;);</pre></td>
+</tr>
+<tr id="line358">
+<td class="line-numbers"><a href="#line358" name="line358">358</a></td>
+<td class="code"><pre class="prettyprint lang-">	MXINSN_OK=1;</pre></td>
+</tr>
+<tr id="line359">
+<td class="line-numbers"><a href="#line359" name="line359">359</a></td>
+<td class="code"><pre class="prettyprint lang-">	q16_optn2 = &quot;000&quot;;</pre></td>
+</tr>
+<tr id="line360">
+<td class="line-numbers"><a href="#line360" name="line360">360</a></td>
+<td class="code"><pre class="prettyprint lang-">	Q16_XRD=&quot;&quot;;</pre></td>
+</tr>
+<tr id="line361">
+<td class="line-numbers"><a href="#line361" name="line361">361</a></td>
+<td class="code"><pre class="prettyprint lang-">	printf &quot;.word\t0b%s%s%s%s%s%s%s%s%s\t\#%s\n&quot;, SPECIAL2, q16_eptn2, q16_optn2, \</pre></td>
+</tr>
+<tr id="line362">
+<td class="line-numbers"><a href="#line362" name="line362">362</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[$1,MINOR0], Q16_XRD, xrf[$4], xrf[$3], xrf[$2], insn[$1,EXTEND], $0; </pre></td>
+</tr>
+<tr id="line363">
+<td class="line-numbers"><a href="#line363" name="line363">363</a></td>
+<td class="code"><pre class="prettyprint lang-">	next</pre></td>
+</tr>
+<tr id="line364">
+<td class="line-numbers"><a href="#line364" name="line364">364</a></td>
+<td class="code"><pre class="prettyprint lang-">	}</pre></td>
+</tr>
+<tr id="line365">
+<td class="line-numbers"><a href="#line365" name="line365">365</a></td>
+<td class="code"><pre class="prettyprint lang-">	if (match($1, &quot;Q16S(LL|(LR|AR))[V]?&quot;)==1) {</pre></td>
+</tr>
+<tr id="line366">
+<td class="line-numbers"><a href="#line366" name="line366">366</a></td>
+<td class="code"><pre class="prettyprint lang-">	if ($1 ~/V/) {</pre></td>
+</tr>
+<tr id="line367">
+<td class="line-numbers"><a href="#line367" name="line367">367</a></td>
+<td class="code"><pre class="prettyprint lang-">	if ($NF ~/[A-Z]/) {sub(&quot;[\$]&quot;,&quot;&quot;, $NF); $NF=&quot;$&quot;grf[$NF]; x_num=split(tmp,x_a); tmp=&quot;&quot;; </pre></td>
+</tr>
+<tr id="line368">
+<td class="line-numbers"><a href="#line368" name="line368">368</a></td>
+<td class="code"><pre class="prettyprint lang-">	for(i=1;i&lt;x_num;i=i+1) {tmp=tmp&quot;&quot;x_a[i]&quot;,&quot;}; tmp=tmp&quot;&quot;$NF;};</pre></td>
+</tr>
+<tr id="line369">
+<td class="line-numbers"><a href="#line369" name="line369">369</a></td>
+<td class="code"><pre class="prettyprint lang-">	assert(match(tmp, &quot;Q16S(LL|(LR|AR))VXR([0-9]|1[0-5]),XR([0-9]|1[0-5]),\</pre></td>
+</tr>
+<tr id="line370">
+<td class="line-numbers"><a href="#line370" name="line370">370</a></td>
+<td class="code"><pre class="prettyprint lang-">[\$]([12]?[0-9]|3[01])$&quot;)==1, &quot;syntax err&quot;);</pre></td>
+</tr>
+<tr id="line371">
+<td class="line-numbers"><a href="#line371" name="line371">371</a></td>
+<td class="code"><pre class="prettyprint lang-">	MXINSN_OK=1;</pre></td>
+</tr>
+<tr id="line372">
+<td class="line-numbers"><a href="#line372" name="line372">372</a></td>
+<td class="code"><pre class="prettyprint lang-">	rb=substr($(NF),2); grf_num = bits2str(strtonum(rb), 5);</pre></td>
+</tr>
+<tr id="line373">
+<td class="line-numbers"><a href="#line373" name="line373">373</a></td>
+<td class="code"><pre class="prettyprint lang-">	printf &quot;.word\t0b%s%s%s%s%s%s%s\t\#%s\n&quot;, SPECIAL2, grf_num, insn[$1,MINOR0], \</pre></td>
+</tr>
+<tr id="line374">
+<td class="line-numbers"><a href="#line374" name="line374">374</a></td>
+<td class="code"><pre class="prettyprint lang-">xrf[$3], xrf[$2], &quot;0000&quot;, insn[$1,EXTEND], $0; </pre></td>
+</tr>
+<tr id="line375">
+<td class="line-numbers"><a href="#line375" name="line375">375</a></td>
+<td class="code"><pre class="prettyprint lang-">	next</pre></td>
+</tr>
+<tr id="line376">
+<td class="line-numbers"><a href="#line376" name="line376">376</a></td>
+<td class="code"><pre class="prettyprint lang-">	} else {</pre></td>
+</tr>
+<tr id="line377">
+<td class="line-numbers"><a href="#line377" name="line377">377</a></td>
+<td class="code"><pre class="prettyprint lang-">	assert(match(tmp, &quot;Q16S(LL|(LR|AR))XR([0-9]|1[0-5]),XR([0-9]|1[0-5]),\</pre></td>
+</tr>
+<tr id="line378">
+<td class="line-numbers"><a href="#line378" name="line378">378</a></td>
+<td class="code"><pre class="prettyprint lang-">XR([0-9]|1[0-5]),XR([0-9]|1[0-5]),(([0-9]|1[0-5])|0X[0-9A-F])$&quot;)==1, &quot;syntax err&quot;);</pre></td>
+</tr>
+<tr id="line379">
+<td class="line-numbers"><a href="#line379" name="line379">379</a></td>
+<td class="code"><pre class="prettyprint lang-">	MXINSN_OK=1;</pre></td>
+</tr>
+<tr id="line380">
+<td class="line-numbers"><a href="#line380" name="line380">380</a></td>
+<td class="code"><pre class="prettyprint lang-">	sft_num = bits2str(strtonum($NF), 4);</pre></td>
+</tr>
+<tr id="line381">
+<td class="line-numbers"><a href="#line381" name="line381">381</a></td>
+<td class="code"><pre class="prettyprint lang-">	Q16_XRD=xrf[$5];</pre></td>
+</tr>
+<tr id="line382">
+<td class="line-numbers"><a href="#line382" name="line382">382</a></td>
+<td class="code"><pre class="prettyprint lang-">	printf &quot;.word\t0b%s%s%s%s%s%s%s%s\t\#%s\n&quot;, SPECIAL2, sft_num, insn[$1,MINOR0], \</pre></td>
+</tr>
+<tr id="line383">
+<td class="line-numbers"><a href="#line383" name="line383">383</a></td>
+<td class="code"><pre class="prettyprint lang-">Q16_XRD, xrf[$4], xrf[$3], xrf[$2], insn[$1,EXTEND], $0; </pre></td>
+</tr>
+<tr id="line384">
+<td class="line-numbers"><a href="#line384" name="line384">384</a></td>
+<td class="code"><pre class="prettyprint lang-">	next</pre></td>
+</tr>
+<tr id="line385">
+<td class="line-numbers"><a href="#line385" name="line385">385</a></td>
+<td class="code"><pre class="prettyprint lang-">	}</pre></td>
+</tr>
+<tr id="line386">
+<td class="line-numbers"><a href="#line386" name="line386">386</a></td>
+<td class="code"><pre class="prettyprint lang-">	}</pre></td>
+</tr>
+<tr id="line387">
+<td class="line-numbers"><a href="#line387" name="line387">387</a></td>
+<td class="code"><pre class="prettyprint lang-">$0 = cur_line;</pre></td>
+</tr>
+<tr id="line388">
+<td class="line-numbers"><a href="#line388" name="line388">388</a></td>
+<td class="code"><pre class="prettyprint lang-">}</pre></td>
+</tr>
+<tr id="line389">
+<td class="line-numbers"><a href="#line389" name="line389">389</a></td>
+<td class="code"><pre class="prettyprint lang-"></pre></td>
+</tr>
+<tr id="line390">
+<td class="line-numbers"><a href="#line390" name="line390">390</a></td>
+<td class="code"><pre class="prettyprint lang-">#&lt;---------------------------------------------------------------------------D32/S32</pre></td>
+</tr>
+<tr id="line391">
+<td class="line-numbers"><a href="#line391" name="line391">391</a></td>
+<td class="code"><pre class="prettyprint lang-">	( match(toupper($1),&quot;[DS]32&quot;) == 1 ) { sub(/\#.*$/, &quot;&quot;, $0); sub(/[ \t]+$/, &quot;&quot;, $0);</pre></td>
+</tr>
+<tr id="line392">
+<td class="line-numbers"><a href="#line392" name="line392">392</a></td>
+<td class="code"><pre class="prettyprint lang-">	$0 = toupper($0); tmp=$0; gsub(/[ \t]+/, &quot;&quot;, tmp);</pre></td>
+</tr>
+<tr id="line393">
+<td class="line-numbers"><a href="#line393" name="line393">393</a></td>
+<td class="code"><pre class="prettyprint lang-"></pre></td>
+</tr>
+<tr id="line394">
+<td class="line-numbers"><a href="#line394" name="line394">394</a></td>
+<td class="code"><pre class="prettyprint lang-">	q32_eptn2=&quot;00&quot;; q32_optn2=&quot;00&quot;; </pre></td>
+</tr>
+<tr id="line395">
+<td class="line-numbers"><a href="#line395" name="line395">395</a></td>
+<td class="code"><pre class="prettyprint lang-"></pre></td>
+</tr>
+<tr id="line396">
+<td class="line-numbers"><a href="#line396" name="line396">396</a></td>
+<td class="code"><pre class="prettyprint lang-">	if (match($1, &quot;S32SFL&quot;)==1) {</pre></td>
+</tr>
+<tr id="line397">
+<td class="line-numbers"><a href="#line397" name="line397">397</a></td>
+<td class="code"><pre class="prettyprint lang-">	assert(match(tmp, &quot;S32SFLXR([0-9]|1[0-5]),XR([0-9]|1[0-5]),XR([0-9]|1[0-5]),\</pre></td>
+</tr>
+<tr id="line398">
+<td class="line-numbers"><a href="#line398" name="line398">398</a></td>
+<td class="code"><pre class="prettyprint lang-">XR([0-9]|1[0-5]),(PTN[0-3]|[01][01])$&quot;)==1, &quot;syntax err&quot;);</pre></td>
+</tr>
+<tr id="line399">
+<td class="line-numbers"><a href="#line399" name="line399">399</a></td>
+<td class="code"><pre class="prettyprint lang-">	MXINSN_OK=1;</pre></td>
+</tr>
+<tr id="line400">
+<td class="line-numbers"><a href="#line400" name="line400">400</a></td>
+<td class="code"><pre class="prettyprint lang-">	if ($NF ~/PTN/) q32_eptn2 = SFL_PTN[$NF];</pre></td>
+</tr>
+<tr id="line401">
+<td class="line-numbers"><a href="#line401" name="line401">401</a></td>
+<td class="code"><pre class="prettyprint lang-">	else q32_eptn2 = $NF;</pre></td>
+</tr>
+<tr id="line402">
+<td class="line-numbers"><a href="#line402" name="line402">402</a></td>
+<td class="code"><pre class="prettyprint lang-">	Q32_XRD=xrf[$5];</pre></td>
+</tr>
+<tr id="line403">
+<td class="line-numbers"><a href="#line403" name="line403">403</a></td>
+<td class="code"><pre class="prettyprint lang-">	printf &quot;.word\t0b%s%s%s%s%s%s%s%s%s\t\#%s\n&quot;, SPECIAL2, q32_eptn2, q32_optn2, \</pre></td>
+</tr>
+<tr id="line404">
+<td class="line-numbers"><a href="#line404" name="line404">404</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[$1,MINOR0], Q32_XRD, xrf[$4], xrf[$3], xrf[$2], insn[$1,EXTEND], $0; </pre></td>
+</tr>
+<tr id="line405">
+<td class="line-numbers"><a href="#line405" name="line405">405</a></td>
+<td class="code"><pre class="prettyprint lang-">	next</pre></td>
+</tr>
+<tr id="line406">
+<td class="line-numbers"><a href="#line406" name="line406">406</a></td>
+<td class="code"><pre class="prettyprint lang-">	}</pre></td>
+</tr>
+<tr id="line407">
+<td class="line-numbers"><a href="#line407" name="line407">407</a></td>
+<td class="code"><pre class="prettyprint lang-">	if (match($1, &quot;D32A(DD|CC)&quot;)==1) {</pre></td>
+</tr>
+<tr id="line408">
+<td class="line-numbers"><a href="#line408" name="line408">408</a></td>
+<td class="code"><pre class="prettyprint lang-">	assert(match(tmp, &quot;D32A(DD|CC)XR([0-9]|1[0-5]),XR([0-9]|1[0-5]),XR([0-9]|1[0-5]),\</pre></td>
+</tr>
+<tr id="line409">
+<td class="line-numbers"><a href="#line409" name="line409">409</a></td>
+<td class="code"><pre class="prettyprint lang-">XR([0-9]|1[0-5]),([AS][AS]|[0-3])$&quot;)==1, &quot;syntax err&quot;);</pre></td>
+</tr>
+<tr id="line410">
+<td class="line-numbers"><a href="#line410" name="line410">410</a></td>
+<td class="code"><pre class="prettyprint lang-">	MXINSN_OK=1;</pre></td>
+</tr>
+<tr id="line411">
+<td class="line-numbers"><a href="#line411" name="line411">411</a></td>
+<td class="code"><pre class="prettyprint lang-">	q32_eptn2 = MAC_AS[$NF];</pre></td>
+</tr>
+<tr id="line412">
+<td class="line-numbers"><a href="#line412" name="line412">412</a></td>
+<td class="code"><pre class="prettyprint lang-">	Q32_XRD=xrf[$5];</pre></td>
+</tr>
+<tr id="line413">
+<td class="line-numbers"><a href="#line413" name="line413">413</a></td>
+<td class="code"><pre class="prettyprint lang-">	printf &quot;.word\t0b%s%s%s%s%s%s%s%s%s\t\#%s\n&quot;, SPECIAL2, q32_eptn2, q32_optn2, \</pre></td>
+</tr>
+<tr id="line414">
+<td class="line-numbers"><a href="#line414" name="line414">414</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[$1,MINOR0], Q32_XRD, xrf[$4], xrf[$3], xrf[$2], insn[$1,EXTEND], $0; </pre></td>
+</tr>
+<tr id="line415">
+<td class="line-numbers"><a href="#line415" name="line415">415</a></td>
+<td class="code"><pre class="prettyprint lang-">	next</pre></td>
+</tr>
+<tr id="line416">
+<td class="line-numbers"><a href="#line416" name="line416">416</a></td>
+<td class="code"><pre class="prettyprint lang-">	}</pre></td>
+</tr>
+<tr id="line417">
+<td class="line-numbers"><a href="#line417" name="line417">417</a></td>
+<td class="code"><pre class="prettyprint lang-">	if (match($1, &quot;S32CPS&quot;)==1) {</pre></td>
+</tr>
+<tr id="line418">
+<td class="line-numbers"><a href="#line418" name="line418">418</a></td>
+<td class="code"><pre class="prettyprint lang-">	assert(match(tmp, &quot;S32CPSXR([0-9]|1[0-5]),XR([0-9]|1[0-5]),XR([0-9]|1[0-5])$&quot;)\</pre></td>
+</tr>
+<tr id="line419">
+<td class="line-numbers"><a href="#line419" name="line419">419</a></td>
+<td class="code"><pre class="prettyprint lang-">==1, &quot;syntax err&quot;);</pre></td>
+</tr>
+<tr id="line420">
+<td class="line-numbers"><a href="#line420" name="line420">420</a></td>
+<td class="code"><pre class="prettyprint lang-">	MXINSN_OK=1;</pre></td>
+</tr>
+<tr id="line421">
+<td class="line-numbers"><a href="#line421" name="line421">421</a></td>
+<td class="code"><pre class="prettyprint lang-">	q32_optn2 = &quot;000&quot;;</pre></td>
+</tr>
+<tr id="line422">
+<td class="line-numbers"><a href="#line422" name="line422">422</a></td>
+<td class="code"><pre class="prettyprint lang-">	Q32_XRD=&quot;&quot;;</pre></td>
+</tr>
+<tr id="line423">
+<td class="line-numbers"><a href="#line423" name="line423">423</a></td>
+<td class="code"><pre class="prettyprint lang-">	printf &quot;.word\t0b%s%s%s%s%s%s%s%s%s\t\#%s\n&quot;, SPECIAL2, q32_eptn2, q32_optn2, \</pre></td>
+</tr>
+<tr id="line424">
+<td class="line-numbers"><a href="#line424" name="line424">424</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[$1,MINOR0], Q32_XRD, xrf[$4], xrf[$3], xrf[$2], insn[$1,EXTEND], $0; </pre></td>
+</tr>
+<tr id="line425">
+<td class="line-numbers"><a href="#line425" name="line425">425</a></td>
+<td class="code"><pre class="prettyprint lang-">	next</pre></td>
+</tr>
+<tr id="line426">
+<td class="line-numbers"><a href="#line426" name="line426">426</a></td>
+<td class="code"><pre class="prettyprint lang-">	}</pre></td>
+</tr>
+<tr id="line427">
+<td class="line-numbers"><a href="#line427" name="line427">427</a></td>
+<td class="code"><pre class="prettyprint lang-">	if (match($1, &quot;S32M(AX|IN)&quot;)==1) {</pre></td>
+</tr>
+<tr id="line428">
+<td class="line-numbers"><a href="#line428" name="line428">428</a></td>
+<td class="code"><pre class="prettyprint lang-">	assert(match(tmp, &quot;S32M(AX|IN)XR([0-9]|1[0-5]),XR([0-9]|1[0-5]),XR([0-9]|1[0-5])$&quot;\</pre></td>
+</tr>
+<tr id="line429">
+<td class="line-numbers"><a href="#line429" name="line429">429</a></td>
+<td class="code"><pre class="prettyprint lang-">)==1, &quot;syntax err&quot;);</pre></td>
+</tr>
+<tr id="line430">
+<td class="line-numbers"><a href="#line430" name="line430">430</a></td>
+<td class="code"><pre class="prettyprint lang-">	MXINSN_OK=1;</pre></td>
+</tr>
+<tr id="line431">
+<td class="line-numbers"><a href="#line431" name="line431">431</a></td>
+<td class="code"><pre class="prettyprint lang-">	q32_optn2 = &quot;000&quot;;</pre></td>
+</tr>
+<tr id="line432">
+<td class="line-numbers"><a href="#line432" name="line432">432</a></td>
+<td class="code"><pre class="prettyprint lang-">	Q32_XRD=&quot;&quot;;</pre></td>
+</tr>
+<tr id="line433">
+<td class="line-numbers"><a href="#line433" name="line433">433</a></td>
+<td class="code"><pre class="prettyprint lang-">	printf &quot;.word\t0b%s%s%s%s%s%s%s%s%s\t\#%s\n&quot;, SPECIAL2, q32_eptn2, q32_optn2, \</pre></td>
+</tr>
+<tr id="line434">
+<td class="line-numbers"><a href="#line434" name="line434">434</a></td>
+<td class="code"><pre class="prettyprint lang-">	insn[$1,MINOR0], Q32_XRD, xrf[$4], xrf[$3], xrf[$2], insn[$1,EXTEND], $0; </pre></td>
+</tr>
+<tr id="line435">
+<td class="line-numbers"><a href="#line435" name="line435">435</a></td>
+<td class="code"><pre class="prettyprint lang-">	next</pre></td>
+</tr>
+<tr id="line436">
+<td class="line-numbers"><a href="#line436" name="line436">436</a></td>
+<td class="code"><pre class="prettyprint lang-">	}</pre></td>
+</tr>
+<tr id="line437">
+<td class="line-numbers"><a href="#line437" name="line437">437</a></td>
+<td class="code"><pre class="prettyprint lang-">	if (match($1, &quot;D32SL[LR][V]?&quot;)==1) {</pre></td>
+</tr>
+<tr id="line438">
+<td class="line-numbers"><a href="#line438" name="line438">438</a></td>
+<td class="code"><pre class="prettyprint lang-">	if ($1 ~/V/) {</pre></td>
+</tr>
+<tr id="line439">
+<td class="line-numbers"><a href="#line439" name="line439">439</a></td>
+<td class="code"><pre class="prettyprint lang-">	if ($NF ~/[A-Z]/) {sub(&quot;[\$]&quot;,&quot;&quot;, $NF); $NF=&quot;$&quot;grf[$NF]; x_num=split(tmp,x_a); tmp=&quot;&quot;; </pre></td>
+</tr>
+<tr id="line440">
+<td class="line-numbers"><a href="#line440" name="line440">440</a></td>
+<td class="code"><pre class="prettyprint lang-">	for(i=1;i&lt;x_num;i=i+1) {tmp=tmp&quot;&quot;x_a[i]&quot;,&quot;}; tmp=tmp&quot;&quot;$NF;};</pre></td>
+</tr>
+<tr id="line441">
+<td class="line-numbers"><a href="#line441" name="line441">441</a></td>
+<td class="code"><pre class="prettyprint lang-">	assert(match(tmp, &quot;D32SL[LR]VXR([0-9]|1[0-5]),XR([0-9]|1[0-5]),\</pre></td>
+</tr>
+<tr id="line442">
+<td class="line-numbers"><a href="#line442" name="line442">442</a></td>
+<td class="code"><pre class="prettyprint lang-">[\$]([12]?[0-9]|3[01])$&quot;)==1, &quot;syntax err&quot;);</pre></td>
+</tr>
+<tr id="line443">
+<td class="line-numbers"><a href="#line443" name="line443">443</a></td>
+<td class="code"><pre class="prettyprint lang-">	MXINSN_OK=1;</pre></td>
+</tr>
+<tr id="line444">
+<td class="line-numbers"><a href="#line444" name="line444">444</a></td>
+<td class="code"><pre class="prettyprint lang-">	rb=substr($(NF),2); grf_num = bits2str(strtonum(rb), 5);</pre></td>
+</tr>
+<tr id="line445">
+<td class="line-numbers"><a href="#line445" name="line445">445</a></td>
+<td class="code"><pre class="prettyprint lang-">	printf &quot;.word\t0b%s%s%s%s%s%s%s\t\#%s\n&quot;, SPECIAL2, grf_num, insn[$1,MINOR0], \</pre></td>
+</tr>
+<tr id="line446">
+<td class="line-numbers"><a href="#line446" name="line446">446</a></td>
+<td class="code"><pre class="prettyprint lang-">xrf[$3], xrf[$2], &quot;0000&quot;, insn[$1,EXTEND], $0; </pre></td>
+</tr>
+<tr id="line447">
+<td class="line-numbers"><a href="#line447" name="line447">447</a></td>
+<td class="code"><pre class="prettyprint lang-">	next</pre></td>
+</tr>
+<tr id="line448">
+<td class="line-numbers"><a href="#line448" name="line448">448</a></td>
+<td class="code"><pre class="prettyprint lang-">	} else {</pre></td>
+</tr>
+<tr id="line449">
+<td class="line-numbers"><a href="#line449" name="line449">449</a></td>
+<td class="code"><pre class="prettyprint lang-">	assert(match(tmp, &quot;D32SL[LR]XR([0-9]|1[0-5]),XR([0-9]|1[0-5]),XR([0-9]|1[0-5]),\</pre></td>
+</tr>
+<tr id="line450">
+<td class="line-numbers"><a href="#line450" name="line450">450</a></td>
+<td class="code"><pre class="prettyprint lang-">XR([0-9]|1[0-5]),(([0-9]|1[0-5])|0X[0-9A-F])$&quot;)==1, &quot;syntax err&quot;);</pre></td>
+</tr>
+<tr id="line451">
+<td class="line-numbers"><a href="#line451" name="line451">451</a></td>
+<td class="code"><pre class="prettyprint lang-">	MXINSN_OK=1;</pre></td>
+</tr>
+<tr id="line452">
+<td class="line-numbers"><a href="#line452" name="line452">452</a></td>
+<td class="code"><pre class="prettyprint lang-">	sft_num = bits2str(strtonum($NF), 4);</pre></td>
+</tr>
+<tr id="line453">
+<td class="line-numbers"><a href="#line453" name="line453">453</a></td>
+<td class="code"><pre class="prettyprint lang-">	Q32_XRD=xrf[$5];</pre></td>
+</tr>
+<tr id="line454">
+<td class="line-numbers"><a href="#line454" name="line454">454</a></td>
+<td class="code"><pre class="prettyprint lang-">	printf &quot;.word\t0b%s%s%s%s%s%s%s%s\t\#%s\n&quot;, SPECIAL2, sft_num, insn[$1,MINOR0]\</pre></td>
+</tr>
+<tr id="line455">
+<td class="line-numbers"><a href="#line455" name="line455">455</a></td>
+<td class="code"><pre class="prettyprint lang-">, Q32_XRD, xrf[$4], xrf[$3], xrf[$2], insn[$1,EXTEND], $0; </pre></td>
+</tr>
+<tr id="line456">
+<td class="line-numbers"><a href="#line456" name="line456">456</a></td>
+<td class="code"><pre class="prettyprint lang-">	next</pre></td>
+</tr>
+<tr id="line457">
+<td class="line-numbers"><a href="#line457" name="line457">457</a></td>
+<td class="code"><pre class="prettyprint lang-">	}</pre></td>
+</tr>
+<tr id="line458">
+<td class="line-numbers"><a href="#line458" name="line458">458</a></td>
+<td class="code"><pre class="prettyprint lang-">	}</pre></td>
+</tr>
+<tr id="line459">
+<td class="line-numbers"><a href="#line459" name="line459">459</a></td>
+<td class="code"><pre class="prettyprint lang-">	if (match($1, &quot;D32SAR[LWV]?&quot;)==1) {</pre></td>
+</tr>
+<tr id="line460">
+<td class="line-numbers"><a href="#line460" name="line460">460</a></td>
+<td class="code"><pre class="prettyprint lang-">	sc=split($1, a, &quot;&quot;); </pre></td>
+</tr>
+<tr id="line461">
+<td class="line-numbers"><a href="#line461" name="line461">461</a></td>
+<td class="code"><pre class="prettyprint lang-">	if (a[sc]==&quot;V&quot;) {</pre></td>
+</tr>
+<tr id="line462">
+<td class="line-numbers"><a href="#line462" name="line462">462</a></td>
+<td class="code"><pre class="prettyprint lang-">	if ($NF ~/[A-Z]/) {sub(&quot;[\$]&quot;,&quot;&quot;, $NF); $NF=&quot;$&quot;grf[$NF]; x_num=split(tmp,x_a); tmp=&quot;&quot;; </pre></td>
+</tr>
+<tr id="line463">
+<td class="line-numbers"><a href="#line463" name="line463">463</a></td>
+<td class="code"><pre class="prettyprint lang-">	for(i=1;i&lt;x_num;i=i+1) {tmp=tmp&quot;&quot;x_a[i]&quot;,&quot;}; tmp=tmp&quot;&quot;$NF;};</pre></td>
+</tr>
+<tr id="line464">
+<td class="line-numbers"><a href="#line464" name="line464">464</a></td>
+<td class="code"><pre class="prettyprint lang-">	assert(match(tmp, &quot;D32SARVXR([0-9]|1[0-5]),XR([0-9]|1[0-5]),\</pre></td>
+</tr>
+<tr id="line465">
+<td class="line-numbers"><a href="#line465" name="line465">465</a></td>
+<td class="code"><pre class="prettyprint lang-">[\$]([12]?[0-9]|3[01])$&quot;)==1, &quot;syntax err&quot;);</pre></td>
+</tr>
+<tr id="line466">
+<td class="line-numbers"><a href="#line466" name="line466">466</a></td>
+<td class="code"><pre class="prettyprint lang-">	MXINSN_OK=1;</pre></td>
+</tr>
+<tr id="line467">
+<td class="line-numbers"><a href="#line467" name="line467">467</a></td>
+<td class="code"><pre class="prettyprint lang-">	rb=substr($(NF),2); grf_num = bits2str(strtonum(rb), 5);</pre></td>
+</tr>
+<tr id="line468">
+<td class="line-numbers"><a href="#line468" name="line468">468</a></td>
+<td class="code"><pre class="prettyprint lang-">	printf &quot;.word\t0b%s%s%s%s%s%s%s\t\#%s\n&quot;, SPECIAL2, grf_num, insn[$1,MINOR0], \</pre></td>
+</tr>
+<tr id="line469">
+<td class="line-numbers"><a href="#line469" name="line469">469</a></td>
+<td class="code"><pre class="prettyprint lang-">xrf[$3], xrf[$2], &quot;0000&quot;, insn[$1,EXTEND], $0; </pre></td>
+</tr>
+<tr id="line470">
+<td class="line-numbers"><a href="#line470" name="line470">470</a></td>
+<td class="code"><pre class="prettyprint lang-">	next</pre></td>
+</tr>
+<tr id="line471">
+<td class="line-numbers"><a href="#line471" name="line471">471</a></td>
+<td class="code"><pre class="prettyprint lang-">	} else {</pre></td>
+</tr>
+<tr id="line472">
+<td class="line-numbers"><a href="#line472" name="line472">472</a></td>
+<td class="code"><pre class="prettyprint lang-">	if (a[sc]==&quot;W&quot;) {</pre></td>
+</tr>
+<tr id="line473">
+<td class="line-numbers"><a href="#line473" name="line473">473</a></td>
+<td class="code"><pre class="prettyprint lang-">	if ($NF ~/[A-Z]/) {sub(&quot;[\$]&quot;,&quot;&quot;, $NF); $NF=&quot;$&quot;grf[$NF]; x_num=split(tmp,x_a); tmp=&quot;&quot;; </pre></td>
+</tr>
+<tr id="line474">
+<td class="line-numbers"><a href="#line474" name="line474">474</a></td>
+<td class="code"><pre class="prettyprint lang-">	for(i=1;i&lt;x_num;i=i+1) {tmp=tmp&quot;&quot;x_a[i]&quot;,&quot;}; tmp=tmp&quot;&quot;$NF;};</pre></td>
+</tr>
+<tr id="line475">
+<td class="line-numbers"><a href="#line475" name="line475">475</a></td>
+<td class="code"><pre class="prettyprint lang-">	assert(match(tmp, &quot;D32SARWXR([0-9]|1[0-5]),XR([0-9]|1[0-5]),XR([0-9]|1[0-5]),\</pre></td>
+</tr>
+<tr id="line476">
+<td class="line-numbers"><a href="#line476" name="line476">476</a></td>
+<td class="code"><pre class="prettyprint lang-">[\$]([12]?[0-9]|3[01])$&quot;)==1, &quot;syntax err&quot;);</pre></td>
+</tr>
+<tr id="line477">
+<td class="line-numbers"><a href="#line477" name="line477">477</a></td>
+<td class="code"><pre class="prettyprint lang-">	MXINSN_OK=1;</pre></td>
+</tr>
+<tr id="line478">
+<td class="line-numbers"><a href="#line478" name="line478">478</a></td>
+<td class="code"><pre class="prettyprint lang-">	rb=substr($(NF),2); grf_num = bits2str(strtonum(rb), 5);</pre></td>
+</tr>
+<tr id="line479">
+<td class="line-numbers"><a href="#line479" name="line479">479</a></td>
+<td class="code"><pre class="prettyprint lang-">	printf &quot;.word\t0b%s%s%s%s%s%s%s\t\#%s\n&quot;, SPECIAL2, grf_num, insn[$1,MINOR0], \</pre></td>
+</tr>
+<tr id="line480">
+<td class="line-numbers"><a href="#line480" name="line480">480</a></td>
+<td class="code"><pre class="prettyprint lang-">xrf[$4], xrf[$3], xrf[$2], insn[$1,EXTEND], $0; </pre></td>
+</tr>
+<tr id="line481">
+<td class="line-numbers"><a href="#line481" name="line481">481</a></td>
+<td class="code"><pre class="prettyprint lang-">	next</pre></td>
+</tr>
+<tr id="line482">
+<td class="line-numbers"><a href="#line482" name="line482">482</a></td>
+<td class="code"><pre class="prettyprint lang-">	} else {</pre></td>
+</tr>
+<tr id="line483">
+<td class="line-numbers"><a href="#line483" name="line483">483</a></td>
+<td class="code"><pre class="prettyprint lang-">	if (a[sc]==&quot;L&quot;) {</pre></td>
+</tr>
+<tr id="line484">
+<td class="line-numbers"><a href="#line484" name="line484">484</a></td>
+<td class="code"><pre class="prettyprint lang-">	assert(match(tmp, &quot;D32SARLXR([0-9]|1[0-5]),XR([0-9]|1[0-5]),XR([0-9]|1[0-5]),\</pre></td>
+</tr>
+<tr id="line485">
+<td class="line-numbers"><a href="#line485" name="line485">485</a></td>
+<td class="code"><pre class="prettyprint lang-">(([0-9]|1[0-5])|0X[0-9A-F])$&quot;)==1, &quot;syntax err&quot;);</pre></td>
+</tr>
+<tr id="line486">
+<td class="line-numbers"><a href="#line486" name="line486">486</a></td>
+<td class="code"><pre class="prettyprint lang-">	MXINSN_OK=1;</pre></td>
+</tr>
+<tr id="line487">
+<td class="line-numbers"><a href="#line487" name="line487">487</a></td>
+<td class="code"><pre class="prettyprint lang-">	sft_num = bits2str(strtonum($NF), 4);</pre></td>
+</tr>
+<tr id="line488">
+<td class="line-numbers"><a href="#line488" name="line488">488</a></td>
+<td class="code"><pre class="prettyprint lang-">	Q32_XRD=&quot;0000&quot;;</pre></td>
+</tr>
+<tr id="line489">
+<td class="line-numbers"><a href="#line489" name="line489">489</a></td>
+<td class="code"><pre class="prettyprint lang-">	printf &quot;.word\t0b%s%s%s%s%s%s%s%s\t\#%s\n&quot;, SPECIAL2, sft_num, insn[$1,MINOR0], \</pre></td>
+</tr>
+<tr id="line490">
+<td class="line-numbers"><a href="#line490" name="line490">490</a></td>
+<td class="code"><pre class="prettyprint lang-">Q32_XRD, xrf[$4], xrf[$3], xrf[$2], insn[$1,EXTEND], $0; </pre></td>
+</tr>
+<tr id="line491">
+<td class="line-numbers"><a href="#line491" name="line491">491</a></td>
+<td class="code"><pre class="prettyprint lang-">	next</pre></td>
+</tr>
+<tr id="line492">
+<td class="line-numbers"><a href="#line492" name="line492">492</a></td>
+<td class="code"><pre class="prettyprint lang-">	} else {</pre></td>
+</tr>
+<tr id="line493">
+<td class="line-numbers"><a href="#line493" name="line493">493</a></td>
+<td class="code"><pre class="prettyprint lang-">	assert(match(tmp, &quot;D32SARXR([0-9]|1[0-5]),XR([0-9]|1[0-5]),XR([0-9]|1[0-5]),\</pre></td>
+</tr>
+<tr id="line494">
+<td class="line-numbers"><a href="#line494" name="line494">494</a></td>
+<td class="code"><pre class="prettyprint lang-">XR([0-9]|1[0-5]),(([0-9]|1[0-5])|0X[0-9A-F])$&quot;)==1, &quot;syntax err&quot;);</pre></td>
+</tr>
+<tr id="line495">
+<td class="line-numbers"><a href="#line495" name="line495">495</a></td>
+<td class="code"><pre class="prettyprint lang-">	MXINSN_OK=1;</pre></td>
+</tr>
+<tr id="line496">
+<td class="line-numbers"><a href="#line496" name="line496">496</a></td>
+<td class="code"><pre class="prettyprint lang-">	sft_num = bits2str(strtonum($NF), 4);</pre></td>
+</tr>
+<tr id="line497">
+<td class="line-numbers"><a href="#line497" name="line497">497</a></td>
+<td class="code"><pre class="prettyprint lang-">	Q32_XRD=xrf[$5];</pre></td>
+</tr>
+<tr id="line498">
+<td class="line-numbers"><a href="#line498" name="line498">498</a></td>
+<td class="code"><pre class="prettyprint lang-">	printf &quot;.word\t0b%s%s%s%s%s%s%s%s\t\#%s\n&quot;, SPECIAL2, sft_num, insn[$1,MINOR0], \</pre></td>
+</tr>
+<tr id="line499">
+<td class="line-numbers"><a href="#line499" name="line499">499</a></td>
+<td class="code"><pre class="prettyprint lang-">Q32_XRD, xrf[$4], xrf[$3], xrf[$2], insn[$1,EXTEND], $0; </pre></td>
+</tr>
+<tr id="line500">
+<td class="line-numbers"><a href="#line500" name="line500">500</a></td>
+<td class="code"><pre class="prettyprint lang-">	next</pre></td>
+</tr>
+<tr id="line501">
+<td class="line-numbers"><a href="#line501" name="line501">501</a></td>
+<td class="code"><pre class="prettyprint lang-">	}</pre></td>
+</tr>
+<tr id="line502">
+<td class="line-numbers"><a href="#line502" name="line502">502</a></td>
+<td class="code"><pre class="prettyprint lang-">	}</pre></td>
+</tr>
+<tr id="line503">
+<td class="line-numbers"><a href="#line503" name="line503">503</a></td>
+<td class="code"><pre class="prettyprint lang-">	}</pre></td>
+</tr>
+<tr id="line504">
+<td class="line-numbers"><a href="#line504" name="line504">504</a></td>
+<td class="code"><pre class="prettyprint lang-">	}</pre></td>
+</tr>
+<tr id="line505">
+<td class="line-numbers"><a href="#line505" name="line505">505</a></td>
+<td class="code"><pre class="prettyprint lang-">	if (match($1, &quot;S32ALN&quot;)==1) {</pre></td>
+</tr>
+<tr id="line506">
+<td class="line-numbers"><a href="#line506" name="line506">506</a></td>
+<td class="code"><pre class="prettyprint lang-">	if ($NF ~/[A-Z]/) {sub(&quot;[\$]&quot;,&quot;&quot;, $NF); $NF=&quot;$&quot;grf[$NF]; x_num=split(tmp,x_a); tmp=&quot;&quot;; </pre></td>
+</tr>
+<tr id="line507">
+<td class="line-numbers"><a href="#line507" name="line507">507</a></td>
+<td class="code"><pre class="prettyprint lang-">	for(i=1;i&lt;x_num;i=i+1) {tmp=tmp&quot;&quot;x_a[i]&quot;,&quot;}; tmp=tmp&quot;&quot;$NF;};</pre></td>
+</tr>
+<tr id="line508">
+<td class="line-numbers"><a href="#line508" name="line508">508</a></td>
+<td class="code"><pre class="prettyprint lang-">	assert(match(tmp, &quot;S32ALNXR([0-9]|1[0-5]),XR([0-9]|1[0-5]),XR([0-9]|1[0-5]),\</pre></td>
+</tr>
+<tr id="line509">
+<td class="line-numbers"><a href="#line509" name="line509">509</a></td>
+<td class="code"><pre class="prettyprint lang-">[\$]([12]?[0-9]|3[01])$&quot;)==1, &quot;syntax err&quot;);</pre></td>
+</tr>
+<tr id="line510">
+<td class="line-numbers"><a href="#line510" name="line510">510</a></td>
+<td class="code"><pre class="prettyprint lang-">	MXINSN_OK=1;</pre></td>
+</tr>
+<tr id="line511">
+<td class="line-numbers"><a href="#line511" name="line511">511</a></td>
+<td class="code"><pre class="prettyprint lang-">	rb=substr($(NF),2); grf_num = bits2str(strtonum(rb), 5);</pre></td>
+</tr>
+<tr id="line512">
+<td class="line-numbers"><a href="#line512" name="line512">512</a></td>
+<td class="code"><pre class="prettyprint lang-">	printf &quot;.word\t0b%s%s%s%s%s%s%s\t\#%s\n&quot;, SPECIAL2, grf_num, insn[$1,MINOR0], \</pre></td>
+</tr>
+<tr id="line513">
+<td class="line-numbers"><a href="#line513" name="line513">513</a></td>
+<td class="code"><pre class="prettyprint lang-">xrf[$4], xrf[$3], xrf[$2], insn[$1,EXTEND], $0; </pre></td>
+</tr>
+<tr id="line514">
+<td class="line-numbers"><a href="#line514" name="line514">514</a></td>
+<td class="code"><pre class="prettyprint lang-">	next</pre></td>
+</tr>
+<tr id="line515">
+<td class="line-numbers"><a href="#line515" name="line515">515</a></td>
+<td class="code"><pre class="prettyprint lang-">	}</pre></td>
+</tr>
+<tr id="line516">
+<td class="line-numbers"><a href="#line516" name="line516">516</a></td>
+<td class="code"><pre class="prettyprint lang-">	if (match($1, &quot;S32(M2I|I2M)&quot;)==1) {</pre></td>
+</tr>
+<tr id="line517">
+<td class="line-numbers"><a href="#line517" name="line517">517</a></td>
+<td class="code"><pre class="prettyprint lang-">	if ($NF ~/[A-Z]/) {sub(&quot;[\$]&quot;,&quot;&quot;, $NF); $NF=&quot;$&quot;grf[$NF]; x_num=split(tmp,x_a); tmp=&quot;&quot;; </pre></td>
+</tr>
+<tr id="line518">
+<td class="line-numbers"><a href="#line518" name="line518">518</a></td>
+<td class="code"><pre class="prettyprint lang-">	for(i=1;i&lt;x_num;i=i+1) {tmp=tmp&quot;&quot;x_a[i]&quot;,&quot;}; tmp=tmp&quot;&quot;$NF;};</pre></td>
+</tr>
+<tr id="line519">
+<td class="line-numbers"><a href="#line519" name="line519">519</a></td>
+<td class="code"><pre class="prettyprint lang-">	assert(match(tmp, &quot;S32(M2I|I2M)XR([0-9]|1[0-6]),[\$]([12]?[0-9]|3[01])$&quot;)==1,\</pre></td>
+</tr>
+<tr id="line520">
+<td class="line-numbers"><a href="#line520" name="line520">520</a></td>
+<td class="code"><pre class="prettyprint lang-"> &quot;syntax err&quot;);</pre></td>
+</tr>
+<tr id="line521">
+<td class="line-numbers"><a href="#line521" name="line521">521</a></td>
+<td class="code"><pre class="prettyprint lang-">	MXINSN_OK=1;</pre></td>
+</tr>
+<tr id="line522">
+<td class="line-numbers"><a href="#line522" name="line522">522</a></td>
+<td class="code"><pre class="prettyprint lang-">	rb=substr($(NF),2); grf_num = bits2str(strtonum(rb), 5);</pre></td>
+</tr>
+<tr id="line523">
+<td class="line-numbers"><a href="#line523" name="line523">523</a></td>
+<td class="code"><pre class="prettyprint lang-">	if (match($2, &quot;XR16&quot;)==1) Q32_XRA=&quot;10000&quot;;</pre></td>
+</tr>
+<tr id="line524">
+<td class="line-numbers"><a href="#line524" name="line524">524</a></td>
+<td class="code"><pre class="prettyprint lang-">	else Q32_XRA=&quot;0&quot;xrf[$2];</pre></td>
+</tr>
+<tr id="line525">
+<td class="line-numbers"><a href="#line525" name="line525">525</a></td>
+<td class="code"><pre class="prettyprint lang-">	printf &quot;.word\t0b%s%s%s%s%s%s\t\#%s\n&quot;, SPECIAL2, &quot;00000&quot;, grf_num, &quot;00000&quot;, \</pre></td>
+</tr>
+<tr id="line526">
+<td class="line-numbers"><a href="#line526" name="line526">526</a></td>
+<td class="code"><pre class="prettyprint lang-">Q32_XRA, insn[$1,EXTEND], $0; </pre></td>
+</tr>
+<tr id="line527">
+<td class="line-numbers"><a href="#line527" name="line527">527</a></td>
+<td class="code"><pre class="prettyprint lang-">	next</pre></td>
+</tr>
+<tr id="line528">
+<td class="line-numbers"><a href="#line528" name="line528">528</a></td>
+<td class="code"><pre class="prettyprint lang-">	}</pre></td>
+</tr>
+<tr id="line529">
+<td class="line-numbers"><a href="#line529" name="line529">529</a></td>
+<td class="code"><pre class="prettyprint lang-">	if (match($1, &quot;S32(LD[DI]|S(TD|DI))[V]?&quot;)==1) {</pre></td>
+</tr>
+<tr id="line530">
+<td class="line-numbers"><a href="#line530" name="line530">530</a></td>
+<td class="code"><pre class="prettyprint lang-">	if ($1 ~/V/) {</pre></td>
+</tr>
+<tr id="line531">
+<td class="line-numbers"><a href="#line531" name="line531">531</a></td>
+<td class="code"><pre class="prettyprint lang-">	if ($(NF-2) ~/[A-Z]/ ) {sub(&quot;[\$]&quot;,&quot;&quot;, $(NF-2)); $(NF-2)=&quot;$&quot;grf[$(NF-2)]; x_num=split(tmp,x_a); </pre></td>
+</tr>
+<tr id="line532">
+<td class="line-numbers"><a href="#line532" name="line532">532</a></td>
+<td class="code"><pre class="prettyprint lang-">	tmp=&quot;&quot;; for(i=1;i&lt;x_num-2;i=i+1) {tmp=tmp&quot;&quot;x_a[i]&quot;,&quot;}; </pre></td>
+</tr>
+<tr id="line533">
+<td class="line-numbers"><a href="#line533" name="line533">533</a></td>
+<td class="code"><pre class="prettyprint lang-">	tmp=tmp&quot;&quot;$(NF-2)&quot;,&quot;x_a[x_num-1]&quot;,&quot;x_a[x_num];};</pre></td>
+</tr>
+<tr id="line534">
+<td class="line-numbers"><a href="#line534" name="line534">534</a></td>
+<td class="code"><pre class="prettyprint lang-">	if ($(NF-1) ~/[A-Z]/ ) {sub(&quot;[\$]&quot;,&quot;&quot;, $(NF-1)); $(NF-1)=&quot;$&quot;grf[$(NF-1)]; x_num=split(tmp,x_a); </pre></td>
+</tr>
+<tr id="line535">
+<td class="line-numbers"><a href="#line535" name="line535">535</a></td>
+<td class="code"><pre class="prettyprint lang-">	tmp=&quot;&quot;; for(i=1;i&lt;x_num-1;i=i+1) {tmp=tmp&quot;&quot;x_a[i]&quot;,&quot;}; tmp=tmp&quot;&quot;$(NF-1)&quot;,&quot;x_a[x_num];};</pre></td>
+</tr>
+<tr id="line536">
+<td class="line-numbers"><a href="#line536" name="line536">536</a></td>
+<td class="code"><pre class="prettyprint lang-">	assert(match(tmp, &quot;S32(LD[DI]|S(TD|DI))VXR([0-9]|1[0-5]),[\$]([12]?[0-9]|3[01]),\</pre></td>
+</tr>
+<tr id="line537">
+<td class="line-numbers"><a href="#line537" name="line537">537</a></td>
+<td class="code"><pre class="prettyprint lang-">[\$]([12]?[0-9]|3[01]),([0-2]|0X[0-2])$&quot;)==1, &quot;syntax err&quot;);</pre></td>
+</tr>
+<tr id="line538">
+<td class="line-numbers"><a href="#line538" name="line538">538</a></td>
+<td class="code"><pre class="prettyprint lang-">	MXINSN_OK=1;</pre></td>
+</tr>
+<tr id="line539">
+<td class="line-numbers"><a href="#line539" name="line539">539</a></td>
+<td class="code"><pre class="prettyprint lang-">	rb=substr($(NF-2),2); grfb_num = bits2str(strtonum(rb), 5);</pre></td>
+</tr>
+<tr id="line540">
+<td class="line-numbers"><a href="#line540" name="line540">540</a></td>
+<td class="code"><pre class="prettyprint lang-">	rc=substr($(NF-1),2); grfc_num = bits2str(strtonum(rc), 5);</pre></td>
+</tr>
+<tr id="line541">
+<td class="line-numbers"><a href="#line541" name="line541">541</a></td>
+<td class="code"><pre class="prettyprint lang-">	strd_num = bits2str(strtonum($NF), 2);</pre></td>
+</tr>
+<tr id="line542">
+<td class="line-numbers"><a href="#line542" name="line542">542</a></td>
+<td class="code"><pre class="prettyprint lang-">	printf &quot;.word\t0b%s%s%s%s%s%s%s\t\#%s\n&quot;, SPECIAL2, grfb_num, grfc_num, strd_num, \</pre></td>
+</tr>
+<tr id="line543">
+<td class="line-numbers"><a href="#line543" name="line543">543</a></td>
+<td class="code"><pre class="prettyprint lang-">&quot;0000&quot;, xrf[$2], insn[$1,EXTEND], $0; </pre></td>
+</tr>
+<tr id="line544">
+<td class="line-numbers"><a href="#line544" name="line544">544</a></td>
+<td class="code"><pre class="prettyprint lang-">	next</pre></td>
+</tr>
+<tr id="line545">
+<td class="line-numbers"><a href="#line545" name="line545">545</a></td>
+<td class="code"><pre class="prettyprint lang-">	} else {</pre></td>
+</tr>
+<tr id="line546">
+<td class="line-numbers"><a href="#line546" name="line546">546</a></td>
+<td class="code"><pre class="prettyprint lang-">	if ($(NF-1) ~/[A-Z]/ ) {sub(&quot;[\$]&quot;,&quot;&quot;, $(NF-1)); $(NF-1)=&quot;$&quot;grf[$(NF-1)]; x_num=split(tmp,x_a); </pre></td>
+</tr>
+<tr id="line547">
+<td class="line-numbers"><a href="#line547" name="line547">547</a></td>
+<td class="code"><pre class="prettyprint lang-">	tmp=&quot;&quot;; for(i=1;i&lt;x_num-1;i=i+1) {tmp=tmp&quot;&quot;x_a[i]&quot;,&quot;}; tmp=tmp&quot;&quot;$(NF-1)&quot;,&quot;x_a[x_num];};</pre></td>
+</tr>
+<tr id="line548">
+<td class="line-numbers"><a href="#line548" name="line548">548</a></td>
+<td class="code"><pre class="prettyprint lang-">	assert(match(tmp, &quot;S32(LD[DI]|S(TD|DI))XR([0-9]|1[0-5]),[\$]([12]?[0-9]|3[01]),\</pre></td>
+</tr>
+<tr id="line549">
+<td class="line-numbers"><a href="#line549" name="line549">549</a></td>
+<td class="code"><pre class="prettyprint lang-">[\-]?([0-9]+|0X[0-9A-F]+)$&quot;)==1, &quot;syntax err&quot;);</pre></td>
+</tr>
+<tr id="line550">
+<td class="line-numbers"><a href="#line550" name="line550">550</a></td>
+<td class="code"><pre class="prettyprint lang-">	MXINSN_OK=1;</pre></td>
+</tr>
+<tr id="line551">
+<td class="line-numbers"><a href="#line551" name="line551">551</a></td>
+<td class="code"><pre class="prettyprint lang-">	rb=substr($(NF-1),2); grfb_num = bits2str(strtonum(rb), 5);</pre></td>
+</tr>
+<tr id="line552">
+<td class="line-numbers"><a href="#line552" name="line552">552</a></td>
+<td class="code"><pre class="prettyprint lang-">	if ($NF ~/-/) {s10_pos=substr($NF, 2); num_s10 = 0 - strtonum(s10_pos); }</pre></td>
+</tr>
+<tr id="line553">
+<td class="line-numbers"><a href="#line553" name="line553">553</a></td>
+<td class="code"><pre class="prettyprint lang-">	else num_s10 = strtonum($NF);</pre></td>
+</tr>
+<tr id="line554">
+<td class="line-numbers"><a href="#line554" name="line554">554</a></td>
+<td class="code"><pre class="prettyprint lang-">	S12 = bits2str(num_s10, 12); addr_off=substr(S12,1,10);</pre></td>
+</tr>
+<tr id="line555">
+<td class="line-numbers"><a href="#line555" name="line555">555</a></td>
+<td class="code"><pre class="prettyprint lang-">	printf &quot;.word\t0b%s%s%s%s%s%s\t\#%s\n&quot;, SPECIAL2, grfb_num, &quot;0&quot;, addr_off, \</pre></td>
+</tr>
+<tr id="line556">
+<td class="line-numbers"><a href="#line556" name="line556">556</a></td>
+<td class="code"><pre class="prettyprint lang-">xrf[$2], insn[$1,EXTEND], $0; </pre></td>
+</tr>
+<tr id="line557">
+<td class="line-numbers"><a href="#line557" name="line557">557</a></td>
+<td class="code"><pre class="prettyprint lang-">	next</pre></td>
+</tr>
+<tr id="line558">
+<td class="line-numbers"><a href="#line558" name="line558">558</a></td>
+<td class="code"><pre class="prettyprint lang-">	}</pre></td>
+</tr>
+<tr id="line559">
+<td class="line-numbers"><a href="#line559" name="line559">559</a></td>
+<td class="code"><pre class="prettyprint lang-">	}</pre></td>
+</tr>
+<tr id="line560">
+<td class="line-numbers"><a href="#line560" name="line560">560</a></td>
+<td class="code"><pre class="prettyprint lang-">$0 = cur_line;</pre></td>
+</tr>
+<tr id="line561">
+<td class="line-numbers"><a href="#line561" name="line561">561</a></td>
+<td class="code"><pre class="prettyprint lang-">}</pre></td>
+</tr>
+<tr id="line562">
+<td class="line-numbers"><a href="#line562" name="line562">562</a></td>
+<td class="code"><pre class="prettyprint lang-">#&lt;---------------------------------------------------------------------------Others</pre></td>
+</tr>
+<tr id="line563">
+<td class="line-numbers"><a href="#line563" name="line563">563</a></td>
+<td class="code"><pre class="prettyprint lang-">	(MXINSN_OK == 0 || NF == 0) {print}</pre></td>
+</tr>
+<tr id="line564">
+<td class="line-numbers"><a href="#line564" name="line564">564</a></td>
+<td class="code"><pre class="prettyprint lang-"></pre></td>
+</tr>
+<tr id="line565">
+<td class="line-numbers"><a href="#line565" name="line565">565</a></td>
+<td class="code"><pre class="prettyprint lang-">     function assert(condition, string)</pre></td>
+</tr>
+<tr id="line566">
+<td class="line-numbers"><a href="#line566" name="line566">566</a></td>
+<td class="code"><pre class="prettyprint lang-">     {</pre></td>
+</tr>
+<tr id="line567">
+<td class="line-numbers"><a href="#line567" name="line567">567</a></td>
+<td class="code"><pre class="prettyprint lang-">         if (!condition) {</pre></td>
+</tr>
+<tr id="line568">
+<td class="line-numbers"><a href="#line568" name="line568">568</a></td>
+<td class="code"><pre class="prettyprint lang-">             printf(&quot;%s: __line__%d: assertion failed: %s\n&quot;, FILENAME, FNR, string) </pre></td>
+</tr>
+<tr id="line569">
+<td class="line-numbers"><a href="#line569" name="line569">569</a></td>
+<td class="code"><pre class="prettyprint lang-">             _assert_exit = 1</pre></td>
+</tr>
+<tr id="line570">
+<td class="line-numbers"><a href="#line570" name="line570">570</a></td>
+<td class="code"><pre class="prettyprint lang-">             exit 1</pre></td>
+</tr>
+<tr id="line571">
+<td class="line-numbers"><a href="#line571" name="line571">571</a></td>
+<td class="code"><pre class="prettyprint lang-">         }</pre></td>
+</tr>
+<tr id="line572">
+<td class="line-numbers"><a href="#line572" name="line572">572</a></td>
+<td class="code"><pre class="prettyprint lang-">     }</pre></td>
+</tr>
+<tr id="line573">
+<td class="line-numbers"><a href="#line573" name="line573">573</a></td>
+<td class="code"><pre class="prettyprint lang-"></pre></td>
+</tr>
+<tr id="line574">
+<td class="line-numbers"><a href="#line574" name="line574">574</a></td>
+<td class="code"><pre class="prettyprint lang-">     function bits2str(bits, tail_len, zero, data, mask)</pre></td>
+</tr>
+<tr id="line575">
+<td class="line-numbers"><a href="#line575" name="line575">575</a></td>
+<td class="code"><pre class="prettyprint lang-">     {</pre></td>
+</tr>
+<tr id="line576">
+<td class="line-numbers"><a href="#line576" name="line576">576</a></td>
+<td class="code"><pre class="prettyprint lang-">         zero=&quot;0000000000000000&quot;;</pre></td>
+</tr>
+<tr id="line577">
+<td class="line-numbers"><a href="#line577" name="line577">577</a></td>
+<td class="code"><pre class="prettyprint lang-">         if (bits == 0) {</pre></td>
+</tr>
+<tr id="line578">
+<td class="line-numbers"><a href="#line578" name="line578">578</a></td>
+<td class="code"><pre class="prettyprint lang-">             zero=substr(zero, length(zero) - tail_len + 1, tail_len);</pre></td>
+</tr>
+<tr id="line579">
+<td class="line-numbers"><a href="#line579" name="line579">579</a></td>
+<td class="code"><pre class="prettyprint lang-">             return zero;</pre></td>
+</tr>
+<tr id="line580">
+<td class="line-numbers"><a href="#line580" name="line580">580</a></td>
+<td class="code"><pre class="prettyprint lang-">         }</pre></td>
+</tr>
+<tr id="line581">
+<td class="line-numbers"><a href="#line581" name="line581">581</a></td>
+<td class="code"><pre class="prettyprint lang-">         mask = 1;</pre></td>
+</tr>
+<tr id="line582">
+<td class="line-numbers"><a href="#line582" name="line582">582</a></td>
+<td class="code"><pre class="prettyprint lang-">         for (; bits != 0; bits = rshift(bits, 1))</pre></td>
+</tr>
+<tr id="line583">
+<td class="line-numbers"><a href="#line583" name="line583">583</a></td>
+<td class="code"><pre class="prettyprint lang-">             data = (and(bits, mask) ? &quot;1&quot; : &quot;0&quot;) data;</pre></td>
+</tr>
+<tr id="line584">
+<td class="line-numbers"><a href="#line584" name="line584">584</a></td>
+<td class="code"><pre class="prettyprint lang-"></pre></td>
+</tr>
+<tr id="line585">
+<td class="line-numbers"><a href="#line585" name="line585">585</a></td>
+<td class="code"><pre class="prettyprint lang-">         data=zero&quot;&quot;data;         </pre></td>
+</tr>
+<tr id="line586">
+<td class="line-numbers"><a href="#line586" name="line586">586</a></td>
+<td class="code"><pre class="prettyprint lang-">         data=substr(data, length(data) - tail_len + 1, tail_len);         </pre></td>
+</tr>
+<tr id="line587">
+<td class="line-numbers"><a href="#line587" name="line587">587</a></td>
+<td class="code"><pre class="prettyprint lang-">         return data;</pre></td>
+</tr>
+<tr id="line588">
+<td class="line-numbers"><a href="#line588" name="line588">588</a></td>
+<td class="code"><pre class="prettyprint lang-">     }</pre></td>
+</tr>
+<tr id="line589">
+<td class="line-numbers"><a href="#line589" name="line589">589</a></td>
+<td class="code"><pre class="prettyprint lang-">     </pre></td>
+</tr>
+<tr id="line590">
+<td class="line-numbers"><a href="#line590" name="line590">590</a></td>
+<td class="code"><pre class="prettyprint lang-">     END {</pre></td>
+</tr>
+<tr id="line591">
+<td class="line-numbers"><a href="#line591" name="line591">591</a></td>
+<td class="code"><pre class="prettyprint lang-">         if (_assert_exit)</pre></td>
+</tr>
+<tr id="line592">
+<td class="line-numbers"><a href="#line592" name="line592">592</a></td>
+<td class="code"><pre class="prettyprint lang-">             exit 1</pre></td>
+</tr>
+<tr id="line593">
+<td class="line-numbers"><a href="#line593" name="line593">593</a></td>
+<td class="code"><pre class="prettyprint lang-">     }</pre></td>
+</tr>
+<tr id="line594">
+<td class="line-numbers"><a href="#line594" name="line594">594</a></td>
+<td class="code"><pre class="prettyprint lang-">' $1  2&gt;/dev/null</pre></td>
+</tr>
+</table>  
+
+
+<div class="page-meta">
+  <ul class="page-actions">
+    <li>Blob contents</li>
+    <li><a href="/~jz4740/jz4740_project/ucosII/blobs/history/580224eb86acaaebd40925e17591fb69e14cc745/mxu_as">Blob history</a></li>
+    <li><a href="/~jz4740/jz4740_project/ucosII/blobs/raw/580224eb86acaaebd40925e17591fb69e14cc745/mxu_as">Raw blob data</a></li>
+  </ul>
+</div>    </div>
+        <div id="footer">
+      
+<div class="powered-by">
+  <a href="http://gitorious.org"><img alt="Powered_by_gitorious" src="/images/powered_by_gitorious.png?1258462303" title="Powered by Gitorious" /></a></div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-52238-3");
+pageTracker._setDomainName(".gitorious.org");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>      <ul class="footer-links">
+        <li><a href="/">Home</a> | </li>
+        <li><a href="/about">About Gitorious</a> | </li>
+        <li><a href="/about/faq">FAQ</a> | </li>
+        <li><a href="/contact">Contact</a> | </li>
+        <li><a href="http://groups.google.com/group/gitorious">Discussion group</a> | </li>
+        <li><a href="http://blog.gitorious.org">Blog</a></li>
+      </ul>
+              <ul class="legal">
+          <li><a href="http://en.gitorious.org/tos">Terms of Service</a> | </li>
+          <li><a href="http://en.gitorious.org/privacy_policy">Privacy Policy</a></li>
+        </ul>
+            <div class="clear"></div>
+    </div>
+  </div>
+</body>
+</html>

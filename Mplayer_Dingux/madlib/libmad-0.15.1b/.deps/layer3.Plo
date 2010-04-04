@@ -1,0 +1,120 @@
+layer3.lo: layer3.c config.h global.h \
+  /opt/mipsel-linux-uclibc/usr/include/stdlib.h \
+  /opt/mipsel-linux-uclibc/usr/include/features.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/uClibc_config.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/uClibc_arch_features.h \
+  /opt/mipsel-linux-uclibc/usr/include/sys/cdefs.h \
+  /opt/mipsel-linux-uclibc/usr/bin/../lib/gcc/mipsel-linux-uclibc/4.3.3/include/stddef.h \
+  /opt/mipsel-linux-uclibc/usr/include/sys/types.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/types.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/wordsize.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/kernel_types.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/typesizes.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/pthreadtypes.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/sched.h \
+  /opt/mipsel-linux-uclibc/usr/include/time.h \
+  /opt/mipsel-linux-uclibc/usr/include/endian.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/endian.h \
+  /opt/mipsel-linux-uclibc/usr/include/sys/select.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/select.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/sigset.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/time.h \
+  /opt/mipsel-linux-uclibc/usr/include/sys/sysmacros.h \
+  /opt/mipsel-linux-uclibc/usr/include/alloca.h \
+  /opt/mipsel-linux-uclibc/usr/include/string.h \
+  /opt/mipsel-linux-uclibc/usr/include/assert.h \
+  /opt/mipsel-linux-uclibc/usr/bin/../lib/gcc/mipsel-linux-uclibc/4.3.3/include-fixed/limits.h \
+  /opt/mipsel-linux-uclibc/usr/bin/../lib/gcc/mipsel-linux-uclibc/4.3.3/include-fixed/syslimits.h \
+  /opt/mipsel-linux-uclibc/usr/include/limits.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/posix1_lim.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/local_lim.h \
+  /opt/mipsel-linux-uclibc/usr/include/linux/limits.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/uClibc_local_lim.h \
+  /opt/mipsel-linux-uclibc/usr/include/bits/posix2_lim.h fixed.h bit.h \
+  stream.h frame.h timer.h huffman.h layer3.h rq_table.dat imdct_s.dat
+
+config.h:
+
+global.h:
+
+/opt/mipsel-linux-uclibc/usr/include/stdlib.h:
+
+/opt/mipsel-linux-uclibc/usr/include/features.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/uClibc_config.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/uClibc_arch_features.h:
+
+/opt/mipsel-linux-uclibc/usr/include/sys/cdefs.h:
+
+/opt/mipsel-linux-uclibc/usr/bin/../lib/gcc/mipsel-linux-uclibc/4.3.3/include/stddef.h:
+
+/opt/mipsel-linux-uclibc/usr/include/sys/types.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/types.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/wordsize.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/kernel_types.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/typesizes.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/pthreadtypes.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/sched.h:
+
+/opt/mipsel-linux-uclibc/usr/include/time.h:
+
+/opt/mipsel-linux-uclibc/usr/include/endian.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/endian.h:
+
+/opt/mipsel-linux-uclibc/usr/include/sys/select.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/select.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/sigset.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/time.h:
+
+/opt/mipsel-linux-uclibc/usr/include/sys/sysmacros.h:
+
+/opt/mipsel-linux-uclibc/usr/include/alloca.h:
+
+/opt/mipsel-linux-uclibc/usr/include/string.h:
+
+/opt/mipsel-linux-uclibc/usr/include/assert.h:
+
+/opt/mipsel-linux-uclibc/usr/bin/../lib/gcc/mipsel-linux-uclibc/4.3.3/include-fixed/limits.h:
+
+/opt/mipsel-linux-uclibc/usr/bin/../lib/gcc/mipsel-linux-uclibc/4.3.3/include-fixed/syslimits.h:
+
+/opt/mipsel-linux-uclibc/usr/include/limits.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/posix1_lim.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/local_lim.h:
+
+/opt/mipsel-linux-uclibc/usr/include/linux/limits.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/uClibc_local_lim.h:
+
+/opt/mipsel-linux-uclibc/usr/include/bits/posix2_lim.h:
+
+fixed.h:
+
+bit.h:
+
+stream.h:
+
+frame.h:
+
+timer.h:
+
+huffman.h:
+
+layer3.h:
+
+rq_table.dat:
+
+imdct_s.dat:
