@@ -1,0 +1,1 @@
+Application and utilities ported for the linux kernel (also known as dingux) on the Dingoo A320 handheld gaming console, based on Ingenic JZ4740 system-on-chip.
